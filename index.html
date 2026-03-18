@@ -2,162 +2,212 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Венчаков — Сайт-визитка</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Венчаков — профессиональные услуги и решения">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; script-src 'self';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta name="theme-color" content="#0A0A0A">
+    <title>Венчаков — Главная</title>
+    <link rel="canonical" href="https://venchakov.com/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Hero секция -->
-    <section class="hero">
-        <div class="hero-bg">
-            <div class="hero-gradient"></div>
+    <!-- Навигация -->
+    <nav class="nav" id="nav">
+        <div class="container nav-inner">
+            <a href="index.html" class="nav-logo">ВЕНЧАКОВ</a>
+            <button class="nav-burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link active">Обо мне</a></li>
+                <li><a href="services.html" class="nav-link">Услуги</a></li>
+                <li><a href="reviews.html" class="nav-link">Отзывы</a></li>
+                <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+            </ul>
         </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-card">
-                    <div class="card-top">
-                        <div class="avatar">
-                            <div class="avatar-placeholder">В</div>
-                        </div>
-                        <div class="hero-info">
-                            <h1>ВЕНЧАКОВ</h1>
-                            <p class="subtitle">Специалист</p>
-                        </div>
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <div class="badge">Открыт к сотрудничеству <span class="badge-dot"></span></div>
+                    <h1>Создаю<br><span class="text-accent">цифровые</span><br>решения</h1>
+                    <p class="hero-desc">Разработка, аналитика и сопровождение проектов. Превращаю идеи в работающие продукты.</p>
+                    <div class="hero-buttons">
+                        <a href="contacts.html" class="btn btn-accent">Связаться <span class="arrow">&#8599;</span></a>
+                        <a href="services.html" class="btn btn-ghost">Услуги <span class="arrow">&#8599;</span></a>
                     </div>
-                    <div class="card-actions">
-                        <a href="#contact" class="btn btn-primary">Написать мне</a>
-                        <a href="#services" class="btn btn-outline">Услуги</a>
+                </div>
+                <div class="hero-bento">
+                    <div class="bento-card bento-avatar">
+                        <div class="avatar-large">В</div>
+                        <div class="bento-card-label">Венчаков</div>
+                    </div>
+                    <div class="bento-card bento-wave">
+                        <div class="wave-decoration">
+                            <svg viewBox="0 0 200 100" preserveAspectRatio="none">
+                                <path d="M0,50 C30,20 70,80 100,50 C130,20 170,80 200,50 L200,100 L0,100 Z" fill="rgba(205,255,0,0.08)"/>
+                                <path d="M0,60 C40,30 60,90 100,60 C140,30 160,90 200,60" fill="none" stroke="rgba(205,255,0,0.3)" stroke-width="1"/>
+                                <path d="M0,55 C35,25 65,85 100,55 C135,25 165,85 200,55" fill="none" stroke="rgba(205,255,0,0.15)" stroke-width="0.5"/>
+                            </svg>
+                        </div>
+                        <span class="bento-stat">5+</span>
+                        <span class="bento-stat-label">лет опыта</span>
+                    </div>
+                    <div class="bento-card bento-chrome">
+                        <div class="chrome-sphere"></div>
+                        <span class="bento-stat-label">Качество</span>
+                    </div>
+                    <div class="bento-card bento-projects">
+                        <span class="bento-stat">50+</span>
+                        <span class="bento-stat-label">проектов</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- О себе -->
-    <section class="about" id="about">
+    <!-- Преимущества -->
+    <section class="advantages">
+        <div class="container">
+            <div class="pills-row">
+                <div class="pill">
+                    <div class="pill-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                    </div>
+                    <span>Мы</span>
+                </div>
+                <div class="pill">
+                    <div class="pill-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <span>Профессионалы</span>
+                </div>
+                <div class="pill">
+                    <div class="pill-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    </div>
+                    <span>Ведущие</span>
+                </div>
+                <div class="pill">
+                    <div class="pill-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <span>К результату</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- О себе — bento -->
+    <section class="about-bento">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">О себе</span>
-                <h2>Получить результат — возможно уже сегодня</h2>
-                <p class="section-desc">Готов помочь вам с решением задач. Обращайтесь — обсудим детали и найдём лучший подход.</p>
+                <span class="section-tag">Обо мне</span>
+                <h2>Кто я и чем<br><span class="text-accent">занимаюсь</span></h2>
             </div>
-            <div class="stats-row">
-                <div class="stat-card">
-                    <span class="stat-number">—</span>
-                    <span class="stat-label">Профессионал</span>
+            <div class="bento-grid bento-about">
+                <div class="bento-card bento-big bento-card-hover">
+                    <div class="wave-bg">
+                        <svg viewBox="0 0 400 200" preserveAspectRatio="none">
+                            <path d="M0,100 C60,40 140,160 200,100 C260,40 340,160 400,100 L400,200 L0,200 Z" fill="rgba(205,255,0,0.04)"/>
+                            <path d="M0,120 C80,60 120,180 200,120 C280,60 320,180 400,120" fill="none" stroke="rgba(205,255,0,0.15)" stroke-width="1"/>
+                        </svg>
+                    </div>
+                    <h3>Специализация</h3>
+                    <p>Разработка сайтов, веб-приложений, аналитика и аудит проектов. Комплексный подход от идеи до запуска.</p>
+                    <a href="services.html" class="card-link">Подробнее <span class="arrow">&#8599;</span></a>
                 </div>
-                <div class="stat-card">
-                    <span class="stat-number">—</span>
-                    <span class="stat-label">Ведущий</span>
+                <div class="bento-card bento-card-hover">
+                    <div class="chrome-sphere chrome-sm"></div>
+                    <h3>Подход</h3>
+                    <p>Индивидуально под каждый проект. Без шаблонов и конвейера.</p>
                 </div>
-                <div class="stat-card">
-                    <span class="stat-number">—</span>
-                    <span class="stat-label">К результату</span>
+                <div class="bento-card bento-card-hover">
+                    <h3>Стек</h3>
+                    <p>Современные технологии и проверенные решения для надёжного результата.</p>
+                </div>
+                <div class="bento-card bento-wide bento-card-hover">
+                    <h3>Готов обсудить ваш проект</h3>
+                    <p>Расскажите о задаче — предложу оптимальное решение и прозрачные сроки.</p>
+                    <a href="contacts.html" class="btn btn-accent btn-sm">Написать <span class="arrow">&#8599;</span></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Услуги -->
-    <section class="services" id="services">
+    <!-- Превью услуг -->
+    <section class="services-preview">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Услуги</span>
-                <h2>Чем могу помочь</h2>
+                <h2>Что я <span class="text-accent">предлагаю</span></h2>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <div class="bento-grid bento-services-preview">
+                <div class="bento-card bento-card-hover service-preview-card">
+                    <div class="service-preview-top">
+                        <svg viewBox="0 0 200 80" preserveAspectRatio="none" class="service-wave">
+                            <path d="M0,40 C50,10 100,70 150,40 C175,25 200,50 200,40 L200,80 L0,80 Z" fill="rgba(205,255,0,0.06)"/>
+                        </svg>
                     </div>
                     <h3>Разработка сайтов</h3>
-                    <p>Создание сайтов под ключ — от лендингов до многостраничных проектов</p>
-                    <a href="#contact" class="service-link">Оставить заявку <span>&rarr;</span></a>
+                    <p>Лендинги, корпоративные сайты, интернет-магазины</p>
+                    <a href="services.html" class="card-link">Подробнее <span class="arrow">&#8599;</span></a>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <div class="bento-card bento-card-hover service-preview-card">
+                    <div class="service-preview-top">
+                        <div class="chrome-sphere chrome-xs"></div>
                     </div>
                     <h3>Аналитика и аудит</h3>
-                    <p>Анализ текущего состояния проекта и рекомендации по улучшению</p>
-                    <a href="#contact" class="service-link">Оставить заявку <span>&rarr;</span></a>
+                    <p>Разбор метрик, поиск точек роста, рекомендации</p>
+                    <a href="services.html" class="card-link">Подробнее <span class="arrow">&#8599;</span></a>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                <div class="bento-card bento-card-hover service-preview-card">
+                    <div class="service-preview-top">
+                        <svg viewBox="0 0 200 80" preserveAspectRatio="none" class="service-wave">
+                            <path d="M0,50 C30,20 70,70 100,40 C130,10 170,60 200,40 L200,80 L0,80 Z" fill="rgba(205,255,0,0.06)"/>
+                        </svg>
                     </div>
-                    <h3>Обслуживание сайтов</h3>
-                    <p>Техническая поддержка, обновления и мониторинг работоспособности</p>
-                    <a href="#contact" class="service-link">Оставить заявку <span>&rarr;</span></a>
+                    <h3>Обслуживание</h3>
+                    <p>Поддержка, обновления, мониторинг, оперативные правки</p>
+                    <a href="services.html" class="card-link">Подробнее <span class="arrow">&#8599;</span></a>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0022 16z"/></svg>
+                <div class="bento-card bento-card-hover service-preview-card">
+                    <div class="service-preview-top">
+                        <div class="chrome-sphere chrome-xs"></div>
                     </div>
                     <h3>Консультации</h3>
-                    <p>Помогу разобраться в вопросах и подобрать оптимальное решение</p>
-                    <a href="#contact" class="service-link">Оставить заявку <span>&rarr;</span></a>
+                    <p>Помогу выбрать стек, архитектуру, стратегию развития</p>
+                    <a href="services.html" class="card-link">Подробнее <span class="arrow">&#8599;</span></a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Контакты -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Контакты</span>
-                <h2>Свяжитесь со мной</h2>
-            </div>
-            <div class="contact-grid">
-                <a href="tel:+70000000000" class="contact-card">
-                    <div class="contact-icon">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-                    </div>
-                    <span class="contact-label">Телефон</span>
-                </a>
-                <a href="https://wa.me/70000000000" class="contact-card" target="_blank">
-                    <div class="contact-icon whatsapp">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                    </div>
-                    <span class="contact-label">WhatsApp</span>
-                </a>
-                <a href="https://t.me/venchakov" class="contact-card" target="_blank">
-                    <div class="contact-icon telegram">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-                    </div>
-                    <span class="contact-label">Telegram</span>
-                </a>
-                <a href="https://vk.com/venchakov" class="contact-card" target="_blank">
-                    <div class="contact-icon vk">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.391 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.862-.525-2.049-1.714-1.033-1.01-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.12-5.339-3.202-2.17-3.042-2.763-5.32-2.763-5.788 0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.678.864 2.49 2.303 4.675 2.896 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.204.17-.407.44-.407h2.744c.373 0 .508.203.508.643v3.473c0 .372.17.508.271.508.22 0 .407-.136.813-.542 1.253-1.406 2.151-3.574 2.151-3.574.119-.254.322-.491.763-.491h1.744c.525 0 .644.27.525.643-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.779 1.203 1.253.745.847 1.32 1.558 1.473 2.049.17.474-.085.716-.576.716z"/></svg>
-                    </div>
-                    <span class="contact-label">ВКонтакте</span>
-                </a>
-                <a href="mailto:info@venchakov.com" class="contact-card">
-                    <div class="contact-icon email">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                    </div>
-                    <span class="contact-label">E-mail</span>
-                </a>
-                <a href="https://venchakov.com" class="contact-card" target="_blank">
-                    <div class="contact-icon website">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-                    </div>
-                    <span class="contact-label">Сайт</span>
-                </a>
+            <div class="section-cta">
+                <a href="services.html" class="btn btn-ghost">Все услуги и цены <span class="arrow">&#8599;</span></a>
             </div>
         </div>
     </section>
 
     <!-- Футер -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 venchakov.com — Все права защищены</p>
+        <div class="container footer-inner">
+            <a href="index.html" class="footer-logo">ВЕНЧАКОВ</a>
+            <ul class="footer-links">
+                <li><a href="index.html">Обо мне</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+            <p class="footer-copy">&copy; 2026 venchakov.com</p>
         </div>
     </footer>
 
