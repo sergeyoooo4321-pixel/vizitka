@@ -563,6 +563,14 @@ img {
 }
 
 /* ==============================
+   CASES SECTION
+   ============================== */
+.cases-section {
+    padding: 80px 0;
+    border-top: 1px solid var(--border);
+}
+
+/* ==============================
    SERVICES PREVIEW (index)
    ============================== */
 .services-preview {
