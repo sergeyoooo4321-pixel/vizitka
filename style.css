@@ -415,6 +415,21 @@ img {
     margin-bottom: 12px;
 }
 
+.avatar-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 2px solid var(--border-hover);
+    margin-bottom: 12px;
+    transition: var(--transition);
+}
+
+.bento-avatar:hover .avatar-photo {
+    border-color: var(--accent);
+    box-shadow: 0 0 20px rgba(205, 255, 0, 0.15);
+}
+
 .bento-card-label {
     font-size: 14px;
     font-weight: 600;
