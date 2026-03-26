@@ -260,7 +260,7 @@ img {
 }
 
 .section-header h2 {
-    font-size: 40px;
+    font-size: clamp(26px, 3.5vw + 0.5rem, 40px);
     font-weight: 800;
     line-height: 1.2;
 }
@@ -292,7 +292,7 @@ img {
 }
 
 .hero-text h1 {
-    font-size: 64px;
+    font-size: clamp(30px, 5vw + 1rem, 64px);
     font-weight: 900;
     line-height: 1.05;
     letter-spacing: -2px;
@@ -625,7 +625,7 @@ img {
 }
 
 .page-hero h1 {
-    font-size: 56px;
+    font-size: clamp(30px, 4.5vw + 1rem, 56px);
     font-weight: 900;
     letter-spacing: -2px;
     line-height: 1.1;
@@ -959,7 +959,7 @@ img {
     }
 
     .hero-text h1 {
-        font-size: 48px;
+        letter-spacing: -1px;
     }
 
     .hero-bento {
@@ -1023,7 +1023,6 @@ img {
     }
 
     .hero-text h1 {
-        font-size: 36px;
         letter-spacing: -1px;
     }
 
@@ -1046,9 +1045,6 @@ img {
     }
 
     /* Sections */
-    .section-header h2 {
-        font-size: 28px;
-    }
 
     .about-bento,
     .services-preview {
@@ -1085,10 +1081,6 @@ img {
         padding: 110px 0 40px;
     }
 
-    .page-hero h1 {
-        font-size: 36px;
-    }
-
     /* CTA */
     .cta-card {
         padding: 32px 24px;
@@ -1123,10 +1115,6 @@ img {
 }
 
 @media (max-width: 420px) {
-    .hero-text h1 {
-        font-size: 30px;
-    }
-
     .bento-contacts {
         grid-template-columns: 1fr;
     }
@@ -1138,8 +1126,134 @@ img {
     .bento-stat {
         font-size: 26px;
     }
+}
 
-    .page-hero h1 {
-        font-size: 30px;
+/* ==============================
+   PROCESS SECTION
+   ============================== */
+.process-section {
+    padding: 80px 0;
+    border-top: 1px solid var(--border);
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.process-step {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    transition: var(--transition);
+}
+
+.process-step:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-hover);
+    transform: translateY(-4px);
+}
+
+.process-number {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    margin-bottom: 12px;
+    line-height: 1;
+}
+
+.process-step h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.process-step p {
+    color: var(--text-secondary);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .process-steps {
+        grid-template-columns: 1fr 1fr;
     }
+}
+
+@media (max-width: 420px) {
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==============================
+   STICKY CTA
+   ============================== */
+.sticky-cta {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #2AABEE;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    box-shadow: 0 4px 20px rgba(42, 171, 238, 0.4);
+    transition: var(--transition);
+    animation: fadeInUp 0.5s ease-out 0.5s both;
+}
+
+.sticky-cta:hover {
+    transform: translateY(-4px) scale(1.1);
+    box-shadow: 0 8px 32px rgba(42, 171, 238, 0.5);
+}
+
+@media (max-width: 420px) {
+    .sticky-cta {
+        bottom: 16px;
+        right: 16px;
+        width: 48px;
+        height: 48px;
+    }
+
+    .sticky-cta svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* ==============================
+   FOCUS-VISIBLE (A11Y)
+   ============================== */
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.btn:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 4px rgba(205, 255, 0, 0.15);
+}
+
+.nav-link:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.bento-card-hover:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-color: var(--border-hover);
+}
+
+.sticky-cta:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
 }

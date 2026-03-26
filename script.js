@@ -61,15 +61,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // === Nav background on scroll ===
     const nav = document.getElementById('nav');
     if (nav) {
-        let lastScroll = 0;
         window.addEventListener('scroll', () => {
-            const scrollY = window.scrollY;
-            if (scrollY > 50) {
+            if (window.scrollY > 50) {
                 nav.style.borderBottomColor = 'rgba(31,31,31,0.8)';
             } else {
                 nav.style.borderBottomColor = '';
             }
-            lastScroll = scrollY;
         }, { passive: true });
     }
 });
