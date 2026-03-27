@@ -12,7 +12,8 @@
 (function () {
   'use strict';
 
-  const API_URL = 'https://venchakov-api-proxy.venchakov.workers.dev/chat';
+  const API_URL = 'https://ollama.com/api/chat';
+  const API_KEY = '9d1aa6cb18c94e66a7826b2237120b8e.Fa62zp4_z6UP3pyYT-y2-Ji1';
   const MODEL = 'gemma3:4b';
 
   const config = window.DEMO_CONFIG;
@@ -106,7 +107,10 @@
 
       const res = await fetch(API_URL, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + API_KEY
+        },
         body: JSON.stringify({ model: MODEL, messages: apiMessages, stream: false })
       });
 
