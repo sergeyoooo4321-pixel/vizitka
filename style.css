@@ -947,6 +947,20 @@ img {
 }
 
 /* ==============================
+   SOCIAL PROOF (главная)
+   ============================== */
+.social-proof {
+    padding: 60px 0;
+}
+
+.proof-rating {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* ==============================
    REVIEWS PAGE
    ============================== */
 .rating-hero {

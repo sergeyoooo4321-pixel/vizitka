@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Отзывы клиентов — 34 отзыва, рейтинг 4.6 из 5 — Сергей Венчаков">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; script-src 'self';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; script-src 'self' 'unsafe-inline';">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     <meta http-equiv="X-Frame-Options" content="DENY">
@@ -61,10 +61,17 @@
     <!-- Отзывы -->
     <section class="reviews-section">
         <div class="container">
+            <div class="filter-row" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:32px;">
+                <button class="filter-btn active" data-filter="all" style="background:#CDFF00;color:#0A0A0A;border:1px solid #CDFF00;padding:8px 18px;border-radius:100px;font-size:13px;font-family:'Inter',sans-serif;cursor:pointer;font-weight:600;">Все</button>
+                <button class="filter-btn" data-filter="admin" style="background:#141414;color:#999;border:1px solid #1F1F1F;padding:8px 18px;border-radius:100px;font-size:13px;font-family:'Inter',sans-serif;cursor:pointer;">ИИ-Администратор</button>
+                <button class="filter-btn" data-filter="sales" style="background:#141414;color:#999;border:1px solid #1F1F1F;padding:8px 18px;border-radius:100px;font-size:13px;font-family:'Inter',sans-serif;cursor:pointer;">ИИ-Отдел продаж</button>
+                <button class="filter-btn" data-filter="secretary" style="background:#141414;color:#999;border:1px solid #1F1F1F;padding:8px 18px;border-radius:100px;font-size:13px;font-family:'Inter',sans-serif;cursor:pointer;">ИИ-Секретарь</button>
+                <button class="filter-btn" data-filter="custom" style="background:#141414;color:#999;border:1px solid #1F1F1F;padding:8px 18px;border-radius:100px;font-size:13px;font-family:'Inter',sans-serif;cursor:pointer;">Кастомные</button>
+            </div>
             <div class="reviews-grid">
 
                 <!-- ИИ-Администратор — 10 отзывов -->
-                <div class="review-card">
+                <div class="review-card" data-category="admin">
                     <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
                     <p class="review-text">Подключили бота 2 недели назад и честно не ожидала такого эффекта. Клиенты записываются ночью, в выходные, когда администратор спит. За первую неделю 23 записи пришло через бота. Раньше эти люди просто не дозвонились бы и ушли.</p>
                     <div class="review-author">
@@ -73,7 +80,7 @@
                     </div>
                 </div>
 
-                <div class="review-card">
+                <div class="review-card" data-category="admin">
                     <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;</span><span class="star-off">&#9733;</span></div>
                     <p class="review-text">В целом работает хорошо, клиенты записываются. Но бот иногда путает свободные слоты если мы меняем расписание в последний момент. Сергей сказал что доработает синхронизацию, жду. А так идея огонь и пациенты довольны.</p>
                     <div class="review-author">
@@ -82,7 +89,7 @@
                     </div>
                 </div>
 
-                <div class="review-card">
+                <div class="review-card" data-category="admin">
                     <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
                     <p class="review-text">У нас маленький барбершоп, 3 мастера. Раньше я сама сидела в телефоне и отвечала всем в директ и телеграм. Сейчас бот всё делает, я освободила себе реально часа 3 в день. Деньги за разработку отбились за месяц.</p>
                     <div class="review-author">
@@ -91,7 +98,7 @@
                     </div>
                 </div>
 
-                <div class="review-card">
+                <div class="review-card" data-category="admin">
                     <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
                     <p class="review-text">Бот бронирует столики, отвечает по меню, подсказывает что у нас есть веранда и детская комната. Клиенты в восторге, некоторые даже не понимают что общаются не с человеком. Рекомендую.</p>
                     <div class="review-author">
@@ -100,7 +107,7 @@
                     </div>
                 </div>
 
-                <div class="review-card">
+                <div class="review-card" data-category="admin">
                     <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;</span><span class="star-off">&#9733;&#9733;</span></div>
                     <p class="review-text">Бот работает но ответы иногда слишком шаблонные. Клиентка спросила можно ли прийти с ребёнком и бот начал рассказывать про услуги. Хотелось бы более гибких ответов. Сергей пообещал доработать промпт.</p>
                     <div class="review-author">
@@ -109,7 +116,7 @@
                     </div>
                 </div>
 
-                <div class="review-card">
+                <div class="review-card" data-category="admin">
                     <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
                     <p class="review-text">Подключили на 3 филиала сразу. Каждый бот знает своё расписание, своих врачей и свои цены. Экономим на 2 администраторах, это около 120к в месяц. Сергей вообще красавчик, сделал быстро и без косяков.</p>
                     <div class="review-author">
@@ -118,7 +125,7 @@
                     </div>
                 </div>
 
-                <div class="review-card">
+                <div class="review-card" data-category="admin">
                     <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
                     <p class="review-text">Я работаю одна и мне было вообще нереально параллельно принимать клиентов и отвечать на сообщения. Теперь бот записывает пока я работаю. Конверсия из обращения в запись выросла процентов на 40 точно.</p>
                     <div class="review-author">
@@ -127,7 +134,7 @@
                     </div>
                 </div>
 
-                <div class="review-card">
+                <div class="review-card" data-category="admin">
                     <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
                     <p class="review-text">Сначала думал зачем кафе бот, это же не салон. Но когда посчитал сколько бронирований мы теряем потому что не берём трубку в час пик — согласился попробовать. Не пожалел вообще, бот отрабатывает чётко.</p>
                     <div class="review-author">
@@ -136,7 +143,7 @@
                     </div>
                 </div>
 
-                <div class="review-card">
+                <div class="review-card" data-category="admin">
                     <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;</span><span class="star-off">&#9733;</span></div>
                     <p class="review-text">Хороший бот, записывает на занятия, подсказывает расписание. Единственное — хотелось бы чтобы он ещё напоминания слал за час до занятия. Сергей сказал добавит в следующем обновлении.</p>
                     <div class="review-author">
@@ -145,7 +152,7 @@
                     </div>
                 </div>
 
-                <div class="review-card">
+                <div class="review-card" data-category="admin">
                     <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
                     <p class="review-text">Мы подключили бота и забыли что такое пропущенные заявки. Серьёзно, раньше в день терялось 5-10 клиентов которые писали вечером. Сейчас ноль потерь. Окупилось за 2 недели.</p>
                     <div class="review-author">
@@ -155,7 +162,7 @@
                 </div>
 
                 <!-- ИИ-Отдел продаж — 9 отзывов -->
-                <div class="review-card">
+                <div class="review-card" data-category="sales">
                     <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
                     <p class="review-text">Бот обрабатывает заявки с сайта, квалифицирует и передаёт менеджерам уже тёплых лидов. Менеджеры перестали тратить время на тех кто просто спрашивает цену и уходит. Конверсия в продажу выросла с 12% до 21%.</p>
                     <div class="review-author">
@@ -164,7 +171,7 @@
                     </div>
                 </div>
 
-                <div class="review-card">
+                <div class="review-card" data-category="sales">
                     <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
                     <p class="review-text">У нас курсы по дизайну и раньше менеджер тратил по 20 минут на каждого. Бот теперь сам рассказывает про программу, отвечает на возражения и записывает на бесплатный вебинар. Это просто спасение.</p>
                     <div class="review-author">
@@ -173,7 +180,7 @@
                     </div>
                 </div>
 
-                <div class="review-card">
+                <div class="review-card" data-category="sales">
                     <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;</span><span class="star-off">&#9733;</span></div>
                     <p class="review-text">Неплохо работает для первичной квалификации. Бот задаёт правильные вопросы и выясняет бюджет, сроки, потребность. Но иногда бывает слишком настойчивым. Попросил смягчить тон, Сергей поправил за день.</p>
                     <div class="review-author">
@@ -182,7 +189,7 @@
                     </div>
                 </div>
 
-                <div class="review-card">
+                <div class="review-card" data-category="sales">
                     <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
                     <p class="review-text">Подключила в инстаграм. Люди пишут "сколько стоит диван" и бот ведёт полноценную консультацию, уточняет размеры, предлагает варианты. За первый месяц бот сделал продаж на 340к. Без менеджера вообще.</p>
                     <div class="review-author">
@@ -191,7 +198,7 @@
                     </div>
                 </div>
 
-                <div class="review-card">
+                <div class="review-card" data-category="sales">
                     <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
                     <p class="review-text">Мы сами продаём софт и внедрили бота на первую линию. Он отвечает на типовые вопросы и записывает на демо. Раньше записывалось 15 человек в неделю, сейчас 35-40. Трафик тот же.</p>
                     <div class="review-author">
@@ -200,7 +207,7 @@
                     </div>
                 </div>
 
-                <div class="review-card">
+                <div class="review-card" data-category="sales">
                     <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;</span><span class="star-off">&#9733;&#9733;</span></div>
                     <p class="review-text">Идея хорошая но для недвижимости бот пока сыроват. Клиенты задают очень специфичные вопросы про ипотеку, документы, район. Бот не всегда справляется. Для простых товаров наверно работает лучше.</p>
                     <div class="review-author">
@@ -209,7 +216,7 @@
                     </div>
                 </div>
 
-                <div class="review-card">
+                <div class="review-card" data-category="sales">
                     <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
                     <p class="review-text">Бот продаёт абонементы через телеграм лучше чем наш менеджер на ресепшене. Серьёзно, он не устаёт, не хамит, всегда вежливый и знает все акции. За 2 месяца окупил себя раз 5.</p>
                     <div class="review-author">
@@ -218,7 +225,7 @@
                     </div>
                 </div>
 
-                <div class="review-card">
+                <div class="review-card" data-category="sales">
                     <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
                     <p class="review-text">Бот помогает клиентам выбрать букет под повод. Спрашивает кому цветы, какой бюджет, предпочтения. Люди говорят что это как личный флорист в телефоне. Выручка выросла на 25% за счёт допродаж.</p>
                     <div class="review-author">
@@ -227,7 +234,7 @@
                     </div>
                 </div>
 
-                <div class="review-card">
+                <div class="review-card" data-category="sales">
                     <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
                     <p class="review-text">Бот проводит мини тест на уровень языка и сразу предлагает подходящую группу с ценой. Конверсия из лида в оплату была 8%, стала 19%. Я даже не верил что такое возможно с ботом.</p>
                     <div class="review-author">
@@ -237,7 +244,7 @@
                 </div>
 
                 <!-- ИИ-Секретарь — 9 отзывов -->
-                <div class="review-card">
+                <div class="review-card" data-category="secretary">
                     <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
                     <p class="review-text">Каждое утро получаю саммари: что срочно, что может подождать, на что ответить самому а что делегировать. Раньше тратил час на разбор почты, сейчас 10 минут. Это лучшая инвестиция за этот год.</p>
                     <div class="review-author">
@@ -246,7 +253,7 @@
                     </div>
                 </div>
 
-                <div class="review-card">
+                <div class="review-card" data-category="secretary">
                     <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;</span><span class="star-off">&#9733;</span></div>
                     <p class="review-text">В целом удобно, секретарь приоритизирует задачи и помогает с черновиками ответов. Но иногда неправильно оценивает приоритет — поставил рекламное предложение как "важное" потому что там было слово "срочно".</p>
                     <div class="review-author">
@@ -255,7 +262,7 @@
                     </div>
                 </div>
 
-                <div class="review-card">
+                <div class="review-card" data-category="secretary">
                     <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
                     <p class="review-text">У меня 4 объекта и в день прилетает штук 80 сообщений. Раньше я реально тонул в этом, забывал ответить важным людям. Сейчас секретарь всё разгребает и подсказывает что горит. Спасибо, реально спас мне нервы.</p>
                     <div class="review-author">
@@ -264,7 +271,7 @@
                     </div>
                 </div>
 
-                <div class="review-card">
+                <div class="review-card" data-category="secretary">
                     <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
                     <p class="review-text">Подключила для управления входящими от разных отделов. Секретарь группирует сообщения по темам и выдаёт мне дайджест 3 раза в день. Я перестала бояться что что-то пропущу. Вещь!</p>
                     <div class="review-author">
@@ -273,7 +280,7 @@
                     </div>
                 </div>
 
-                <div class="review-card">
+                <div class="review-card" data-category="secretary">
                     <div class="review-stars"><span class="star-on">&#9733;&#9733;</span><span class="star-off">&#9733;&#9733;&#9733;</span></div>
                     <p class="review-text">Честно не понял зачем мне это. У меня небольшой бизнес и сообщений не так много, сам справляюсь. Может для крупных компаний актуально. Сергей предложил бесплатно потестить другой продукт, ценю подход.</p>
                     <div class="review-author">
@@ -282,7 +289,7 @@
                     </div>
                 </div>
 
-                <div class="review-card">
+                <div class="review-card" data-category="secretary">
                     <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
                     <p class="review-text">Секретарь составляет черновики ответов и я просто правлю и отправляю. Экономит минут 40 в день минимум. Особенно нравится что он понимает контекст переписки и не пишет отсебятину.</p>
                     <div class="review-author">
@@ -291,7 +298,7 @@
                     </div>
                 </div>
 
-                <div class="review-card">
+                <div class="review-card" data-category="secretary">
                     <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
                     <p class="review-text">Пользуюсь 3 месяца, привык настолько что без него уже как без рук. Утреннее саммари это прям маст хэв. Коллеги заметили что я стал быстрее отвечать и меньше забывать задачи.</p>
                     <div class="review-author">
@@ -300,7 +307,7 @@
                     </div>
                 </div>
 
-                <div class="review-card">
+                <div class="review-card" data-category="secretary">
                     <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
                     <p class="review-text">Когда ты фаундер и у тебя нет бюджета на помощника — этот бот спасение. Он реально заменяет секретаря процентов на 70. Оставшиеся 30 это чисто физические задачи типа принести кофе.</p>
                     <div class="review-author">
@@ -309,7 +316,7 @@
                     </div>
                 </div>
 
-                <div class="review-card">
+                <div class="review-card" data-category="secretary">
                     <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;</span><span class="star-off">&#9733;</span></div>
                     <p class="review-text">Удобная штука для тех у кого много переписок. Бот хорошо фильтрует спам и неважное. Хотела бы ещё интеграцию с гугл календарём чтобы сам туда задачи кидал, надеюсь появится.</p>
                     <div class="review-author">
@@ -319,7 +326,7 @@
                 </div>
 
                 <!-- Кастомные проекты — 6 отзывов -->
-                <div class="review-card">
+                <div class="review-card" data-category="custom">
                     <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
                     <p class="review-text">Заказывали бота который распознаёт фото накладных и заносит данные в таблицу. Раньше бухгалтер вбивала руками по 50 штук в день. Сейчас кидает фото в бот и всё. Ошибок меньше, скорость в 10 раз быстрее.</p>
                     <div class="review-author">
@@ -328,7 +335,7 @@
                     </div>
                 </div>
 
-                <div class="review-card">
+                <div class="review-card" data-category="custom">
                     <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
                     <p class="review-text">Сергей сделал систему которая сама собирает данные из рекламных кабинетов и генерит красивый отчёт в PDF. Раньше дизайнер тратил 2 дня в месяц на это. Сейчас нажал кнопку и готово. Рекомендую однозначно.</p>
                     <div class="review-author">
@@ -337,7 +344,7 @@
                     </div>
                 </div>
 
-                <div class="review-card">
+                <div class="review-card" data-category="custom">
                     <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;</span><span class="star-off">&#9733;</span></div>
                     <p class="review-text">Сделал нам полноценную CRM в телеграме. Клиенты записываются, мы видим загрузку по боксам, история клиентов сохраняется. Есть мелкие баги которые фиксятся постепенно, но в целом экономит кучу времени.</p>
                     <div class="review-author">
@@ -346,7 +353,7 @@
                     </div>
                 </div>
 
-                <div class="review-card">
+                <div class="review-card" data-category="custom">
                     <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
                     <p class="review-text">Мне сделали лендинг и бота для записи на консультации. Всё в одном стиле, клиенты переходят с сайта в бот и сразу записываются. Раньше я сама переписывалась с каждым. Сейчас поток идёт на автомате.</p>
                     <div class="review-author">
@@ -355,7 +362,7 @@
                     </div>
                 </div>
 
-                <div class="review-card">
+                <div class="review-card" data-category="custom">
                     <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
                     <p class="review-text">Заказал парсер который мониторит цены конкурентов и автоматически корректирует наши. Работает 24/7, обновляет прайс каждые 2 часа. За первый месяц маржа выросла на 8%.</p>
                     <div class="review-author">
@@ -364,7 +371,7 @@
                     </div>
                 </div>
 
-                <div class="review-card">
+                <div class="review-card" data-category="custom">
                     <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
                     <p class="review-text">Клиент пишет площадь квартиры и тип уборки, бот сам считает цену и предлагает записаться. Конверсия из заявки в заказ была 30%, стала 55%. Менеджер больше не нужен на первой линии.</p>
                     <div class="review-author">
@@ -406,5 +413,29 @@
     </a>
 
     <script src="script.js"></script>
+    <script>
+document.querySelectorAll('.filter-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        document.querySelectorAll('.filter-btn').forEach(function(b) {
+            b.style.background = '#141414';
+            b.style.color = '#999';
+            b.style.borderColor = '#1F1F1F';
+            b.style.fontWeight = 'normal';
+        });
+        btn.style.background = '#CDFF00';
+        btn.style.color = '#0A0A0A';
+        btn.style.borderColor = '#CDFF00';
+        btn.style.fontWeight = '600';
+        var filter = btn.dataset.filter;
+        document.querySelectorAll('.review-card').forEach(function(card) {
+            if (filter === 'all' || card.dataset.category === filter) {
+                card.style.display = '';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+});
+    </script>
 </body>
 </html>
