@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#0A0A0A">
+    <title>Демо: ИИ-Администратор — Сергей Венчаков</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --accent: #CDFF00;
+            --bg: #0a0a0a;
+            --bg-chat: #111111;
+            --bg-bubble: #1a1a1a;
+            --border: #222;
+            --text: #e0e0e0;
+            --text-muted: #666;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg);
+            color: #fff;
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+        }
+
+        .demo-wrapper {
+            width: 100%;
+            max-width: 480px;
+            height: 90vh;
+            height: 90dvh;
+            max-height: 750px;
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-chat);
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .demo-header {
+            padding: 14px 20px;
+            border-bottom: 1px solid #1a1a1a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .demo-header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .demo-avatar {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: rgba(205,255,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .demo-title { font-size: 15px; font-weight: 700; }
+        .demo-subtitle { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+
+        .demo-badge {
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--bg);
+            background: var(--accent);
+            padding: 4px 10px;
+            border-radius: 20px;
+            letter-spacing: 1px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .demo-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 13px;
+            padding: 10px 20px 0;
+            transition: color 0.2s;
+            flex-shrink: 0;
+        }
+        .demo-back:hover { color: var(--accent); }
+
+        .chat-area {
+            flex: 1;
+            overflow-y: auto;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .msg-row { display: flex; }
+        .msg-row.user { justify-content: flex-end; }
+
+        .bubble {
+            max-width: 80%;
+            padding: 10px 14px;
+            border-radius: 16px;
+            font-size: 14px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .bubble.ai {
+            background: var(--bg-bubble);
+            color: var(--text);
+            border-bottom-left-radius: 4px;
+        }
+
+        .bubble.user {
+            background: var(--accent);
+            color: var(--bg);
+            border-bottom-right-radius: 4px;
+            font-weight: 500;
+        }
+
+        .typing .dot {
+            display: inline-block;
+            animation: blink 1s infinite;
+            color: #555;
+            font-size: 10px;
+            margin-right: 4px;
+        }
+        .typing .dot:nth-child(2) { animation-delay: 0.2s; }
+        .typing .dot:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes blink {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 1; }
+        }
+
+        .quick-row {
+            padding: 8px 16px 4px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            flex-shrink: 0;
+        }
+
+        .quick-btn {
+            background: transparent;
+            border: 1px solid #333;
+            color: var(--accent);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+        .quick-btn:hover {
+            background: rgba(205,255,0,0.08);
+            border-color: var(--accent);
+        }
+
+        .input-row {
+            padding: 12px 16px 16px;
+            border-top: 1px solid #1a1a1a;
+            display: flex;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+
+        .input-row input {
+            flex: 1;
+            background: var(--bg-bubble);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 10px 14px;
+            color: #fff;
+            font-size: 14px;
+            font-family: 'Inter', sans-serif;
+            outline: none;
+        }
+        .input-row input:focus { border-color: #444; }
+
+        .send-btn {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: var(--accent);
+            color: var(--bg);
+            border: none;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.2s;
+        }
+        .send-btn:disabled { opacity: 0.4; cursor: default; }
+
+        @media (max-width: 520px) {
+            body { padding: 0; }
+            .demo-wrapper {
+                max-width: 100%;
+                height: 100vh;
+                height: 100dvh;
+                max-height: none;
+                border-radius: 0;
+                border: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="demo-wrapper">
+        <a href="project-administrator.html" class="demo-back">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><polyline points="12 19 5 12 12 5"/></svg>
+            Назад к описанию
+        </a>
+        <div class="demo-header">
+            <div class="demo-header-left">
+                <div class="demo-avatar">💆‍♀️</div>
+                <div>
+                    <div class="demo-title">Luxe Beauty</div>
+                    <div class="demo-subtitle">ИИ-администратор &bull; Онлайн</div>
+                </div>
+            </div>
+            <div class="demo-badge">DEMO</div>
+        </div>
+
+        <div class="chat-area" id="chat"></div>
+
+        <div class="quick-row" id="quickRow">
+            <button class="quick-btn" onclick="send('Какие услуги есть?')">Какие услуги есть?</button>
+            <button class="quick-btn" onclick="send('Хочу записаться на стрижку')">Хочу записаться на стрижку</button>
+            <button class="quick-btn" onclick="send('Свободное время на завтра?')">Свободное время на завтра?</button>
+            <button class="quick-btn" onclick="send('Сколько стоит маникюр?')">Сколько стоит маникюр?</button>
+        </div>
+
+        <div class="input-row">
+            <input type="text" id="input" placeholder="Напишите сообщение..." autocomplete="off">
+            <button class="send-btn" id="sendBtn" disabled>&uarr;</button>
+        </div>
+    </div>
+
+<script>
+const SYSTEM_PROMPT = `Ты — ИИ-администратор салона красоты "Luxe Beauty". Твоя задача: консультировать клиентов, помогать с выбором услуг и записывать на приём.
+
+ИНФОРМАЦИЯ О САЛОНЕ:
+- Название: Luxe Beauty
+- Адрес: ул. Тверская, 15, Москва
+- Режим работы: Пн-Сб 9:00–21:00, Вс 10:00–18:00
+- Телефон: +7 (999) 123-45-67
+
+УСЛУГИ И ЦЕНЫ:
+- Стрижка женская — от 2500₽ (60 мин)
+- Стрижка мужская — от 1500₽ (30 мин)
+- Окрашивание — от 5000₽ (120 мин)
+- Маникюр классический — 1800₽ (60 мин)
+- Маникюр с покрытием гель-лак — 2500₽ (90 мин)
+- Педикюр — 2200₽ (60 мин)
+- Укладка — от 2000₽ (45 мин)
+- Брови (коррекция + окрашивание) — 1500₽ (30 мин)
+- Ресницы (наращивание) — от 3500₽ (120 мин)
+- Уход за лицом (чистка) — от 4000₽ (90 мин)
+
+МАСТЕРА:
+- Анна — стрижки, окрашивание, укладки
+- Мария — маникюр, педикюр
+- Елена — брови, ресницы
+- Ольга — уход за лицом
+
+СВОБОДНЫЕ СЛОТЫ (ближайшие):
+- Сегодня: 14:00, 16:30, 18:00
+- Завтра: 10:00, 11:30, 13:00, 15:00, 17:00
+- Послезавтра: 9:00, 12:00, 14:30, 16:00
+
+ПРАВИЛА:
+1. Будь вежливой, дружелюбной и профессиональной
+2. Всегда предлагай конкретные слоты для записи
+3. Уточняй имя клиента и телефон для записи
+4. Отвечай коротко и по делу, не больше 2-3 предложений
+5. Используй эмодзи умеренно`;
+
+const messages = [];
+const chat = document.getElementById('chat');
+const input = document.getElementById('input');
+const sendBtn = document.getElementById('sendBtn');
+const quickRow = document.getElementById('quickRow');
+let loading = false;
+
+function addBubble(role, text) {
+    const row = document.createElement('div');
+    row.className = 'msg-row' + (role === 'user' ? ' user' : '');
+    const bubble = document.createElement('div');
+    bubble.className = 'bubble ' + role;
+    bubble.textContent = text;
+    row.appendChild(bubble);
+    chat.appendChild(row);
+    chat.scrollTop = chat.scrollHeight;
+    return row;
+}
+
+function showTyping() {
+    const row = document.createElement('div');
+    row.className = 'msg-row';
+    row.id = 'typing';
+    row.innerHTML = '<div class="bubble ai typing"><span class="dot">●</span><span class="dot">●</span><span class="dot">●</span></div>';
+    chat.appendChild(row);
+    chat.scrollTop = chat.scrollHeight;
+}
+
+function hideTyping() {
+    const el = document.getElementById('typing');
+    if (el) el.remove();
+}
+
+addBubble('ai', 'Добро пожаловать в Luxe Beauty! ✨ Я ваш ИИ-администратор. Помогу выбрать услугу, подскажу цены и запишу на удобное время. Чем могу помочь?');
+messages.push({ role: 'assistant', content: 'Добро пожаловать в Luxe Beauty! ✨ Я ваш ИИ-администратор. Помогу выбрать услугу, подскажу цены и запишу на удобное время. Чем могу помочь?' });
+
+async function send(text) {
+    if (!text || !text.trim() || loading) return;
+    text = text.trim();
+    loading = true;
+    sendBtn.disabled = true;
+    input.disabled = true;
+    quickRow.style.display = 'none';
+
+    addBubble('user', text);
+    messages.push({ role: 'user', content: text });
+    input.value = '';
+    showTyping();
+
+    try {
+        const res = await fetch('https://api.anthropic.com/v1/messages', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                model: 'claude-sonnet-4-20250514',
+                max_tokens: 1000,
+                system: SYSTEM_PROMPT,
+                messages: messages.map(m => ({ role: m.role, content: m.content }))
+            })
+        });
+        const data = await res.json();
+        const reply = data.content?.filter(b => b.type === 'text').map(b => b.text).join('\n') || 'Произошла ошибка.';
+        hideTyping();
+        addBubble('ai', reply);
+        messages.push({ role: 'assistant', content: reply });
+    } catch {
+        hideTyping();
+        addBubble('ai', 'Связь прервалась. Попробуйте обновить страницу.');
+    } finally {
+        loading = false;
+        input.disabled = false;
+        input.focus();
+        updateSendBtn();
+    }
+}
+
+function updateSendBtn() {
+    sendBtn.disabled = !input.value.trim() || loading;
+}
+
+input.addEventListener('input', updateSendBtn);
+input.addEventListener('keydown', e => { if (e.key === 'Enter') send(input.value); });
+sendBtn.addEventListener('click', () => send(input.value));
+</script>
+
+</body>
+</html>

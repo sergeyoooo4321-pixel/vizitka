@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="ИИ-Администратор — нейросеть для записи клиентов и консультаций 24/7">
+    <meta name="theme-color" content="#0A0A0A">
+    <title>ИИ-Администратор — Сергей Венчаков</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="nav" id="nav">
+        <div class="container nav-inner">
+            <a href="index.html" class="nav-logo">ВЕНЧАКОВ</a>
+            <button class="nav-burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Обо мне</a></li>
+                <li><a href="services.html" class="nav-link">Услуги</a></li>
+                <li><a href="reviews.html" class="nav-link">Отзывы</a></li>
+                <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="project-hero">
+        <div class="container">
+            <a href="index.html#cases" class="back-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><polyline points="12 19 5 12 12 5"/></svg>
+                Назад к проектам
+            </a>
+            <div class="project-hero-grid">
+                <div class="project-hero-text">
+                    <span class="section-tag">Кейс</span>
+                    <h1>ИИ-<span class="text-accent">Администратор</span></h1>
+                    <p class="hero-desc">Нейросеть, которая сидит в ваших мессенджерах и делает работу администратора: отвечает клиентам, консультирует по услугам и ценам, показывает свободное время и записывает на приём. Работает 24/7, не уходит на обед и не забывает перезвонить.</p>
+                    <div class="hero-buttons">
+                        <a href="demo-administrator.html" class="btn btn-accent">Попробовать демо <span class="arrow">&#8599;</span></a>
+                        <a href="https://t.me/cvvjesuss" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Заказать <span class="arrow">&#8599;</span></a>
+                    </div>
+                </div>
+                <div class="project-stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-value text-accent">~3%</span>
+                        <span class="stat-label">потерянных заявок<br><small>было ~35%</small></span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value text-accent">79%</span>
+                        <span class="stat-label">конверсия в запись<br><small>было 48%</small></span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value text-accent">8 сек</span>
+                        <span class="stat-label">время ответа<br><small>было 12 мин</small></span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value text-accent">45 000₽</span>
+                        <span class="stat-label">экономия в месяц<br><small>на администраторе</small></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-details">
+        <div class="container">
+            <div class="details-grid">
+                <div class="detail-block">
+                    <h2>Для кого</h2>
+                    <p>Салоны красоты, стоматологии, барбершопы, рестораны, студии, клиники — любой бизнес, где есть запись клиентов.</p>
+                </div>
+                <div class="detail-block">
+                    <h2>Как устроено</h2>
+                    <p>Бот подключается к вашему мессенджеру через API. Когда клиент пишет сообщение, оно попадает в языковую модель с заранее настроенным промптом — туда загружены ваши услуги, цены, расписание мастеров и правила общения. Модель понимает контекст разговора, помнит что клиент говорил раньше и отвечает как живой администратор. Расписание синхронизируется с вашей CRM или Google Calendar.</p>
+                </div>
+                <div class="detail-block detail-wide">
+                    <h2>Что умеет</h2>
+                    <ul class="feature-list">
+                        <li>Отвечать на вопросы по услугам и ценам</li>
+                        <li>Показывать свободное время у конкретного мастера</li>
+                        <li>Записывать клиента (имя, телефон, время, услуга)</li>
+                        <li>Напоминать о визите за день и за час</li>
+                        <li>Передавать сложные вопросы живому администратору</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-cta">
+        <div class="container">
+            <div class="cta-card">
+                <h2>Хотите такого же администратора?</h2>
+                <p>Расскажите о вашем бизнесе — настрою под ваши услуги, цены и расписание.</p>
+                <div class="hero-buttons" style="justify-content: center;">
+                    <a href="demo-administrator.html" class="btn btn-accent">Попробовать демо <span class="arrow">&#8599;</span></a>
+                    <a href="https://t.me/cvvjesuss" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Написать в Telegram <span class="arrow">&#8599;</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <a href="index.html" class="footer-logo">ВЕНЧАКОВ</a>
+            <ul class="footer-links">
+                <li><a href="index.html">Обо мне</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+            <p class="footer-copy">&copy; 2026 venchakov.com</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
