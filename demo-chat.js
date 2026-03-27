@@ -1,53 +1,47 @@
 /**
- * Общий движок чата для демо-страниц.
+ * Скриптовый движок чата для демо-страниц.
  * Конфигурация задаётся через window.DEMO_CONFIG перед подключением скрипта.
  *
  * window.DEMO_CONFIG = {
- *   systemPrompt: '...',
  *   greeting: '...',
- *   quickMessages: ['...', '...']
+ *   quickMessages: ['...'],
+ *   responses: { 'вопрос': 'ответ', ... },
+ *   fallback: '...'
  * }
  */
 
 (function () {
   'use strict';
 
-  const API_URL = 'https://ollama.com/api/chat';
-  const API_KEY = '9d1aa6cb18c94e66a7826b2237120b8e.Fa62zp4_z6UP3pyYT-y2-Ji1';
-  const MODEL = 'gemma3:4b';
+  var TG_LINK = 'https://t.me/cvvjesuss';
+  var config = window.DEMO_CONFIG;
+  if (!config) return;
 
-  const config = window.DEMO_CONFIG;
-  if (!config) {
-    console.error('DEMO_CONFIG не задан');
-    return;
-  }
+  var chat = document.getElementById('chat');
+  var input = document.getElementById('input');
+  var sendBtn = document.getElementById('sendBtn');
+  var quickRow = document.getElementById('quickRow');
+  var loading = false;
 
-  const messages = [];
-  const chat = document.getElementById('chat');
-  const input = document.getElementById('input');
-  const sendBtn = document.getElementById('sendBtn');
-  const quickRow = document.getElementById('quickRow');
-  let loading = false;
-
-  function escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
-  }
+  var FALLBACK = config.fallback || 'Это демо-версия, возможности ограничены. Чтобы подключить такой продукт себе — напишите мне в Telegram: ' + TG_LINK;
 
   function addBubble(role, text) {
-    const row = document.createElement('div');
+    var row = document.createElement('div');
     row.className = 'msg-row' + (role === 'user' ? ' user' : '');
-    const bubble = document.createElement('div');
+    var bubble = document.createElement('div');
     bubble.className = 'bubble ' + role;
-    bubble.textContent = text;
+    if (role === 'ai' && text.indexOf(TG_LINK) !== -1) {
+      bubble.innerHTML = text.replace(TG_LINK, '<a href="' + TG_LINK + '" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline">' + TG_LINK + '</a>');
+    } else {
+      bubble.textContent = text;
+    }
     row.appendChild(bubble);
     chat.appendChild(row);
     chat.scrollTop = chat.scrollHeight;
   }
 
   function showTyping() {
-    const row = document.createElement('div');
+    var row = document.createElement('div');
     row.className = 'msg-row';
     row.id = 'typing';
     row.innerHTML = '<div class="bubble ai typing"><span class="dot">&#9679;</span><span class="dot">&#9679;</span><span class="dot">&#9679;</span></div>';
@@ -56,7 +50,7 @@
   }
 
   function hideTyping() {
-    const el = document.getElementById('typing');
+    var el = document.getElementById('typing');
     if (el) el.remove();
   }
 
@@ -64,14 +58,31 @@
     sendBtn.disabled = !input.value.trim() || loading;
   }
 
+  function findResponse(text) {
+    var lower = text.toLowerCase().trim();
+    // Точное совпадение
+    for (var key in config.responses) {
+      if (lower === key.toLowerCase()) return config.responses[key];
+    }
+    // Частичное совпадение
+    for (var key2 in config.responses) {
+      var words = key2.toLowerCase().split(' ');
+      var matched = 0;
+      for (var i = 0; i < words.length; i++) {
+        if (lower.indexOf(words[i]) !== -1) matched++;
+      }
+      if (matched >= Math.ceil(words.length * 0.6)) return config.responses[key2];
+    }
+    return null;
+  }
+
   // Приветствие
   addBubble('ai', config.greeting);
-  messages.push({ role: 'assistant', content: config.greeting });
 
   // Быстрые кнопки
   if (quickRow && config.quickMessages) {
     config.quickMessages.forEach(function (text) {
-      const btn = document.createElement('button');
+      var btn = document.createElement('button');
       btn.className = 'quick-btn';
       btn.textContent = text;
       btn.addEventListener('click', function () { send(text); });
@@ -79,68 +90,30 @@
     });
   }
 
-  async function send(text) {
+  function send(text) {
     if (!text || !text.trim() || loading) return;
     text = text.trim();
-
-    // Ограничение длины сообщения (клиентская валидация)
-    if (text.length > 1500) {
-      addBubble('ai', 'Сообщение слишком длинное. Попробуйте короче.');
-      return;
-    }
-
     loading = true;
     sendBtn.disabled = true;
     input.disabled = true;
     if (quickRow) quickRow.style.display = 'none';
 
     addBubble('user', text);
-    messages.push({ role: 'user', content: text });
     input.value = '';
     showTyping();
 
-    try {
-      const apiMessages = [
-        { role: 'system', content: config.systemPrompt },
-        ...messages.map(function (m) { return { role: m.role, content: m.content }; })
-      ];
-
-      const res = await fetch(API_URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': 'Bearer ' + API_KEY
-        },
-        body: JSON.stringify({ model: MODEL, messages: apiMessages, stream: false })
-      });
-
-      if (res.status === 429) {
-        hideTyping();
-        addBubble('ai', 'Слишком много запросов. Подождите минуту и попробуйте снова.');
-        return;
-      }
-
-      if (!res.ok) {
-        throw new Error('HTTP ' + res.status);
-      }
-
-      const data = await res.json();
-      var reply = data.message?.content || 'Произошла ошибка.';
+    var delay = 600 + Math.random() * 800;
+    setTimeout(function () {
       hideTyping();
+      var reply = findResponse(text) || FALLBACK;
       addBubble('ai', reply);
-      messages.push({ role: 'assistant', content: reply });
-    } catch (e) {
-      hideTyping();
-      addBubble('ai', 'Связь прервалась. Попробуйте обновить страницу.');
-    } finally {
       loading = false;
       input.disabled = false;
       input.focus();
       updateSendBtn();
-    }
+    }, delay);
   }
 
-  // Глобальная функция для обратной совместимости
   window.send = send;
 
   input.addEventListener('input', updateSendBtn);
