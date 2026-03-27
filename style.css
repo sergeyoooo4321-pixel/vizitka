@@ -321,6 +321,21 @@ img {
     gap: 12px;
 }
 
+/* Hero photo */
+.hero-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-photo-img {
+    width: 100%;
+    max-width: 480px;
+    border-radius: var(--radius-lg);
+    object-fit: cover;
+    aspect-ratio: 3 / 4;
+}
+
 /* ==============================
    BENTO CARDS
    ============================== */
@@ -979,6 +994,10 @@ img {
 
     .hero-bento {
         max-width: 480px;
+    }
+
+    .hero-photo {
+        max-width: 360px;
     }
 
     .bento-services-preview {
