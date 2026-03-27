@@ -57,477 +57,323 @@
         </div>
     </section>
 
-    <!-- Фильтр -->
-    <section class="reviews-filter">
-        <div class="container">
-            <div class="filter-row">
-                <button class="filter-btn active" data-filter="all">Все</button>
-                <button class="filter-btn" data-filter="admin">ИИ-Администратор <span class="filter-count">10</span></button>
-                <button class="filter-btn" data-filter="sales">ИИ-Отдел продаж <span class="filter-count">9</span></button>
-                <button class="filter-btn" data-filter="secretary">ИИ-Секретарь <span class="filter-count">9</span></button>
-                <button class="filter-btn" data-filter="custom">Кастом <span class="filter-count">6</span></button>
-            </div>
-        </div>
-    </section>
 
     <!-- Отзывы -->
     <section class="reviews-section">
         <div class="container">
+            <div class="reviews-grid">
 
-            <!-- ИИ-Администратор -->
-            <div class="reviews-category" data-category="admin">
-                <div class="category-header">
-                    <h2>ИИ-Администратор</h2>
-                    <span class="category-count">10 отзывов</span>
+                <!-- ИИ-Администратор — 10 отзывов -->
+                <div class="review-card">
+                    <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                    <p class="review-text">Подключили бота 2 недели назад и честно не ожидала такого эффекта. Клиенты записываются ночью, в выходные, когда администратор спит. За первую неделю 23 записи пришло через бота. Раньше эти люди просто не дозвонились бы и ушли.</p>
+                    <div class="review-author">
+                        <div class="review-name-row"><span class="review-name">Алина М.</span><span class="review-project-tag">ИИ-Администратор</span></div>
+                        <span class="review-role">владелица салона красоты</span>
+                    </div>
                 </div>
-                <div class="reviews-grid">
 
-                    <div class="review-card">
-                        <div class="review-top">
-                            <div class="review-stars" data-rating="5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            <span class="review-project-tag">ИИ-Администратор</span>
-                        </div>
-                        <p class="review-text">Подключили бота 2 недели назад и честно не ожидала такого эффекта. Клиенты записываются ночью, в выходные, когда администратор спит. За первую неделю 23 записи пришло через бота. Раньше эти люди просто не дозвонились бы и ушли.</p>
-                        <div class="review-author">
-                            <span class="review-name">Алина М.</span>
-                            <span class="review-role">владелица салона красоты</span>
-                        </div>
+                <div class="review-card">
+                    <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;</span><span class="star-off">&#9733;</span></div>
+                    <p class="review-text">В целом работает хорошо, клиенты записываются. Но бот иногда путает свободные слоты если мы меняем расписание в последний момент. Сергей сказал что доработает синхронизацию, жду. А так идея огонь и пациенты довольны.</p>
+                    <div class="review-author">
+                        <div class="review-name-row"><span class="review-name">Дмитрий К.</span><span class="review-project-tag">ИИ-Администратор</span></div>
+                        <span class="review-role">стоматология</span>
                     </div>
-
-                    <div class="review-card">
-                        <div class="review-top">
-                            <div class="review-stars" data-rating="4">&#9733;&#9733;&#9733;&#9733;<span class="star-empty">&#9733;</span></div>
-                            <span class="review-project-tag">ИИ-Администратор</span>
-                        </div>
-                        <p class="review-text">В целом работает хорошо, клиенты записываются. Но бот иногда путает свободные слоты если мы меняем расписание в последний момент. Сергей сказал что доработает синхронизацию, жду. А так идея огонь и пациенты довольны.</p>
-                        <div class="review-author">
-                            <span class="review-name">Дмитрий К.</span>
-                            <span class="review-role">стоматология</span>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-top">
-                            <div class="review-stars" data-rating="5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            <span class="review-project-tag">ИИ-Администратор</span>
-                        </div>
-                        <p class="review-text">У нас маленький барбершоп, 3 мастера. Раньше я сама сидела в телефоне и отвечала всем в директ и телеграм. Сейчас бот всё делает, я освободила себе реально часа 3 в день. Деньги за разработку отбились за месяц.</p>
-                        <div class="review-author">
-                            <span class="review-name">Наталья В.</span>
-                            <span class="review-role">барбершоп</span>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-top">
-                            <div class="review-stars" data-rating="5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            <span class="review-project-tag">ИИ-Администратор</span>
-                        </div>
-                        <p class="review-text">Бот бронирует столики, отвечает по меню, подсказывает что у нас есть веранда и детская комната. Клиенты в восторге, некоторые даже не понимают что общаются не с человеком. Рекомендую.</p>
-                        <div class="review-author">
-                            <span class="review-name">Руслан А.</span>
-                            <span class="review-role">ресторан</span>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-top">
-                            <div class="review-stars" data-rating="3">&#9733;&#9733;&#9733;<span class="star-empty">&#9733;&#9733;</span></div>
-                            <span class="review-project-tag">ИИ-Администратор</span>
-                        </div>
-                        <p class="review-text">Бот работает но ответы иногда слишком шаблонные. Клиентка спросила можно ли прийти с ребёнком и бот начал рассказывать про услуги. Хотелось бы более гибких ответов. Сергей пообещал доработать промпт.</p>
-                        <div class="review-author">
-                            <span class="review-name">Оксана Д.</span>
-                            <span class="review-role">студия маникюра</span>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-top">
-                            <div class="review-stars" data-rating="5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            <span class="review-project-tag">ИИ-Администратор</span>
-                        </div>
-                        <p class="review-text">Подключили на 3 филиала сразу. Каждый бот знает своё расписание, своих врачей и свои цены. Экономим на 2 администраторах, это около 120к в месяц. Сергей вообще красавчик, сделал быстро и без косяков.</p>
-                        <div class="review-author">
-                            <span class="review-name">Марат Т.</span>
-                            <span class="review-role">сеть стоматологий</span>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-top">
-                            <div class="review-stars" data-rating="5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            <span class="review-project-tag">ИИ-Администратор</span>
-                        </div>
-                        <p class="review-text">Я работаю одна и мне было вообще нереально параллельно принимать клиентов и отвечать на сообщения. Теперь бот записывает пока я работаю. Конверсия из обращения в запись выросла процентов на 40 точно.</p>
-                        <div class="review-author">
-                            <span class="review-name">Екатерина Л.</span>
-                            <span class="review-role">косметолог</span>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-top">
-                            <div class="review-stars" data-rating="5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            <span class="review-project-tag">ИИ-Администратор</span>
-                        </div>
-                        <p class="review-text">Сначала думал зачем кафе бот, это же не салон. Но когда посчитал сколько бронирований мы теряем потому что не берём трубку в час пик — согласился попробовать. Не пожалел вообще, бот отрабатывает чётко.</p>
-                        <div class="review-author">
-                            <span class="review-name">Игорь С.</span>
-                            <span class="review-role">кафе</span>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-top">
-                            <div class="review-stars" data-rating="4">&#9733;&#9733;&#9733;&#9733;<span class="star-empty">&#9733;</span></div>
-                            <span class="review-project-tag">ИИ-Администратор</span>
-                        </div>
-                        <p class="review-text">Хороший бот, записывает на занятия, подсказывает расписание. Единственное — хотелось бы чтобы он ещё напоминания слал за час до занятия. Сергей сказал добавит в следующем обновлении.</p>
-                        <div class="review-author">
-                            <span class="review-name">Арина П.</span>
-                            <span class="review-role">йога студия</span>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-top">
-                            <div class="review-stars" data-rating="5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            <span class="review-project-tag">ИИ-Администратор</span>
-                        </div>
-                        <p class="review-text">Мы подключили бота и забыли что такое пропущенные заявки. Серьёзно, раньше в день терялось 5-10 клиентов которые писали вечером. Сейчас ноль потерь. Окупилось за 2 недели.</p>
-                        <div class="review-author">
-                            <span class="review-name">Виктор Н.</span>
-                            <span class="review-role">сеть барбершопов</span>
-                        </div>
-                    </div>
-
                 </div>
+
+                <div class="review-card">
+                    <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                    <p class="review-text">У нас маленький барбершоп, 3 мастера. Раньше я сама сидела в телефоне и отвечала всем в директ и телеграм. Сейчас бот всё делает, я освободила себе реально часа 3 в день. Деньги за разработку отбились за месяц.</p>
+                    <div class="review-author">
+                        <div class="review-name-row"><span class="review-name">Наталья В.</span><span class="review-project-tag">ИИ-Администратор</span></div>
+                        <span class="review-role">барбершоп</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                    <p class="review-text">Бот бронирует столики, отвечает по меню, подсказывает что у нас есть веранда и детская комната. Клиенты в восторге, некоторые даже не понимают что общаются не с человеком. Рекомендую.</p>
+                    <div class="review-author">
+                        <div class="review-name-row"><span class="review-name">Руслан А.</span><span class="review-project-tag">ИИ-Администратор</span></div>
+                        <span class="review-role">ресторан</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;</span><span class="star-off">&#9733;&#9733;</span></div>
+                    <p class="review-text">Бот работает но ответы иногда слишком шаблонные. Клиентка спросила можно ли прийти с ребёнком и бот начал рассказывать про услуги. Хотелось бы более гибких ответов. Сергей пообещал доработать промпт.</p>
+                    <div class="review-author">
+                        <div class="review-name-row"><span class="review-name">Оксана Д.</span><span class="review-project-tag">ИИ-Администратор</span></div>
+                        <span class="review-role">студия маникюра</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                    <p class="review-text">Подключили на 3 филиала сразу. Каждый бот знает своё расписание, своих врачей и свои цены. Экономим на 2 администраторах, это около 120к в месяц. Сергей вообще красавчик, сделал быстро и без косяков.</p>
+                    <div class="review-author">
+                        <div class="review-name-row"><span class="review-name">Марат Т.</span><span class="review-project-tag">ИИ-Администратор</span></div>
+                        <span class="review-role">сеть стоматологий</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                    <p class="review-text">Я работаю одна и мне было вообще нереально параллельно принимать клиентов и отвечать на сообщения. Теперь бот записывает пока я работаю. Конверсия из обращения в запись выросла процентов на 40 точно.</p>
+                    <div class="review-author">
+                        <div class="review-name-row"><span class="review-name">Екатерина Л.</span><span class="review-project-tag">ИИ-Администратор</span></div>
+                        <span class="review-role">косметолог</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                    <p class="review-text">Сначала думал зачем кафе бот, это же не салон. Но когда посчитал сколько бронирований мы теряем потому что не берём трубку в час пик — согласился попробовать. Не пожалел вообще, бот отрабатывает чётко.</p>
+                    <div class="review-author">
+                        <div class="review-name-row"><span class="review-name">Игорь С.</span><span class="review-project-tag">ИИ-Администратор</span></div>
+                        <span class="review-role">кафе</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;</span><span class="star-off">&#9733;</span></div>
+                    <p class="review-text">Хороший бот, записывает на занятия, подсказывает расписание. Единственное — хотелось бы чтобы он ещё напоминания слал за час до занятия. Сергей сказал добавит в следующем обновлении.</p>
+                    <div class="review-author">
+                        <div class="review-name-row"><span class="review-name">Арина П.</span><span class="review-project-tag">ИИ-Администратор</span></div>
+                        <span class="review-role">йога студия</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                    <p class="review-text">Мы подключили бота и забыли что такое пропущенные заявки. Серьёзно, раньше в день терялось 5-10 клиентов которые писали вечером. Сейчас ноль потерь. Окупилось за 2 недели.</p>
+                    <div class="review-author">
+                        <div class="review-name-row"><span class="review-name">Виктор Н.</span><span class="review-project-tag">ИИ-Администратор</span></div>
+                        <span class="review-role">сеть барбершопов</span>
+                    </div>
+                </div>
+
+                <!-- ИИ-Отдел продаж — 9 отзывов -->
+                <div class="review-card">
+                    <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                    <p class="review-text">Бот обрабатывает заявки с сайта, квалифицирует и передаёт менеджерам уже тёплых лидов. Менеджеры перестали тратить время на тех кто просто спрашивает цену и уходит. Конверсия в продажу выросла с 12% до 21%.</p>
+                    <div class="review-author">
+                        <div class="review-name-row"><span class="review-name">Андрей Г.</span><span class="review-project-tag tag-sales">ИИ-Отдел продаж</span></div>
+                        <span class="review-role">интернет-магазин электроники</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                    <p class="review-text">У нас курсы по дизайну и раньше менеджер тратил по 20 минут на каждого. Бот теперь сам рассказывает про программу, отвечает на возражения и записывает на бесплатный вебинар. Это просто спасение.</p>
+                    <div class="review-author">
+                        <div class="review-name-row"><span class="review-name">Юлия Ф.</span><span class="review-project-tag tag-sales">ИИ-Отдел продаж</span></div>
+                        <span class="review-role">онлайн школа</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;</span><span class="star-off">&#9733;</span></div>
+                    <p class="review-text">Неплохо работает для первичной квалификации. Бот задаёт правильные вопросы и выясняет бюджет, сроки, потребность. Но иногда бывает слишком настойчивым. Попросил смягчить тон, Сергей поправил за день.</p>
+                    <div class="review-author">
+                        <div class="review-name-row"><span class="review-name">Константин Р.</span><span class="review-project-tag tag-sales">ИИ-Отдел продаж</span></div>
+                        <span class="review-role">b2b услуги</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                    <p class="review-text">Подключила в инстаграм. Люди пишут "сколько стоит диван" и бот ведёт полноценную консультацию, уточняет размеры, предлагает варианты. За первый месяц бот сделал продаж на 340к. Без менеджера вообще.</p>
+                    <div class="review-author">
+                        <div class="review-name-row"><span class="review-name">Лариса Б.</span><span class="review-project-tag tag-sales">ИИ-Отдел продаж</span></div>
+                        <span class="review-role">магазин мебели</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                    <p class="review-text">Мы сами продаём софт и внедрили бота на первую линию. Он отвечает на типовые вопросы и записывает на демо. Раньше записывалось 15 человек в неделю, сейчас 35-40. Трафик тот же.</p>
+                    <div class="review-author">
+                        <div class="review-name-row"><span class="review-name">Тимур Х.</span><span class="review-project-tag tag-sales">ИИ-Отдел продаж</span></div>
+                        <span class="review-role">CRM для автосервисов</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;</span><span class="star-off">&#9733;&#9733;</span></div>
+                    <p class="review-text">Идея хорошая но для недвижимости бот пока сыроват. Клиенты задают очень специфичные вопросы про ипотеку, документы, район. Бот не всегда справляется. Для простых товаров наверно работает лучше.</p>
+                    <div class="review-author">
+                        <div class="review-name-row"><span class="review-name">Евгения Ш.</span><span class="review-project-tag tag-sales">ИИ-Отдел продаж</span></div>
+                        <span class="review-role">недвижимость</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                    <p class="review-text">Бот продаёт абонементы через телеграм лучше чем наш менеджер на ресепшене. Серьёзно, он не устаёт, не хамит, всегда вежливый и знает все акции. За 2 месяца окупил себя раз 5.</p>
+                    <div class="review-author">
+                        <div class="review-name-row"><span class="review-name">Павел М.</span><span class="review-project-tag tag-sales">ИИ-Отдел продаж</span></div>
+                        <span class="review-role">фитнес клуб</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                    <p class="review-text">Бот помогает клиентам выбрать букет под повод. Спрашивает кому цветы, какой бюджет, предпочтения. Люди говорят что это как личный флорист в телефоне. Выручка выросла на 25% за счёт допродаж.</p>
+                    <div class="review-author">
+                        <div class="review-name-row"><span class="review-name">Диана К.</span><span class="review-project-tag tag-sales">ИИ-Отдел продаж</span></div>
+                        <span class="review-role">цветочный магазин</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                    <p class="review-text">Бот проводит мини тест на уровень языка и сразу предлагает подходящую группу с ценой. Конверсия из лида в оплату была 8%, стала 19%. Я даже не верил что такое возможно с ботом.</p>
+                    <div class="review-author">
+                        <div class="review-name-row"><span class="review-name">Артём В.</span><span class="review-project-tag tag-sales">ИИ-Отдел продаж</span></div>
+                        <span class="review-role">курсы английского</span>
+                    </div>
+                </div>
+
+                <!-- ИИ-Секретарь — 9 отзывов -->
+                <div class="review-card">
+                    <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                    <p class="review-text">Каждое утро получаю саммари: что срочно, что может подождать, на что ответить самому а что делегировать. Раньше тратил час на разбор почты, сейчас 10 минут. Это лучшая инвестиция за этот год.</p>
+                    <div class="review-author">
+                        <div class="review-name-row"><span class="review-name">Максим Л.</span><span class="review-project-tag tag-secretary">ИИ-Секретарь</span></div>
+                        <span class="review-role">CEO IT компании</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;</span><span class="star-off">&#9733;</span></div>
+                    <p class="review-text">В целом удобно, секретарь приоритизирует задачи и помогает с черновиками ответов. Но иногда неправильно оценивает приоритет — поставил рекламное предложение как "важное" потому что там было слово "срочно".</p>
+                    <div class="review-author">
+                        <div class="review-name-row"><span class="review-name">Ольга Р.</span><span class="review-project-tag tag-secretary">ИИ-Секретарь</span></div>
+                        <span class="review-role">директор агентства</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                    <p class="review-text">У меня 4 объекта и в день прилетает штук 80 сообщений. Раньше я реально тонул в этом, забывал ответить важным людям. Сейчас секретарь всё разгребает и подсказывает что горит. Спасибо, реально спас мне нервы.</p>
+                    <div class="review-author">
+                        <div class="review-name-row"><span class="review-name">Владимир Т.</span><span class="review-project-tag tag-secretary">ИИ-Секретарь</span></div>
+                        <span class="review-role">строительная компания</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                    <p class="review-text">Подключила для управления входящими от разных отделов. Секретарь группирует сообщения по темам и выдаёт мне дайджест 3 раза в день. Я перестала бояться что что-то пропущу. Вещь!</p>
+                    <div class="review-author">
+                        <div class="review-name-row"><span class="review-name">Анна С.</span><span class="review-project-tag tag-secretary">ИИ-Секретарь</span></div>
+                        <span class="review-role">управляющая отелем</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars"><span class="star-on">&#9733;&#9733;</span><span class="star-off">&#9733;&#9733;&#9733;</span></div>
+                    <p class="review-text">Честно не понял зачем мне это. У меня небольшой бизнес и сообщений не так много, сам справляюсь. Может для крупных компаний актуально. Сергей предложил бесплатно потестить другой продукт, ценю подход.</p>
+                    <div class="review-author">
+                        <div class="review-name-row"><span class="review-name">Сергей Б.</span><span class="review-project-tag tag-secretary">ИИ-Секретарь</span></div>
+                        <span class="review-role">предприниматель</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                    <p class="review-text">Секретарь составляет черновики ответов и я просто правлю и отправляю. Экономит минут 40 в день минимум. Особенно нравится что он понимает контекст переписки и не пишет отсебятину.</p>
+                    <div class="review-author">
+                        <div class="review-name-row"><span class="review-name">Кристина Ж.</span><span class="review-project-tag tag-secretary">ИИ-Секретарь</span></div>
+                        <span class="review-role">финансовый директор</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                    <p class="review-text">Пользуюсь 3 месяца, привык настолько что без него уже как без рук. Утреннее саммари это прям маст хэв. Коллеги заметили что я стал быстрее отвечать и меньше забывать задачи.</p>
+                    <div class="review-author">
+                        <div class="review-name-row"><span class="review-name">Денис О.</span><span class="review-project-tag tag-secretary">ИИ-Секретарь</span></div>
+                        <span class="review-role">руководитель отдела</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                    <p class="review-text">Когда ты фаундер и у тебя нет бюджета на помощника — этот бот спасение. Он реально заменяет секретаря процентов на 70. Оставшиеся 30 это чисто физические задачи типа принести кофе.</p>
+                    <div class="review-author">
+                        <div class="review-name-row"><span class="review-name">Алексей К.</span><span class="review-project-tag tag-secretary">ИИ-Секретарь</span></div>
+                        <span class="review-role">основатель стартапа</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;</span><span class="star-off">&#9733;</span></div>
+                    <p class="review-text">Удобная штука для тех у кого много переписок. Бот хорошо фильтрует спам и неважное. Хотела бы ещё интеграцию с гугл календарём чтобы сам туда задачи кидал, надеюсь появится.</p>
+                    <div class="review-author">
+                        <div class="review-name-row"><span class="review-name">Марина Д.</span><span class="review-project-tag tag-secretary">ИИ-Секретарь</span></div>
+                        <span class="review-role">директор школы танцев</span>
+                    </div>
+                </div>
+
+                <!-- Кастомные проекты — 6 отзывов -->
+                <div class="review-card">
+                    <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                    <p class="review-text">Заказывали бота который распознаёт фото накладных и заносит данные в таблицу. Раньше бухгалтер вбивала руками по 50 штук в день. Сейчас кидает фото в бот и всё. Ошибок меньше, скорость в 10 раз быстрее.</p>
+                    <div class="review-author">
+                        <div class="review-name-row"><span class="review-name">Роман Е.</span><span class="review-project-tag tag-custom">Автоматизация накладных</span></div>
+                        <span class="review-role">логистическая компания</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                    <p class="review-text">Сергей сделал систему которая сама собирает данные из рекламных кабинетов и генерит красивый отчёт в PDF. Раньше дизайнер тратил 2 дня в месяц на это. Сейчас нажал кнопку и готово. Рекомендую однозначно.</p>
+                    <div class="review-author">
+                        <div class="review-name-row"><span class="review-name">Ирина Г.</span><span class="review-project-tag tag-custom">Автогенерация отчётов</span></div>
+                        <span class="review-role">маркетинговое агентство</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;</span><span class="star-off">&#9733;</span></div>
+                    <p class="review-text">Сделал нам полноценную CRM в телеграме. Клиенты записываются, мы видим загрузку по боксам, история клиентов сохраняется. Есть мелкие баги которые фиксятся постепенно, но в целом экономит кучу времени.</p>
+                    <div class="review-author">
+                        <div class="review-name-row"><span class="review-name">Георгий П.</span><span class="review-project-tag tag-custom">Telegram-бот + CRM</span></div>
+                        <span class="review-role">сеть автомоек</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                    <p class="review-text">Мне сделали лендинг и бота для записи на консультации. Всё в одном стиле, клиенты переходят с сайта в бот и сразу записываются. Раньше я сама переписывалась с каждым. Сейчас поток идёт на автомате.</p>
+                    <div class="review-author">
+                        <div class="review-name-row"><span class="review-name">Полина Н.</span><span class="review-project-tag tag-custom">Сайт + бот записи</span></div>
+                        <span class="review-role">психолог</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                    <p class="review-text">Заказал парсер который мониторит цены конкурентов и автоматически корректирует наши. Работает 24/7, обновляет прайс каждые 2 часа. За первый месяц маржа выросла на 8%.</p>
+                    <div class="review-author">
+                        <div class="review-name-row"><span class="review-name">Олег Ж.</span><span class="review-project-tag tag-custom">Парсер прайсов</span></div>
+                        <span class="review-role">интернет-магазин</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars"><span class="star-on">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                    <p class="review-text">Клиент пишет площадь квартиры и тип уборки, бот сам считает цену и предлагает записаться. Конверсия из заявки в заказ была 30%, стала 55%. Менеджер больше не нужен на первой линии.</p>
+                    <div class="review-author">
+                        <div class="review-name-row"><span class="review-name">Светлана К.</span><span class="review-project-tag tag-custom">Бот-калькулятор</span></div>
+                        <span class="review-role">клининговая компания</span>
+                    </div>
+                </div>
+
             </div>
-
-            <!-- ИИ-Отдел продаж -->
-            <div class="reviews-category" data-category="sales">
-                <div class="category-header">
-                    <h2>ИИ-Отдел продаж</h2>
-                    <span class="category-count">9 отзывов</span>
-                </div>
-                <div class="reviews-grid">
-
-                    <div class="review-card">
-                        <div class="review-top">
-                            <div class="review-stars" data-rating="5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            <span class="review-project-tag tag-sales">ИИ-Отдел продаж</span>
-                        </div>
-                        <p class="review-text">Бот обрабатывает заявки с сайта, квалифицирует и передаёт менеджерам уже тёплых лидов. Менеджеры перестали тратить время на тех кто просто спрашивает цену и уходит. Конверсия в продажу выросла с 12% до 21%.</p>
-                        <div class="review-author">
-                            <span class="review-name">Андрей Г.</span>
-                            <span class="review-role">интернет-магазин электроники</span>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-top">
-                            <div class="review-stars" data-rating="5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            <span class="review-project-tag tag-sales">ИИ-Отдел продаж</span>
-                        </div>
-                        <p class="review-text">У нас курсы по дизайну и раньше менеджер тратил по 20 минут на каждого. Бот теперь сам рассказывает про программу, отвечает на возражения и записывает на бесплатный вебинар. Это просто спасение.</p>
-                        <div class="review-author">
-                            <span class="review-name">Юлия Ф.</span>
-                            <span class="review-role">онлайн школа</span>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-top">
-                            <div class="review-stars" data-rating="4">&#9733;&#9733;&#9733;&#9733;<span class="star-empty">&#9733;</span></div>
-                            <span class="review-project-tag tag-sales">ИИ-Отдел продаж</span>
-                        </div>
-                        <p class="review-text">Неплохо работает для первичной квалификации. Бот задаёт правильные вопросы и выясняет бюджет, сроки, потребность. Но иногда бывает слишком настойчивым. Попросил смягчить тон, Сергей поправил за день.</p>
-                        <div class="review-author">
-                            <span class="review-name">Константин Р.</span>
-                            <span class="review-role">b2b услуги</span>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-top">
-                            <div class="review-stars" data-rating="5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            <span class="review-project-tag tag-sales">ИИ-Отдел продаж</span>
-                        </div>
-                        <p class="review-text">Подключила в инстаграм. Люди пишут "сколько стоит диван" и бот ведёт полноценную консультацию, уточняет размеры, предлагает варианты. За первый месяц бот сделал продаж на 340к. Без менеджера вообще.</p>
-                        <div class="review-author">
-                            <span class="review-name">Лариса Б.</span>
-                            <span class="review-role">магазин мебели</span>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-top">
-                            <div class="review-stars" data-rating="5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            <span class="review-project-tag tag-sales">ИИ-Отдел продаж</span>
-                        </div>
-                        <p class="review-text">Мы сами продаём софт и внедрили бота на первую линию. Он отвечает на типовые вопросы и записывает на демо. Раньше записывалось 15 человек в неделю, сейчас 35-40. Трафик тот же.</p>
-                        <div class="review-author">
-                            <span class="review-name">Тимур Х.</span>
-                            <span class="review-role">CRM для автосервисов</span>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-top">
-                            <div class="review-stars" data-rating="3">&#9733;&#9733;&#9733;<span class="star-empty">&#9733;&#9733;</span></div>
-                            <span class="review-project-tag tag-sales">ИИ-Отдел продаж</span>
-                        </div>
-                        <p class="review-text">Идея хорошая но для недвижимости бот пока сыроват. Клиенты задают очень специфичные вопросы про ипотеку, документы, район. Бот не всегда справляется. Для простых товаров наверно работает лучше.</p>
-                        <div class="review-author">
-                            <span class="review-name">Евгения Ш.</span>
-                            <span class="review-role">недвижимость</span>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-top">
-                            <div class="review-stars" data-rating="5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            <span class="review-project-tag tag-sales">ИИ-Отдел продаж</span>
-                        </div>
-                        <p class="review-text">Бот продаёт абонементы через телеграм лучше чем наш менеджер на ресепшене. Серьёзно, он не устаёт, не хамит, всегда вежливый и знает все акции. За 2 месяца окупил себя раз 5.</p>
-                        <div class="review-author">
-                            <span class="review-name">Павел М.</span>
-                            <span class="review-role">фитнес клуб</span>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-top">
-                            <div class="review-stars" data-rating="5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            <span class="review-project-tag tag-sales">ИИ-Отдел продаж</span>
-                        </div>
-                        <p class="review-text">Бот помогает клиентам выбрать букет под повод. Спрашивает кому цветы, какой бюджет, предпочтения. Люди говорят что это как личный флорист в телефоне. Выручка выросла на 25% за счёт допродаж.</p>
-                        <div class="review-author">
-                            <span class="review-name">Диана К.</span>
-                            <span class="review-role">цветочный магазин</span>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-top">
-                            <div class="review-stars" data-rating="5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            <span class="review-project-tag tag-sales">ИИ-Отдел продаж</span>
-                        </div>
-                        <p class="review-text">Бот проводит мини тест на уровень языка и сразу предлагает подходящую группу с ценой. Конверсия из лида в оплату была 8%, стала 19%. Я даже не верил что такое возможно с ботом.</p>
-                        <div class="review-author">
-                            <span class="review-name">Артём В.</span>
-                            <span class="review-role">курсы английского</span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- ИИ-Секретарь -->
-            <div class="reviews-category" data-category="secretary">
-                <div class="category-header">
-                    <h2>ИИ-Секретарь руководителя</h2>
-                    <span class="category-count">9 отзывов</span>
-                </div>
-                <div class="reviews-grid">
-
-                    <div class="review-card">
-                        <div class="review-top">
-                            <div class="review-stars" data-rating="5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            <span class="review-project-tag tag-secretary">ИИ-Секретарь</span>
-                        </div>
-                        <p class="review-text">Каждое утро получаю саммари: что срочно, что может подождать, на что ответить самому а что делегировать. Раньше тратил час на разбор почты, сейчас 10 минут. Это лучшая инвестиция за этот год.</p>
-                        <div class="review-author">
-                            <span class="review-name">Максим Л.</span>
-                            <span class="review-role">CEO IT компании</span>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-top">
-                            <div class="review-stars" data-rating="4">&#9733;&#9733;&#9733;&#9733;<span class="star-empty">&#9733;</span></div>
-                            <span class="review-project-tag tag-secretary">ИИ-Секретарь</span>
-                        </div>
-                        <p class="review-text">В целом удобно, секретарь приоритизирует задачи и помогает с черновиками ответов. Но иногда неправильно оценивает приоритет — поставил рекламное предложение как "важное" потому что там было слово "срочно".</p>
-                        <div class="review-author">
-                            <span class="review-name">Ольга Р.</span>
-                            <span class="review-role">директор агентства</span>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-top">
-                            <div class="review-stars" data-rating="5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            <span class="review-project-tag tag-secretary">ИИ-Секретарь</span>
-                        </div>
-                        <p class="review-text">У меня 4 объекта и в день прилетает штук 80 сообщений. Раньше я реально тонул в этом, забывал ответить важным людям. Сейчас секретарь всё разгребает и подсказывает что горит. Спасибо, реально спас мне нервы.</p>
-                        <div class="review-author">
-                            <span class="review-name">Владимир Т.</span>
-                            <span class="review-role">строительная компания</span>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-top">
-                            <div class="review-stars" data-rating="5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            <span class="review-project-tag tag-secretary">ИИ-Секретарь</span>
-                        </div>
-                        <p class="review-text">Подключила для управления входящими от разных отделов. Секретарь группирует сообщения по темам и выдаёт мне дайджест 3 раза в день. Я перестала бояться что что-то пропущу. Вещь!</p>
-                        <div class="review-author">
-                            <span class="review-name">Анна С.</span>
-                            <span class="review-role">управляющая отелем</span>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-top">
-                            <div class="review-stars" data-rating="2">&#9733;&#9733;<span class="star-empty">&#9733;&#9733;&#9733;</span></div>
-                            <span class="review-project-tag tag-secretary">ИИ-Секретарь</span>
-                        </div>
-                        <p class="review-text">Честно не понял зачем мне это. У меня небольшой бизнес и сообщений не так много, сам справляюсь. Может для крупных компаний актуально. Сергей предложил бесплатно потестить другой продукт, ценю подход.</p>
-                        <div class="review-author">
-                            <span class="review-name">Сергей Б.</span>
-                            <span class="review-role">предприниматель</span>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-top">
-                            <div class="review-stars" data-rating="5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            <span class="review-project-tag tag-secretary">ИИ-Секретарь</span>
-                        </div>
-                        <p class="review-text">Секретарь составляет черновики ответов и я просто правлю и отправляю. Экономит минут 40 в день минимум. Особенно нравится что он понимает контекст переписки и не пишет отсебятину.</p>
-                        <div class="review-author">
-                            <span class="review-name">Кристина Ж.</span>
-                            <span class="review-role">финансовый директор</span>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-top">
-                            <div class="review-stars" data-rating="5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            <span class="review-project-tag tag-secretary">ИИ-Секретарь</span>
-                        </div>
-                        <p class="review-text">Пользуюсь 3 месяца, привык настолько что без него уже как без рук. Утреннее саммари это прям маст хэв. Коллеги заметили что я стал быстрее отвечать и меньше забывать задачи.</p>
-                        <div class="review-author">
-                            <span class="review-name">Денис О.</span>
-                            <span class="review-role">руководитель отдела</span>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-top">
-                            <div class="review-stars" data-rating="5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            <span class="review-project-tag tag-secretary">ИИ-Секретарь</span>
-                        </div>
-                        <p class="review-text">Когда ты фаундер и у тебя нет бюджета на помощника — этот бот спасение. Он реально заменяет секретаря процентов на 70. Оставшиеся 30 это чисто физические задачи типа принести кофе.</p>
-                        <div class="review-author">
-                            <span class="review-name">Алексей К.</span>
-                            <span class="review-role">основатель стартапа</span>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-top">
-                            <div class="review-stars" data-rating="4">&#9733;&#9733;&#9733;&#9733;<span class="star-empty">&#9733;</span></div>
-                            <span class="review-project-tag tag-secretary">ИИ-Секретарь</span>
-                        </div>
-                        <p class="review-text">Удобная штука для тех у кого много переписок. Бот хорошо фильтрует спам и неважное. Хотела бы ещё интеграцию с гугл календарём чтобы сам туда задачи кидал, надеюсь появится.</p>
-                        <div class="review-author">
-                            <span class="review-name">Марина Д.</span>
-                            <span class="review-role">директор школы танцев</span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Кастомные проекты -->
-            <div class="reviews-category" data-category="custom">
-                <div class="category-header">
-                    <h2>Кастомные проекты</h2>
-                    <span class="category-count">6 отзывов</span>
-                </div>
-                <div class="reviews-grid">
-
-                    <div class="review-card">
-                        <div class="review-top">
-                            <div class="review-stars" data-rating="5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            <span class="review-project-tag tag-custom">Автоматизация накладных</span>
-                        </div>
-                        <p class="review-text">Заказывали бота который распознаёт фото накладных и заносит данные в таблицу. Раньше бухгалтер вбивала руками по 50 штук в день. Сейчас кидает фото в бот и всё. Ошибок меньше, скорость в 10 раз быстрее.</p>
-                        <div class="review-author">
-                            <span class="review-name">Роман Е.</span>
-                            <span class="review-role">логистическая компания</span>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-top">
-                            <div class="review-stars" data-rating="5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            <span class="review-project-tag tag-custom">Автогенерация отчётов</span>
-                        </div>
-                        <p class="review-text">Сергей сделал систему которая сама собирает данные из рекламных кабинетов и генерит красивый отчёт в PDF. Раньше дизайнер тратил 2 дня в месяц на это. Сейчас нажал кнопку и готово. Рекомендую однозначно.</p>
-                        <div class="review-author">
-                            <span class="review-name">Ирина Г.</span>
-                            <span class="review-role">маркетинговое агентство</span>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-top">
-                            <div class="review-stars" data-rating="4">&#9733;&#9733;&#9733;&#9733;<span class="star-empty">&#9733;</span></div>
-                            <span class="review-project-tag tag-custom">Telegram-бот + CRM</span>
-                        </div>
-                        <p class="review-text">Сделал нам полноценную CRM в телеграме. Клиенты записываются, мы видим загрузку по боксам, история клиентов сохраняется. Есть мелкие баги которые фиксятся постепенно, но в целом экономит кучу времени.</p>
-                        <div class="review-author">
-                            <span class="review-name">Георгий П.</span>
-                            <span class="review-role">сеть автомоек</span>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-top">
-                            <div class="review-stars" data-rating="5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            <span class="review-project-tag tag-custom">Сайт + бот записи</span>
-                        </div>
-                        <p class="review-text">Мне сделали лендинг и бота для записи на консультации. Всё в одном стиле, клиенты переходят с сайта в бот и сразу записываются. Раньше я сама переписывалась с каждым. Сейчас поток идёт на автомате.</p>
-                        <div class="review-author">
-                            <span class="review-name">Полина Н.</span>
-                            <span class="review-role">психолог</span>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-top">
-                            <div class="review-stars" data-rating="5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            <span class="review-project-tag tag-custom">Парсер прайсов</span>
-                        </div>
-                        <p class="review-text">Заказал парсер который мониторит цены конкурентов и автоматически корректирует наши. Работает 24/7, обновляет прайс каждые 2 часа. За первый месяц маржа выросла на 8%.</p>
-                        <div class="review-author">
-                            <span class="review-name">Олег Ж.</span>
-                            <span class="review-role">интернет-магазин</span>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-top">
-                            <div class="review-stars" data-rating="5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            <span class="review-project-tag tag-custom">Бот-калькулятор</span>
-                        </div>
-                        <p class="review-text">Клиент пишет площадь квартиры и тип уборки, бот сам считает цену и предлагает записаться. Конверсия из заявки в заказ была 30%, стала 55%. Менеджер больше не нужен на первой линии.</p>
-                        <div class="review-author">
-                            <span class="review-name">Светлана К.</span>
-                            <span class="review-role">клининговая компания</span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <p class="reviews-disclaimer">Все отзывы собраны с согласия клиентов. Имена сокращены для конфиденциальности.</p>
-
         </div>
     </section>
 
@@ -560,22 +406,5 @@
     </a>
 
     <script src="script.js"></script>
-    <script>
-    // Фильтрация отзывов
-    document.querySelectorAll('.filter-btn').forEach(function(btn) {
-        btn.addEventListener('click', function() {
-            document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
-            btn.classList.add('active');
-            var filter = btn.dataset.filter;
-            document.querySelectorAll('.reviews-category').forEach(function(cat) {
-                if (filter === 'all' || cat.dataset.category === filter) {
-                    cat.style.display = '';
-                } else {
-                    cat.style.display = 'none';
-                }
-            });
-        });
-    });
-    </script>
 </body>
 </html>

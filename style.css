@@ -983,83 +983,17 @@ img {
 }
 
 .rating-stars-big .star.filled {
-    color: var(--accent);
+    color: #FFD700;
 }
 
 .rating-stars-big .star.half {
-    color: var(--accent);
+    color: #FFD700;
     opacity: 0.5;
 }
 
 .rating-count {
     font-size: 15px;
     color: var(--text-secondary);
-}
-
-/* Фильтр */
-.reviews-filter {
-    padding: 0 0 40px;
-}
-
-.filter-row {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.filter-btn {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    color: var(--text-secondary);
-    padding: 8px 18px;
-    border-radius: var(--radius-pill);
-    font-size: 13px;
-    font-family: var(--font);
-    cursor: pointer;
-    transition: var(--transition);
-    white-space: nowrap;
-}
-
-.filter-btn:hover {
-    border-color: var(--border-hover);
-    color: var(--text);
-}
-
-.filter-btn.active {
-    background: var(--accent);
-    color: var(--bg);
-    border-color: var(--accent);
-    font-weight: 600;
-}
-
-.filter-count {
-    opacity: 0.7;
-    font-size: 11px;
-}
-
-/* Категория отзывов */
-.reviews-category {
-    margin-bottom: 48px;
-}
-
-.category-header {
-    display: flex;
-    align-items: baseline;
-    gap: 16px;
-    margin-bottom: 20px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid var(--border);
-}
-
-.category-header h2 {
-    font-size: 22px;
-    font-weight: 700;
-}
-
-.category-count {
-    font-size: 14px;
-    color: var(--text-muted);
 }
 
 /* Сетка отзывов */
@@ -1087,23 +1021,25 @@ img {
     transform: translateY(-2px);
 }
 
-.review-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;
-}
-
 .review-stars {
-    color: var(--accent);
-    font-size: 16px;
+    font-size: 18px;
     letter-spacing: 2px;
     line-height: 1;
 }
 
-.review-stars .star-empty {
-    opacity: 0.2;
+.review-stars .star-on {
+    color: #FFD700;
+}
+
+.review-stars .star-off {
+    color: #333;
+}
+
+.review-name-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .review-project-tag {
@@ -1157,12 +1093,6 @@ img {
     color: var(--text-muted);
 }
 
-.reviews-disclaimer {
-    text-align: center;
-    font-size: 13px;
-    color: var(--text-muted);
-    margin-top: 16px;
-}
 
 /* ==============================
    PROJECT PAGES
@@ -1495,20 +1425,6 @@ img {
 
     .rating-number {
         font-size: 48px;
-    }
-
-    .filter-row {
-        justify-content: flex-start;
-    }
-
-    .filter-btn {
-        font-size: 12px;
-        padding: 6px 14px;
-    }
-
-    .category-header {
-        flex-direction: column;
-        gap: 4px;
     }
 
     /* Project pages */
