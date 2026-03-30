@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="RAG простыми словами: как научить ИИ отвечать по вашей базе знаний — прайсам, регламентам и документам. Разбираю механику по шагам и где это реально нужно бизнесу.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <meta name="author" content="Сергей Венчаков">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://venchakov.com https://mc.yandex.ru; script-src 'self' 'unsafe-inline' https://mc.yandex.ru; connect-src 'self' https://mc.yandex.ru;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta name="theme-color" content="#FBF9F6">
+    <title>RAG простыми словами: как научить ИИ отвечать по базе знаний — Сергей Венчаков</title>
+    <meta property="og:title" content="RAG простыми словами: как научить ИИ отвечать по базе знаний">
+    <meta property="og:description" content="RAG простыми словами: как научить ИИ отвечать по вашей базе знаний — прайсам, регламентам и документам. Разбираю механику по шагам и где это реально нужно бизнесу.">
+    <meta property="og:url" content="https://venchakov.com/blog/rag-prostymi-slovami.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="Венчаков">
+    <meta property="og:image" content="https://venchakov.com/hero-sergey.jpg">
+    <meta property="article:published_time" content="2026-03-30">
+    <meta property="article:author" content="Сергей Венчаков">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="RAG простыми словами: как научить ИИ отвечать по базе знаний">
+    <meta name="twitter:description" content="RAG простыми словами: как научить ИИ отвечать по вашей базе знаний — прайсам, регламентам и документам. Разбираю механику по шагам и где это реально нужно бизнесу.">
+    <meta name="twitter:image" content="https://venchakov.com/hero-sergey.jpg">
+    <link rel="canonical" href="https://venchakov.com/blog/rag-prostymi-slovami.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500..900;1,500..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/style.css?v=blog2026">
+    <link rel="stylesheet" href="/blog.css?v=blog2026">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BlogPosting",
+          "@id": "https://venchakov.com/blog/rag-prostymi-slovami.html#article",
+          "headline": "RAG простыми словами: как научить ИИ отвечать по базе знаний",
+          "description": "RAG простыми словами: как научить ИИ отвечать по вашей базе знаний — прайсам, регламентам и документам. Разбираю механику по шагам и где это реально нужно бизнесу.",
+          "inLanguage": "ru-RU",
+          "author": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков", "url": "https://venchakov.com/"},
+          "publisher": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков"},
+          "datePublished": "2026-03-30",
+          "dateModified": "2026-03-30",
+          "mainEntityOfPage": "https://venchakov.com/blog/rag-prostymi-slovami.html",
+          "image": "https://venchakov.com/hero-sergey.jpg",
+          "keywords": "RAG простыми словами, база знаний ИИ, retrieval augmented generation, ИИ отвечает по документам, ассистент по базе знаний"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://venchakov.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://venchakov.com/blog.html"},
+            {"@type": "ListItem", "position": 3, "name": "RAG простыми словами"}
+          ]
+        }
+      ]
+    }
+    </script>
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=110472799', 'ym');
+
+    ym(110472799, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/110472799" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="container nav-inner">
+            <a href="/index.html" class="nav-logo">ВЕНЧАКОВ</a>
+            <button class="nav-burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/index.html" class="nav-link">Обо мне</a></li>
+                <li><a href="/services.html" class="nav-link">Услуги</a></li>
+                <li><a href="/reviews.html" class="nav-link">Кейсы и отзывы</a></li>
+                <li><a href="/blog.html" class="nav-link active">Блог</a></li>
+                <li><a href="/contacts.html" class="nav-link">Контакты</a></li>
+            </ul>
+            <a href="https://t.me/cvvjesuss" class="btn btn-accent btn-sm nav-cta" target="_blank" rel="noopener noreferrer">Написать <span class="arrow">&#8594;</span></a>
+        </div>
+    </nav>
+    <main>
+        <article class="blog-post">
+            <div class="container blog-post-container">
+                <nav class="post-breadcrumbs" aria-label="Хлебные крошки"><a href="/index.html">Главная</a> / <a href="/blog.html">Блог</a> / <span>RAG простыми словами</span></nav>
+                <header class="post-header">
+                    <div class="post-meta"><time datetime="2026-03-30">30 марта 2026</time><span class="post-meta-sep">·</span>8 мин чтения<span class="post-meta-sep">·</span><span class="post-tag">Разбор</span></div>
+                    <h1>RAG простыми словами: как научить ИИ отвечать по базе знаний</h1>
+                    <p class="post-lead">RAG простыми словами — это способ научить ИИ отвечать не «из головы», а строго по вашим документам: прайсам, регламентам, договорам и частым вопросам. Ниже разберу без терминов, как это устроено, почему без него ассистент выдумывает и что нужно, чтобы запустить RAG у себя.</p>
+                </header>
+                <div class="post-body">
+                    <h2>Что такое RAG простыми словами</h2>
+                    <p>Представьте нового сотрудника, который прекрасно говорит, вежлив и сообразителен, но пришёл к вам в первый день и ничего не знает про компанию. Если спросить его о вашей цене на услугу, он либо честно скажет «не знаю», либо, что хуже, придумает правдоподобный ответ. Обычная нейросеть ведёт себя именно так: язык знает, а вашу специфику — нет.</p>
+                    <p>RAG (по-английски retrieval augmented generation, «генерация с подглядыванием в документы») решает это просто: перед тем как ответить, система сначала находит в ваших материалах нужный кусок, а потом отвечает, опираясь на него. Тот же новичок, но теперь у него на столе лежит папка со всеми регламентами, и он подсматривает туда перед каждым ответом. Отвечает не по памяти, а по факту.</p>
+
+                    <h2>Почему обычный ИИ не отвечает по вашим данным</h2>
+                    <p>Большая модель обучена на огромном массиве текстов из интернета. Там нет вашего внутреннего прайса от прошлой недели, ваших условий доставки в конкретный город и вашего свежего регламента возврата. Модель физически не могла это выучить — этих данных не было в обучении.</p>
+                    <p>Есть соблазн «дообучить» модель на своих данных, но для большинства задач это дорого, долго и негибко: обновили прайс — надо переучивать заново. RAG обходит проблему изящнее. Мы не трогаем саму модель, а просто даём ей нужный документ в момент вопроса. Поменялась цена — поменяли строчку в базе, и ассистент сразу отвечает по-новому. Это дешевле, быстрее и честнее: ответ всегда основан на актуальном тексте.</p>
+
+                    <h2>Как RAG работает: три шага</h2>
+                    <p>Под капотом всё выглядит технично, но идея умещается в три понятных шага. Разберу их на примере вопроса клиента «Сколько стоит выезд мастера в субботу?».</p>
+                    <ol>
+                        <li><strong>Подготовка базы.</strong> Заранее берём ваши документы — прайсы, FAQ, регламенты — режем на небольшие смысловые куски и складываем в специальное хранилище, где по смыслу быстро находится нужное.</li>
+                        <li><strong>Поиск.</strong> Приходит вопрос про субботний выезд — система ищет в базе именно те куски, где говорится про выезд, выходные и цены. Не всю базу, а три–пять самых подходящих фрагментов.</li>
+                        <li><strong>Ответ.</strong> Модель получает вопрос вместе с найденными фрагментами и формулирует человеческий ответ строго на их основе. Не выдумывает, а пересказывает то, что нашла.</li>
+                    </ol>
+                    <p>Ключевой момент — на третьем шаге модели прямо говорят: отвечай только по этим фрагментам, а если ответа в них нет, честно скажи об этом. Как грамотно давать такие указания, я разбираю в статье про <a href="/blog/prompt-inzhiniring-osnovy.html">основы промпт-инжиниринга</a> — от формулировки инструкции сильно зависит, будет ли ассистент врать.</p>
+
+                    <blockquote>Я формулирую это так: без RAG ассистент — это красноречивый собеседник, который иногда фантазирует. С RAG он становится сотрудником, который сначала лезет в справочник, а уже потом открывает рот. Для бизнеса важен именно второй.</blockquote>
+
+                    <h2>Где RAG реально нужен бизнесу</h2>
+                    <p>RAG не нужен, если ваш ассистент болтает о погоде. Он становится обязательным, как только ответы должны быть точными и опираться на вашу специфику. Вот типичные ситуации, где я его закладываю:</p>
+                    <ul>
+                        <li>Поддержка клиентов по продукту: условия, тарифы, гарантия, возврат — ответы строго по вашим документам.</li>
+                        <li>Внутренний помощник для сотрудников: регламенты, инструкции, база знаний, чтобы не дёргать коллег по мелочам.</li>
+                        <li>Продажи: ассистент подбирает подходящую услугу и объясняет условия, не путаясь в прайсе.</li>
+                        <li>Обработка документов: договоры, отчёты, длинные PDF, по которым нужно быстро находить факты.</li>
+                    </ul>
+                    <p>Особенно заметна польза в поддержке, где 80% вопросов — типовые и повторяются каждый день. Такой ассистент снимает основную нагрузку с людей, а редкие сложные случаи передаёт человеку. Подробнее эту логику я разбираю в статье про <a href="/blog/ii-bot-podderzhki.html">ИИ-бота поддержки</a>.</p>
+
+                    <h2>Что нужно, чтобы запустить RAG у себя</h2>
+                    <p>Хорошая новость: чтобы получить пользу от RAG, вам не нужно разбираться в его внутренностях. Со стороны бизнеса требуется не так много, и почти всё — про порядок в информации, а не про технологии.</p>
+                    <ul>
+                        <li>Собрать документы в одном месте: актуальные прайсы, FAQ, регламенты, описания услуг.</li>
+                        <li>Навести в них порядок — убрать устаревшее и противоречивое, иначе ассистент будет путаться.</li>
+                        <li>Определить, что делать, если ответа в базе нет: передать человеку, попросить контакт, извиниться.</li>
+                        <li>Назначить того, кто будет поддерживать базу в актуальном состоянии.</li>
+                    </ul>
+                    <p>Всё остальное — разрезать документы, настроить поиск, подключить модель и связать с мессенджером или сайтом — это уже инженерная часть. Именно её я и беру на себя, когда делаю <a href="/service-custom-ai.html">кастомные ИИ-решения</a>: собираю ассистента, который отвечает по вашей базе, и встраиваю его туда, где сидят ваши клиенты — в бота или на сайт. Как это выглядит со стороны пользователя, видно на примере <a href="/service-bots.html">ботов</a>, которых я делаю.</p>
+
+                    <h2>Что влияет на качество ответов</h2>
+                    <p>RAG — не волшебная кнопка: качество ответов напрямую зависит от того, что и как вы в него загрузили. Если база противоречива — в одном документе цена одна, в другом другая, — ассистент будет путаться и выдавать то один вариант, то другой. Мусор на входе даёт мусор на выходе, как и в любой системе.</p>
+                    <p>Поэтому перед запуском я всегда навожу порядок в документах: убираю устаревшее, свожу противоречия, разбиваю длинные файлы на понятные смысловые куски. Второй важный момент — инструкция модели: ей прямо задают отвечать только по найденным фрагментам и честно признаваться, если ответа в базе нет. Эти две вещи — чистая база и строгая инструкция — и отличают ассистента, которому можно доверять, от того, который иногда фантазирует.</p>
+
+                    <h2>Частые вопросы</h2>
+                    <h3>Чем RAG отличается от дообучения модели?</h3>
+                    <p>Дообучение меняет саму модель под ваши данные — это дорого и надо повторять при каждом обновлении. RAG модель не трогает, а подкладывает ей актуальный документ в момент вопроса. Для большинства бизнес-задач RAG проще, дешевле и гибче.</p>
+                    <h3>Может ли ассистент с RAG всё равно выдумывать?</h3>
+                    <p>Риск снижается в разы, но не до нуля. Многое зависит от качества базы и от инструкции модели. Если прямо приказать отвечать только по найденным фрагментам и честно признаваться в незнании, выдумки становятся редкостью.</p>
+                    <h3>Насколько сложно поддерживать базу знаний?</h3>
+                    <p>Проще, чем кажется. Обычно достаточно держать в актуальном виде прайсы и частые вопросы. Обновление — это правка текста, а не перенастройка системы: поменяли строчку, и ассистент сразу отвечает по-новому.</p>
+                </div>
+                <section class="post-cta">
+                    <h2>Нужна помощь с внедрением?</h2>
+                    <p>Я Сергей Венчаков — делаю ИИ-агентов, ботов и автоматизацию под ключ. Расскажите задачу — предложу решение бесплатно.</p>
+                    <a href="https://t.me/cvvjesuss" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Написать в Telegram <span class="arrow">&#8599;</span></a>
+                    <a href="/services.html" class="btn btn-ghost">Услуги и цены <span class="arrow">&#8599;</span></a>
+                </section>
+                <footer class="post-author">
+                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a></p>
+                </footer>
+            </div>
+        </article>
+    </main>
+    <footer class="footer">
+        <div class="container footer-inner">
+            <a href="/index.html" class="footer-logo">ВЕНЧАКОВ</a>
+            <ul class="footer-links">
+                <li><a href="/index.html">Обо мне</a></li>
+                <li><a href="/services.html">Услуги</a></li>
+                <li><a href="/reviews.html">Кейсы и отзывы</a></li>
+                <li><a href="/blog.html">Блог</a></li>
+                <li><a href="/contacts.html">Контакты</a></li>
+            </ul>
+            <p class="footer-copy">&copy; 2026 venchakov.com</p>
+        </div>
+    </footer>
+    <script src="/script.js" defer></script>
+</body>
+</html>
