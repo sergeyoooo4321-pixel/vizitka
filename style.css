@@ -1236,6 +1236,101 @@ img {
     background: var(--accent);
 }
 
+/* ==============================
+   FEATURED SERVICE CARD
+   ============================== */
+.service-card-featured {
+    border-color: rgba(205, 255, 0, 0.2);
+}
+
+/* ==============================
+   TARIFFS (project-openclaw)
+   ============================== */
+.tariffs-section {
+    padding: 0 0 80px;
+}
+
+.tariffs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.tariff-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.tariff-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.tariff-price {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--accent);
+    margin-bottom: 16px;
+}
+
+.tariff-card p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 16px;
+    flex-grow: 1;
+}
+
+.tariff-features {
+    list-style: none;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tariff-features li {
+    font-size: 14px;
+    color: var(--text-secondary);
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.tariff-features li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+.tariff-popular {
+    border-color: rgba(205, 255, 0, 0.3);
+}
+
+.tariff-badge {
+    position: absolute;
+    top: -1px;
+    right: 24px;
+    background: var(--accent);
+    color: #0A0A0A;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+}
+
 .project-cta {
     padding: 0 0 80px;
 }
@@ -1465,6 +1560,10 @@ img {
 
     .detail-block {
         padding: 24px;
+    }
+
+    .tariffs-grid {
+        grid-template-columns: 1fr;
     }
 
     /* Page hero */
