@@ -1,35 +1,47 @@
 document.addEventListener('DOMContentLoaded', () => {
     'use strict';
 
-    // === Mobile burger menu ===
+    // === Mobile burger menu (side panel) ===
     const burger = document.getElementById('burger');
     const navLinks = document.getElementById('navLinks');
 
+    // Create overlay for closing menu by tapping outside
+    const overlay = document.createElement('div');
+    overlay.className = 'nav-overlay';
+    document.body.appendChild(overlay);
+
+    function openMenu() {
+        navLinks.classList.add('open');
+        burger.classList.add('open');
+        overlay.classList.add('open');
+        burger.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+        navLinks.classList.remove('open');
+        burger.classList.remove('open');
+        overlay.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+    }
+
     if (burger && navLinks) {
         burger.addEventListener('click', () => {
-            const isOpen = navLinks.classList.toggle('open');
-            burger.classList.toggle('open');
-            burger.setAttribute('aria-expanded', isOpen);
-            document.body.style.overflow = isOpen ? 'hidden' : '';
+            navLinks.classList.contains('open') ? closeMenu() : openMenu();
         });
+
+        overlay.addEventListener('click', closeMenu);
 
         // Close menu on link click
         navLinks.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('open');
-                burger.classList.remove('open');
-                burger.setAttribute('aria-expanded', 'false');
-                document.body.style.overflow = '';
-            });
+            link.addEventListener('click', closeMenu);
         });
 
         // Close on Escape
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && navLinks.classList.contains('open')) {
-                navLinks.classList.remove('open');
-                burger.classList.remove('open');
-                burger.setAttribute('aria-expanded', 'false');
-                document.body.style.overflow = '';
+                closeMenu();
             }
         });
     }
