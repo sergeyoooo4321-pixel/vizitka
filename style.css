@@ -608,7 +608,17 @@ img {
 }
 
 .bento-services-preview {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.bento-cases-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.proof-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 24px;
 }
 
 .service-preview-card {
@@ -1400,11 +1410,27 @@ img {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .bento-cases-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .proof-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .bento-about {
         grid-template-columns: 1fr 1fr;
     }
 
     .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tariffs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-steps {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -1510,6 +1536,19 @@ img {
         grid-template-columns: 1fr;
     }
 
+    .bento-cases-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .proof-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .proof-rating {
+        justify-content: center;
+    }
+
     .bento-services {
         grid-template-columns: 1fr;
     }
@@ -1564,6 +1603,14 @@ img {
 
     .tariffs-grid {
         grid-template-columns: 1fr;
+    }
+
+    .tariff-card {
+        padding: 24px;
+    }
+
+    .price-tag {
+        font-size: 18px;
     }
 
     /* Page hero */
@@ -1666,13 +1713,7 @@ img {
     line-height: 1.7;
 }
 
-@media (max-width: 768px) {
-    .process-steps {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 420px) {
+@media (max-width: 520px) {
     .process-steps {
         grid-template-columns: 1fr;
     }
