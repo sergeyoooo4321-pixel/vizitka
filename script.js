@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // === Scroll animations (Intersection Observer) ===
     const animatedElements = document.querySelectorAll(
-        '.bento-card, .pill, .cta-card, .section-header'
+        '.bento-card, .pill, .cta-card, .section-header, .audience-card, .compare-card, .faq-item'
     );
 
     if ('IntersectionObserver' in window) {
