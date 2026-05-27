@@ -8,18 +8,18 @@
 }
 
 :root {
-    --bg: #0A0A0A;
-    --bg-card: #141414;
-    --bg-card-alt: #1A1A1A;
-    --bg-card-hover: #1E1E1E;
-    --border: #1F1F1F;
-    --border-hover: #333333;
-    --text: #FFFFFF;
-    --text-secondary: #999999;
-    --text-muted: #555555;
-    --accent: #CDFF00;
-    --accent-dim: rgba(205, 255, 0, 0.08);
-    --accent-glow: rgba(205, 255, 0, 0.15);
+    --bg: #FBF9F6;
+    --bg-card: #FFFFFF;
+    --bg-card-alt: #F2EFE9;
+    --bg-card-hover: #FFFFFF;
+    --border: #EAE6DF;
+    --border-hover: #D4CEB0;
+    --text: #2C2A28;
+    --text-secondary: #6B6862;
+    --text-muted: #9C9891;
+    --accent: #8E7B68;
+    --accent-dim: rgba(142, 123, 104, 0.08);
+    --accent-glow: rgba(142, 123, 104, 0.15);
     --radius: 16px;
     --radius-lg: 24px;
     --radius-sm: 10px;
@@ -69,7 +69,7 @@ img {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgba(10, 10, 10, 0.8);
+    background: rgba(251, 249, 246, 0.8);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border);
@@ -116,7 +116,7 @@ img {
 }
 
 .nav-link.active {
-    color: #0A0A0A;
+    color: #FFFFFF;
     background: var(--accent);
     font-weight: 600;
 }
@@ -174,13 +174,13 @@ img {
 
 .btn-accent {
     background: var(--accent);
-    color: #0A0A0A;
+    color: #FFFFFF;
 }
 
 .btn-accent:hover {
-    background: #d4ff33;
+    background: #7A6956;
     transform: translateY(-2px);
-    box-shadow: 0 8px 32px rgba(205, 255, 0, 0.2);
+    box-shadow: 0 8px 32px rgba(142, 123, 104, 0.2);
 }
 
 .btn-ghost {
@@ -191,7 +191,7 @@ img {
 
 .btn-ghost:hover {
     border-color: var(--text-secondary);
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(0, 0, 0, 0.04);
     transform: translateY(-2px);
 }
 
@@ -223,7 +223,7 @@ img {
     font-weight: 600;
     color: var(--accent);
     background: var(--accent-dim);
-    border: 1px solid rgba(205, 255, 0, 0.15);
+    border: 1px solid rgba(142, 123, 104, 0.15);
     margin-bottom: 24px;
 }
 
@@ -249,7 +249,7 @@ img {
     letter-spacing: 1px;
     text-transform: uppercase;
     color: var(--text-secondary);
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.03);
     border: 1px solid var(--border);
     margin-bottom: 20px;
 }
@@ -356,7 +356,7 @@ img {
     background: var(--bg-card-hover);
     border-color: var(--border-hover);
     transform: translateY(-4px);
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(205, 255, 0, 0.05);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(142, 123, 104, 0.05);
 }
 
 .bento-grid {
@@ -442,7 +442,7 @@ img {
 
 .bento-avatar:hover .avatar-photo {
     border-color: var(--accent);
-    box-shadow: 0 0 20px rgba(205, 255, 0, 0.15);
+    box-shadow: 0 0 20px rgba(142, 123, 104, 0.15);
 }
 
 .bento-card-label {
@@ -495,8 +495,8 @@ img {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: radial-gradient(ellipse at 30% 30%, #e0e0e0, #888888 40%, #333333 70%, #111111);
-    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.08), inset 0 -2px 6px rgba(0,0,0,0.5);
+    background: radial-gradient(ellipse at 30% 30%, #ffffff, #e0e0e0 40%, #c0c0c0 70%, #a0a0a0);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05), inset 0 -2px 6px rgba(0,0,0,0.5);
     margin-bottom: 12px;
     animation: float 6s ease-in-out infinite;
 }
@@ -635,7 +635,7 @@ img {
     position: relative;
     overflow: hidden;
     border-radius: var(--radius-sm);
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(0, 0, 0, 0.02);
 }
 
 .service-wave {
@@ -704,7 +704,7 @@ img {
     position: relative;
     overflow: hidden;
     border-radius: var(--radius-sm);
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(0, 0, 0, 0.02);
 }
 
 .service-wave-lg {
@@ -813,7 +813,7 @@ img {
     height: 40px;
     border-radius: 12px;
     background: var(--accent-dim);
-    border: 1px solid rgba(205, 255, 0, 0.15);
+    border: 1px solid rgba(142, 123, 104, 0.15);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -879,7 +879,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.03);
     border: 1px solid var(--border);
     margin-bottom: 16px;
     color: var(--text);
@@ -1056,7 +1056,7 @@ img {
 }
 
 .review-stars .star-off {
-    color: #333;
+    color: #EAE6DF;
 }
 
 .review-name-row {
@@ -1077,18 +1077,18 @@ img {
 }
 
 .review-project-tag.tag-sales {
-    background: rgba(0, 212, 255, 0.08);
-    color: #00d4ff;
+    background: rgba(0, 150, 200, 0.08);
+    color: #007CA8;
 }
 
 .review-project-tag.tag-secretary {
-    background: rgba(167, 139, 250, 0.08);
-    color: #a78bfa;
+    background: rgba(120, 90, 200, 0.08);
+    color: #785AC8;
 }
 
 .review-project-tag.tag-custom {
-    background: rgba(255, 170, 50, 0.08);
-    color: #ffaa32;
+    background: rgba(220, 130, 20, 0.08);
+    color: #DC8214;
 }
 
 .review-text {
@@ -1250,7 +1250,7 @@ img {
    FEATURED SERVICE CARD
    ============================== */
 .service-card-featured {
-    border-color: rgba(205, 255, 0, 0.2);
+    border-color: rgba(142, 123, 104, 0.2);
 }
 
 /* ==============================
@@ -1326,7 +1326,7 @@ img {
 }
 
 .tariff-popular {
-    border-color: rgba(205, 255, 0, 0.3);
+    border-color: rgba(142, 123, 104, 0.3);
 }
 
 .tariff-badge {
@@ -1334,7 +1334,7 @@ img {
     top: -1px;
     right: 24px;
     background: var(--accent);
-    color: #0A0A0A;
+    color: #FFFFFF;
     font-size: 12px;
     font-weight: 700;
     padding: 4px 12px;
@@ -1676,7 +1676,7 @@ img {
         right: 0;
         bottom: 0;
         width: 280px;
-        background: rgba(10, 10, 10, 0.98);
+        background: rgba(251, 249, 246, 0.98);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         flex-direction: column;
@@ -1689,7 +1689,7 @@ img {
         transition: transform var(--transition);
         z-index: 999;
         border-left: 1px solid var(--border);
-        box-shadow: -8px 0 32px rgba(0, 0, 0, 0.5);
+        box-shadow: -8px 0 32px rgba(0, 0, 0, 0.05);
     }
 
     .nav-links.open {
@@ -2017,7 +2017,7 @@ img {
 .btn:focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 3px;
-    box-shadow: 0 0 0 4px rgba(205, 255, 0, 0.15);
+    box-shadow: 0 0 0 4px rgba(142, 123, 104, 0.15);
 }
 
 .nav-link:focus-visible {
