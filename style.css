@@ -284,6 +284,10 @@ img {
     align-items: center;
 }
 
+.hero .container {
+    max-width: 1520px;
+}
+
 .hero-grid {
     position: relative;
     aspect-ratio: 16 / 9;
