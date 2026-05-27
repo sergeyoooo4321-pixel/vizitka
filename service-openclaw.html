@@ -51,17 +51,90 @@
                 <div class="detail-block stats-animate-container" style="background: var(--bg-card-alt); border: 1px solid var(--border-hover); border-radius: var(--radius-lg); padding: 40px;">
                     <h2 style="font-size: 24px; font-weight: 800; margin-bottom: 32px; color: var(--text);">До и после</h2>
                     
-                    <div style="margin-bottom: 32px; padding-bottom: 32px; border-bottom: 1px solid var(--border);">
-                        <div style="font-weight: 700; color: var(--text-muted); margin-bottom: 12px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Ситуация ДО:</div>
-                        <p style="color: var(--text-secondary); line-height: 1.7; font-size: 18px; position: relative; padding-left: 20px; border-left: 3px solid var(--text-muted);">Менеджеры тратят по 4 часа в день на рутинную сортировку писем, ручной поиск информации в базах данных и перенос задач.</p>
+            <div style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border);">
+                <div style="font-weight: 700; color: var(--text); margin-bottom: 12px; font-size: 16px; letter-spacing: 0.5px;">Скорость ответа на письма:</div>
+                
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <div style="color: var(--text-muted); font-size: 15px; position: relative; padding-left: 20px; border-left: 3px solid var(--text-muted);">
+                        <span style="font-weight: 600; text-transform: uppercase; font-size: 12px; margin-right: 6px;">До:</span> в среднем 2 часа
                     </div>
-
-                    <div>
-                        <div style="font-weight: 700; color: var(--accent); margin-bottom: 12px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Ситуация ПОСЛЕ:</div>
-                        <p style="color: var(--text); line-height: 1.7; font-size: 20px; position: relative; padding-left: 20px; border-left: 3px solid var(--accent); font-weight: 500;">
-                            Время обработки рутины сокращается до <span class="counter-value" style="color: var(--accent); font-weight: 800; font-size: 1.2em;" data-target="15">0</span> минут, общая скорость ответа клиентам вырастает на <span class="counter-value" style="color: var(--accent); font-weight: 800; font-size: 1.2em;" data-target="70">0</span>%, а общая продуктивность команды увеличивается с <span class="counter-value" style="color: var(--accent); font-weight: 800; font-size: 1.2em;" data-target="10">0</span>% до <span class="counter-value" style="color: var(--accent); font-weight: 800; font-size: 1.2em;" data-target="55">0</span>%.
-                        </p>
+                    
+                    <div style="color: var(--text); font-size: 16px; position: relative; padding-left: 20px; border-left: 3px solid var(--accent); font-weight: 500;">
+                        <span style="font-weight: 600; color: var(--accent); text-transform: uppercase; font-size: 12px; margin-right: 6px;">После:</span> до <span class="counter-value" style="color: var(--accent); font-weight: 800; font-size: 1.1em;" data-target="45">0</span> секунд
                     </div>
+                </div>
+            </div>
+        
+            <div style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border);">
+                <div style="font-weight: 700; color: var(--text); margin-bottom: 12px; font-size: 16px; letter-spacing: 0.5px;">Время на рутину у менеджеров:</div>
+                
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <div style="color: var(--text-muted); font-size: 15px; position: relative; padding-left: 20px; border-left: 3px solid var(--text-muted);">
+                        <span style="font-weight: 600; text-transform: uppercase; font-size: 12px; margin-right: 6px;">До:</span> 4 часа в день
+                    </div>
+                    
+                    <div style="color: var(--text); font-size: 16px; position: relative; padding-left: 20px; border-left: 3px solid var(--accent); font-weight: 500;">
+                        <span style="font-weight: 600; color: var(--accent); text-transform: uppercase; font-size: 12px; margin-right: 6px;">После:</span> всего <span class="counter-value" style="color: var(--accent); font-weight: 800; font-size: 1.1em;" data-target="15">0</span> минут в день
+                    </div>
+                </div>
+            </div>
+        
+            <div style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border);">
+                <div style="font-weight: 700; color: var(--text); margin-bottom: 12px; font-size: 16px; letter-spacing: 0.5px;">Ошибки при переносе данных в CRM:</div>
+                
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <div style="color: var(--text-muted); font-size: 15px; position: relative; padding-left: 20px; border-left: 3px solid var(--text-muted);">
+                        <span style="font-weight: 600; text-transform: uppercase; font-size: 12px; margin-right: 6px;">До:</span> 12% из-за человеческого фактора
+                    </div>
+                    
+                    <div style="color: var(--text); font-size: 16px; position: relative; padding-left: 20px; border-left: 3px solid var(--accent); font-weight: 500;">
+                        <span style="font-weight: 600; color: var(--accent); text-transform: uppercase; font-size: 12px; margin-right: 6px;">После:</span> <span class="counter-value" style="color: var(--accent); font-weight: 800; font-size: 1.1em;" data-target="0">0</span>%
+                    </div>
+                </div>
+            </div>
+        
+            <div style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border);">
+                <div style="font-weight: 700; color: var(--text); margin-bottom: 12px; font-size: 16px; letter-spacing: 0.5px;">Доступность поддержки:</div>
+                
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <div style="color: var(--text-muted); font-size: 15px; position: relative; padding-left: 20px; border-left: 3px solid var(--text-muted);">
+                        <span style="font-weight: 600; text-transform: uppercase; font-size: 12px; margin-right: 6px;">До:</span> только в рабочие часы офиса
+                    </div>
+                    
+                    <div style="color: var(--text); font-size: 16px; position: relative; padding-left: 20px; border-left: 3px solid var(--accent); font-weight: 500;">
+                        <span style="font-weight: 600; color: var(--accent); text-transform: uppercase; font-size: 12px; margin-right: 6px;">После:</span> в режиме <span class="counter-value" style="color: var(--accent); font-weight: 800; font-size: 1.1em;" data-target="24">0</span>/<span class="counter-value" style="color: var(--accent); font-weight: 800; font-size: 1.1em;" data-target="7">0</span> без выходных
+                    </div>
+                </div>
+            </div>
+        
+            <div style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border);">
+                <div style="font-weight: 700; color: var(--text); margin-bottom: 12px; font-size: 16px; letter-spacing: 0.5px;">Расходы на обработку типовых заявок:</div>
+                
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <div style="color: var(--text-muted); font-size: 15px; position: relative; padding-left: 20px; border-left: 3px solid var(--text-muted);">
+                        <span style="font-weight: 600; text-transform: uppercase; font-size: 12px; margin-right: 6px;">До:</span> фиксированная зарплата сотрудников
+                    </div>
+                    
+                    <div style="color: var(--text); font-size: 16px; position: relative; padding-left: 20px; border-left: 3px solid var(--accent); font-weight: 500;">
+                        <span style="font-weight: 600; color: var(--accent); text-transform: uppercase; font-size: 12px; margin-right: 6px;">После:</span> копеечная оплата API
+                    </div>
+                </div>
+            </div>
+        
+            <div style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border);">
+                <div style="font-weight: 700; color: var(--text); margin-bottom: 12px; font-size: 16px; letter-spacing: 0.5px;">Общая продуктивность команды:</div>
+                
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <div style="color: var(--text-muted); font-size: 15px; position: relative; padding-left: 20px; border-left: 3px solid var(--text-muted);">
+                        <span style="font-weight: 600; text-transform: uppercase; font-size: 12px; margin-right: 6px;">До:</span> на уровне 10%
+                    </div>
+                    
+                    <div style="color: var(--text); font-size: 16px; position: relative; padding-left: 20px; border-left: 3px solid var(--accent); font-weight: 500;">
+                        <span style="font-weight: 600; color: var(--accent); text-transform: uppercase; font-size: 12px; margin-right: 6px;">После:</span> вырастает до <span class="counter-value" style="color: var(--accent); font-weight: 800; font-size: 1.1em;" data-target="55">0</span>%
+                    </div>
+                </div>
+            </div>
+        
                 </div>
             </div>
         </div>
