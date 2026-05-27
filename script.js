@@ -29,7 +29,47 @@ document.addEventListener('DOMContentLoaded', () => {
     if (burger && navLinks) {
         burger.addEventListener('click', () => {
             navLinks.classList.contains('open') ? closeMenu() : openMenu();
+        
+    // === Animated Statistics ===
+    const statsContainers = document.querySelectorAll('.stats-animate-container');
+    if ('IntersectionObserver' in window && statsContainers.length > 0) {
+        const statsObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.counter-value');
+                    counters.forEach(counter => {
+                        const target = +counter.getAttribute('data-target');
+                        let start = 0;
+                        let duration = 2000; // 2 seconds
+                        let startTime = null;
+                        
+                        const step = (timestamp) => {
+                            if (!startTime) startTime = timestamp;
+                            const progress = Math.min((timestamp - startTime) / duration, 1);
+                            counter.innerText = Math.floor(progress * target);
+                            if (progress < 1) {
+                                window.requestAnimationFrame(step);
+                            } else {
+                                counter.innerText = target;
+                                if(counter.getAttribute('data-suffix')) {
+                                    counter.innerText += counter.getAttribute('data-suffix');
+                                }
+                            }
+                        };
+                        window.requestAnimationFrame(step);
+                        counter.classList.remove('counter-value');
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        statsContainers.forEach(container => {
+            statsObserver.observe(container);
         });
+    }
+
+});
 
         overlay.addEventListener('click', closeMenu);
 
