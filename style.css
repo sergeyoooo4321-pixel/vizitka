@@ -285,11 +285,14 @@ img {
 }
 
 .hero .container {
-    max-width: 1520px;
+    width: min(86vw, 1540px);
+    max-width: none;
+    padding: 0;
 }
 
 .hero-grid {
     position: relative;
+    width: 100%;
     aspect-ratio: 16 / 9;
     min-height: 0;
     display: flex;
