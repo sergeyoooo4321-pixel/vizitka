@@ -1768,7 +1768,7 @@ img {
         background: var(--accent-dim);
     }
 
-    /* Hero — one beige plate, photo fills it as background, text overlays on top (mirrors desktop) */
+    /* Hero — one compact horizontal beige plate: photo as background, text overlaid; content shrunk so the plate stays landscape */
     .hero {
         padding: 90px 0 40px;
     }
@@ -1780,8 +1780,8 @@ img {
         position: relative;
         background: #D3AD89;
         box-shadow: 0 18px 40px rgba(44, 42, 40, 0.12);
-        padding: 28px 22px;
-        border-radius: 24px;
+        padding: 20px 18px;
+        border-radius: 22px;
         overflow: hidden;
     }
 
@@ -1792,9 +1792,9 @@ img {
         inset: 0;
         background:
             linear-gradient(180deg,
-                rgba(211, 173, 137, 0.92) 0%,
-                rgba(211, 173, 137, 0.55) 55%,
-                rgba(211, 173, 137, 0.85) 100%);
+                rgba(211, 173, 137, 0.55) 0%,
+                rgba(211, 173, 137, 0.78) 60%,
+                rgba(211, 173, 137, 0.92) 100%);
         z-index: 1;
         pointer-events: none;
     }
@@ -1826,16 +1826,55 @@ img {
         object-position: right center;
     }
 
-    .hero-text h1 {
-        letter-spacing: -1px;
+    /* Compact slider content so the plate stays landscape */
+    .hero-slide .badge {
+        margin-bottom: 10px;
+        padding: 4px 10px;
+        font-size: 10px;
     }
 
-    .hero-desc {
-        font-size: 15px;
+    .hero-slider {
+        margin-bottom: 10px;
+    }
+
+    .hero-slide h1,
+    .hero-slide .hero-slide-title {
+        font-size: 22px;
+        line-height: 1.08;
+        letter-spacing: -0.5px;
+        margin-bottom: 8px;
+    }
+
+    .hero-slide .hero-desc {
+        font-size: 12.5px;
+        line-height: 1.45;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        margin: 0;
+    }
+
+    .hero-slider-dots {
+        margin-top: 10px;
+        padding: 3px;
+        gap: 5px;
+    }
+
+    .hero-slider-dot {
+        width: 18px;
+        height: 4px;
+    }
+
+    .hero-slider-dot.is-active {
+        width: 28px;
     }
 
     .hero-buttons {
         flex-direction: column;
+        gap: 7px;
+        margin-top: 12px;
     }
 
     .hero-buttons .btn {
@@ -1843,6 +1882,8 @@ img {
         width: 100%;
         white-space: normal;
         text-align: center;
+        padding: 9px 14px;
+        font-size: 13px;
     }
 
     .hero-bento {
@@ -2011,20 +2052,20 @@ img {
     }
 
     .hero-grid {
-        padding: 24px 18px;
-        border-radius: 20px;
+        padding: 18px 16px;
+        border-radius: 18px;
     }
 
     .hero-slide h1,
     .hero-slide .hero-slide-title,
     .hero-text h1 {
-        font-size: 26px;
-        letter-spacing: -0.5px;
+        font-size: 20px;
+        letter-spacing: -0.4px;
     }
 
     .hero-slide .hero-desc,
     .hero-desc {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .hero-slider-dots {
