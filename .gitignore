@@ -9,29 +9,12 @@ Thumbs.db
 .claude/
 .playwright-mcp/
 
+# Local scratch
+всяична/
+*.py
+
 # Cloudflare Workers local cache
-cloudflare-worker/.wrangler/
-.wrangler/
-
-# Generator / one-off scripts
-update.js
-update_services.js
-update_services_v2.js
-update_services_v3.js
-apply_markdown_services.js
-generate_service_pages.js
-
-# Source markdown drafts
-openclaw-service.md
-toyfight-snapshot.md
-в.md
-
-# Screenshots / temporary images at repo root
-image.png
-ba-bots-*.jpeg
-hero-mobile*.jpeg
-hero-slide-*-fix.jpeg
-toyfight-*.jpeg
+**/.wrangler/
 
 # Node
 node_modules/

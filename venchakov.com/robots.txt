@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+Disallow: /demo-administrator.html
+Disallow: /demo-sales.html
+Disallow: /demo-secretary.html
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+Host: venchakov.com
+Sitemap: https://venchakov.com/sitemap.xml
