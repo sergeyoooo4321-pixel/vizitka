@@ -1768,25 +1768,43 @@ img {
         background: var(--accent-dim);
     }
 
-    /* Hero */
+    /* Hero — stacked layout: text on top, photo below as a landscape banner */
     .hero {
         padding: 90px 0 40px;
     }
 
     .hero-grid {
         aspect-ratio: auto;
-        min-height: 620px;
-        align-items: flex-start;
-        padding: 34px 22px 320px;
+        min-height: 0;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 28px 20px;
+        gap: 22px;
         border-radius: 24px;
+        overflow: hidden;
     }
 
     .hero-text {
-        max-width: none;
+        max-width: 100%;
+        width: 100%;
+        order: 1;
+    }
+
+    .hero-photo {
+        position: relative;
+        inset: auto;
+        order: 2;
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        border-radius: 18px;
+        overflow: hidden;
     }
 
     .hero-photo-img {
-        object-position: 62% bottom;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 25%;
     }
 
     .hero-text h1 {
@@ -1974,9 +1992,14 @@ img {
     }
 
     .hero-grid {
-        padding: 28px 18px 280px;
-        min-height: 580px;
+        padding: 24px 16px;
+        gap: 18px;
         border-radius: 20px;
+    }
+
+    .hero-photo {
+        aspect-ratio: 16 / 11;
+        border-radius: 14px;
     }
 
     .hero-slide h1,
