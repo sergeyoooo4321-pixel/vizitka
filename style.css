@@ -1714,14 +1714,14 @@ img {
         top: 0;
         right: 0;
         bottom: 0;
-        width: 280px;
+        width: min(85vw, 320px);
         background: rgba(251, 249, 246, 0.98);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
         justify-content: flex-start;
-        padding: 80px 32px 32px;
+        padding: 80px 20px 32px;
         gap: 4px;
         transform: translateX(100%);
         pointer-events: none;
@@ -1729,6 +1729,12 @@ img {
         z-index: 999;
         border-left: 1px solid var(--border);
         box-shadow: -8px 0 32px rgba(0, 0, 0, 0.05);
+        overflow-y: auto;
+    }
+
+    .nav-links li {
+        width: 100%;
+        list-style: none;
     }
 
     .nav-links.open {
@@ -1752,10 +1758,15 @@ img {
     }
 
     .nav-link {
-        font-size: 18px;
-        padding: 14px 20px;
+        display: block;
+        font-size: 17px;
+        padding: 13px 18px;
         width: 100%;
+        box-sizing: border-box;
         border-radius: var(--radius-sm);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .nav-link:hover,
