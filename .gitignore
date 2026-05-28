@@ -12,6 +12,7 @@ Thumbs.db
 # Local scratch
 всяична/
 *.py
+image.png
 
 # Cloudflare Workers local cache
 **/.wrangler/
