@@ -1768,7 +1768,7 @@ img {
         background: var(--accent-dim);
     }
 
-    /* Hero — stacked layout: text on top, photo below as a landscape banner */
+    /* Hero — photo becomes its own landscape banner; beige plate disappears */
     .hero {
         padding: 90px 0 40px;
     }
@@ -1778,26 +1778,30 @@ img {
         min-height: 0;
         flex-direction: column;
         align-items: stretch;
-        padding: 28px 20px;
-        gap: 22px;
-        border-radius: 24px;
-        overflow: hidden;
+        background: transparent;
+        box-shadow: none;
+        padding: 0;
+        gap: 20px;
+        border-radius: 0;
+        overflow: visible;
     }
 
     .hero-text {
         max-width: 100%;
         width: 100%;
-        order: 1;
+        order: 2;
     }
 
     .hero-photo {
         position: relative;
         inset: auto;
-        order: 2;
+        order: 1;
         width: 100%;
         aspect-ratio: 16 / 10;
-        border-radius: 18px;
+        background: #D3AD89;
+        border-radius: 20px;
         overflow: hidden;
+        box-shadow: 0 18px 40px rgba(44, 42, 40, 0.12);
     }
 
     .hero-photo-img {
@@ -1992,14 +1996,13 @@ img {
     }
 
     .hero-grid {
-        padding: 24px 16px;
-        gap: 18px;
-        border-radius: 20px;
+        padding: 0;
+        gap: 16px;
     }
 
     .hero-photo {
         aspect-ratio: 16 / 11;
-        border-radius: 14px;
+        border-radius: 16px;
     }
 
     .hero-slide h1,
