@@ -44,7 +44,7 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html" class="nav-link">Обо мне</a></li>
                 <li><a href="services.html" class="nav-link">Услуги</a></li>
-                <li><a href="reviews.html" class="nav-link active">Отзывы</a></li>
+                <li><a href="reviews.html" class="nav-link active">Кейсы и отзывы</a></li>
                 <li><a href="contacts.html" class="nav-link">Контакты</a></li>
             </ul>
             <a href="https://t.me/cvvjesuss" class="btn btn-accent btn-sm nav-cta" target="_blank" rel="noopener noreferrer">Написать <span class="arrow">&#8594;</span></a>
@@ -73,13 +73,6 @@
     <!-- Отзывы -->
     <section class="reviews-section">
         <div class="container">
-            <div class="filter-row" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:32px;">
-                <button class="filter-btn active" data-filter="all" style="background:#8E7B68;color:#FFFFFF;border:1px solid #8E7B68;padding:8px 18px;border-radius:100px;font-size:13px;font-family:'Inter',sans-serif;cursor:pointer;font-weight:600;">Все</button>
-                <button class="filter-btn" data-filter="admin" style="background:#141414;color:#999;border:1px solid #1F1F1F;padding:8px 18px;border-radius:100px;font-size:13px;font-family:'Inter',sans-serif;cursor:pointer;">ИИ-Администратор</button>
-                <button class="filter-btn" data-filter="sales" style="background:#141414;color:#999;border:1px solid #1F1F1F;padding:8px 18px;border-radius:100px;font-size:13px;font-family:'Inter',sans-serif;cursor:pointer;">ИИ-Отдел продаж</button>
-                <button class="filter-btn" data-filter="secretary" style="background:#141414;color:#999;border:1px solid #1F1F1F;padding:8px 18px;border-radius:100px;font-size:13px;font-family:'Inter',sans-serif;cursor:pointer;">ИИ-Секретарь</button>
-                <button class="filter-btn" data-filter="custom" style="background:#141414;color:#999;border:1px solid #1F1F1F;padding:8px 18px;border-radius:100px;font-size:13px;font-family:'Inter',sans-serif;cursor:pointer;">Кастомные</button>
-            </div>
             <div class="reviews-grid">
 
                 <!-- ИИ-Администратор — 10 отзывов -->
@@ -413,7 +406,7 @@
             <ul class="footer-links">
                 <li><a href="index.html">Обо мне</a></li>
                 <li><a href="services.html">Услуги</a></li>
-                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="reviews.html">Кейсы и отзывы</a></li>
                 <li><a href="contacts.html">Контакты</a></li>
             </ul>
             <p class="footer-copy">&copy; 2026 venchakov.com</p>
@@ -425,30 +418,6 @@
     </a>
 
     <script src="script.js?v=c2ff591"></script>
-    <script>
-document.querySelectorAll('.filter-btn').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-        document.querySelectorAll('.filter-btn').forEach(function(b) {
-            b.style.background = '#141414';
-            b.style.color = '#999';
-            b.style.borderColor = '#1F1F1F';
-            b.style.fontWeight = 'normal';
-        });
-        btn.style.background = '#CDFF00';
-        btn.style.color = '#FFFFFF';
-        btn.style.borderColor = '#CDFF00';
-        btn.style.fontWeight = '600';
-        var filter = btn.dataset.filter;
-        document.querySelectorAll('.review-card').forEach(function(card) {
-            if (filter === 'all' || card.dataset.category === filter) {
-                card.style.display = '';
-            } else {
-                card.style.display = 'none';
-            }
-        });
-    });
-});
-    </script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",

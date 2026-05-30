@@ -1,8 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /demo-administrator.html
-Disallow: /demo-sales.html
-Disallow: /demo-secretary.html
 
 User-agent: GPTBot
 Allow: /
