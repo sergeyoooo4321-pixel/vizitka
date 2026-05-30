@@ -12,7 +12,22 @@
     </url>
     <url>
         <loc>https://venchakov.com/reviews.html</loc>
-        <lastmod>2026-05-28</lastmod>
+        <lastmod>2026-05-30</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://venchakov.com/case-svoyasreda.html</loc>
+        <lastmod>2026-05-30</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://venchakov.com/case-aerodom.html</loc>
+        <lastmod>2026-05-30</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://venchakov.com/case-stepline.html</loc>
+        <lastmod>2026-05-30</lastmod>
         <priority>0.7</priority>
     </url>
     <url>
