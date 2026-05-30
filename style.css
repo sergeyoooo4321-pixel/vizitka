@@ -1153,6 +1153,258 @@ img {
 
 
 /* ==============================
+   REVIEWS — сводка и список (стиль карточки приложения)
+   ============================== */
+.rating-summary {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: clamp(24px, 5vw, 52px);
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 28px 32px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+}
+
+.rating-summary-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-right: clamp(20px, 4vw, 44px);
+    border-right: 1px solid var(--border);
+}
+
+.rating-summary-number {
+    font-size: 68px;
+    font-weight: 900;
+    letter-spacing: -3px;
+    line-height: 1;
+    color: var(--text);
+}
+
+.rating-summary-stars {
+    margin-top: 10px;
+    font-size: 18px;
+    letter-spacing: 3px;
+    line-height: 1;
+}
+.rating-summary-stars .star-on { color: #FFD700; }
+.rating-summary-stars .star-half {
+    background: linear-gradient(90deg, #FFD700 50%, var(--border) 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.rating-summary-count {
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--text-muted);
+    white-space: nowrap;
+}
+
+.rating-summary-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.rating-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 3px 6px;
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-family: var(--font);
+    transition: var(--transition);
+}
+.rating-bar:hover { background: rgba(0, 0, 0, 0.03); }
+.rating-bar.is-active { background: var(--accent-dim); }
+
+.rating-bar-label {
+    flex-shrink: 0;
+    width: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-align: right;
+}
+
+.rating-bar-track {
+    position: relative;
+    flex: 1;
+    height: 8px;
+    background: var(--bg-card-alt);
+    border-radius: var(--radius-pill);
+    overflow: hidden;
+}
+
+.rating-bar-fill {
+    position: absolute;
+    inset: 0 auto 0 0;
+    height: 100%;
+    background: var(--accent);
+    border-radius: var(--radius-pill);
+    transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.rating-bar-count {
+    flex-shrink: 0;
+    width: 26px;
+    font-size: 12px;
+    color: var(--text-muted);
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Управление: сортировка + сброс фильтра */
+.reviews-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    max-width: 720px;
+    margin: 24px auto 4px;
+}
+
+.reviews-sort {
+    display: inline-flex;
+    gap: 4px;
+    padding: 4px;
+    background: var(--bg-card-alt);
+    border-radius: var(--radius-pill);
+}
+
+.sort-btn {
+    padding: 8px 16px;
+    border: none;
+    background: transparent;
+    border-radius: var(--radius-pill);
+    font-family: var(--font);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: var(--transition);
+}
+.sort-btn:hover { color: var(--text); }
+.sort-btn.is-active {
+    background: var(--bg-card);
+    color: var(--text);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.reviews-reset {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 16px;
+    border: 1px solid var(--border-hover);
+    background: transparent;
+    border-radius: var(--radius-pill);
+    font-family: var(--font);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: var(--transition);
+}
+.reviews-reset:hover { border-color: var(--text-secondary); color: var(--text); }
+.reviews-reset[hidden] { display: none; }
+
+/* Список отзывов — строками */
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+/* до инициализации JS показываем первые 3 — без прыжка раскладки */
+.js .reviews-list .review-card:nth-child(n+4) { display: none; }
+
+.reviews-list .review-card {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    border-radius: 0;
+    padding: 26px 4px;
+    gap: 12px;
+    transform: none;
+}
+.reviews-list .review-card:hover {
+    background: transparent;
+    border-color: var(--border);
+    transform: none;
+}
+
+.reviews-list .review-author {
+    order: -2;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+    padding-top: 0;
+    border-top: none;
+}
+.reviews-list .review-stars { order: -1; font-size: 16px; letter-spacing: 2px; }
+.reviews-list .review-text { order: 0; font-size: 15px; line-height: 1.75; color: var(--text); font-style: normal; }
+
+.reviews-list .review-role { position: relative; }
+.reviews-list .review-role::before {
+    content: "·";
+    margin-right: 10px;
+    color: var(--text-muted);
+}
+
+.reviews-empty {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 0 8px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 15px;
+}
+.reviews-empty[hidden] { display: none; }
+
+.reviews-more-wrap {
+    max-width: 720px;
+    margin: 28px auto 0;
+}
+.reviews-more {
+    width: 100%;
+    justify-content: center;
+}
+
+@media (max-width: 560px) {
+    .rating-summary {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 22px 18px;
+    }
+    .rating-summary-score {
+        padding-right: 0;
+        padding-bottom: 20px;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+    .rating-summary-number { font-size: 56px; }
+    .reviews-controls { justify-content: stretch; }
+    .reviews-sort { flex: 1; }
+    .sort-btn { flex: 1; padding: 8px 10px; }
+}
+
+
+/* ==============================
    PROJECT PAGES
    ============================== */
 .back-link {

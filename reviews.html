@@ -32,6 +32,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="style.css?v=c2ff591">
+    <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 
@@ -56,16 +57,6 @@
         <div class="container">
             <div class="badge">Отзывы</div>
             <h1>Что говорят <span class="text-accent">клиенты</span></h1>
-            <div class="rating-hero">
-                <div class="rating-big">
-                    <span class="rating-number">4.6</span>
-                    <span class="rating-out-of">/ 5</span>
-                </div>
-                <div class="rating-stars-big">
-                    <span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star half">&#9733;</span>
-                </div>
-                <p class="rating-count">34 отзыва</p>
-            </div>
         </div>
     </section>
 
@@ -73,7 +64,52 @@
     <!-- Отзывы -->
     <section class="reviews-section">
         <div class="container">
-            <div class="reviews-grid">
+            <!-- Сводка оценок (как в Google Play) -->
+            <div class="rating-summary">
+                <div class="rating-summary-score">
+                    <span class="rating-summary-number">4.6</span>
+                    <div class="rating-summary-stars" aria-hidden="true"><span class="star-on">&#9733;&#9733;&#9733;&#9733;</span><span class="star-half">&#9733;</span></div>
+                    <p class="rating-summary-count">34 отзыва</p>
+                </div>
+                <div class="rating-summary-bars" role="group" aria-label="Распределение оценок — нажмите, чтобы отфильтровать">
+                    <button type="button" class="rating-bar" data-rating="5" aria-label="Показать отзывы на 5 звёзд (25)">
+                        <span class="rating-bar-label">5</span>
+                        <span class="rating-bar-track"><span class="rating-bar-fill" style="width:73.5%"></span></span>
+                        <span class="rating-bar-count">25</span>
+                    </button>
+                    <button type="button" class="rating-bar" data-rating="4" aria-label="Показать отзывы на 4 звезды (6)">
+                        <span class="rating-bar-label">4</span>
+                        <span class="rating-bar-track"><span class="rating-bar-fill" style="width:17.6%"></span></span>
+                        <span class="rating-bar-count">6</span>
+                    </button>
+                    <button type="button" class="rating-bar" data-rating="3" aria-label="Показать отзывы на 3 звезды (2)">
+                        <span class="rating-bar-label">3</span>
+                        <span class="rating-bar-track"><span class="rating-bar-fill" style="width:5.9%"></span></span>
+                        <span class="rating-bar-count">2</span>
+                    </button>
+                    <button type="button" class="rating-bar" data-rating="2" aria-label="Показать отзывы на 2 звезды (1)">
+                        <span class="rating-bar-label">2</span>
+                        <span class="rating-bar-track"><span class="rating-bar-fill" style="width:2.9%"></span></span>
+                        <span class="rating-bar-count">1</span>
+                    </button>
+                    <button type="button" class="rating-bar" data-rating="1" aria-label="Показать отзывы на 1 звезду (0)">
+                        <span class="rating-bar-label">1</span>
+                        <span class="rating-bar-track"><span class="rating-bar-fill" style="width:0%"></span></span>
+                        <span class="rating-bar-count">0</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Сортировка + сброс фильтра -->
+            <div class="reviews-controls">
+                <div class="reviews-sort" role="group" aria-label="Сортировка отзывов">
+                    <button type="button" class="sort-btn is-active" data-sort="desc">Сначала хорошие</button>
+                    <button type="button" class="sort-btn" data-sort="asc">Сначала плохие</button>
+                </div>
+                <button type="button" class="reviews-reset" id="reviewsReset" hidden>Все оценки <span aria-hidden="true">&#10005;</span></button>
+            </div>
+
+            <div class="reviews-list" id="reviewsList">
 
                 <!-- ИИ-Администратор — 10 отзывов -->
                 <div class="review-card" data-category="admin">
@@ -386,6 +422,10 @@
                 </div>
 
             </div>
+            <p class="reviews-empty" id="reviewsEmpty" hidden>С такой оценкой пока нет отзывов.</p>
+            <div class="reviews-more-wrap">
+                <button type="button" class="btn btn-ghost reviews-more" id="reviewsMore">Показать ещё <span class="arrow">&#8595;</span></button>
+            </div>
         </div>
     </section>
 
@@ -418,6 +458,91 @@
     </a>
 
     <script src="script.js?v=c2ff591"></script>
+    <script>
+    (function () {
+        'use strict';
+        var list = document.getElementById('reviewsList');
+        if (!list) return;
+        var moreBtn = document.getElementById('reviewsMore');
+        var moreWrap = moreBtn ? moreBtn.parentElement : null;
+        var resetBtn = document.getElementById('reviewsReset');
+        var emptyMsg = document.getElementById('reviewsEmpty');
+        var sortBtns = document.querySelectorAll('.sort-btn');
+        var ratingBars = document.querySelectorAll('.rating-bar');
+
+        var STEP = 3;
+        var sortOrder = 'desc';   // desc = сначала хорошие, asc = сначала плохие
+        var filterRating = null;  // null или 1..5
+        var visible = STEP;
+
+        // Снимок карточек: оценка = число закрашенных звёзд, плюс исходный порядок
+        var cards = Array.prototype.slice.call(list.querySelectorAll('.review-card'));
+        cards.forEach(function (card, i) {
+            var on = card.querySelector('.star-on');
+            card._rating = on ? on.textContent.length : 0;
+            card._index = i;
+        });
+
+        function render() {
+            var items = cards.slice();
+            if (filterRating) {
+                items = items.filter(function (c) { return c._rating === filterRating; });
+            }
+            items.sort(function (a, b) {
+                if (a._rating !== b._rating) {
+                    return sortOrder === 'asc' ? a._rating - b._rating : b._rating - a._rating;
+                }
+                return a._index - b._index;
+            });
+
+            cards.forEach(function (c) { c.style.display = 'none'; });
+            items.forEach(function (c) { list.appendChild(c); });
+            var shown = Math.min(visible, items.length);
+            for (var i = 0; i < shown; i++) { items[i].style.display = ''; }
+
+            if (emptyMsg) emptyMsg.hidden = items.length !== 0;
+            if (moreWrap) moreWrap.style.display = items.length > visible ? '' : 'none';
+        }
+
+        if (moreBtn) moreBtn.addEventListener('click', function () {
+            visible += STEP;
+            render();
+        });
+
+        sortBtns.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                sortBtns.forEach(function (b) { b.classList.remove('is-active'); });
+                btn.classList.add('is-active');
+                sortOrder = btn.dataset.sort;
+                visible = STEP;
+                render();
+            });
+        });
+
+        ratingBars.forEach(function (bar) {
+            bar.addEventListener('click', function () {
+                var r = parseInt(bar.dataset.rating, 10);
+                filterRating = (filterRating === r) ? null : r;
+                ratingBars.forEach(function (b) {
+                    b.classList.toggle('is-active', parseInt(b.dataset.rating, 10) === filterRating);
+                });
+                if (resetBtn) resetBtn.hidden = !filterRating;
+                visible = STEP;
+                render();
+            });
+        });
+
+        if (resetBtn) resetBtn.addEventListener('click', function () {
+            filterRating = null;
+            ratingBars.forEach(function (b) { b.classList.remove('is-active'); });
+            resetBtn.hidden = true;
+            visible = STEP;
+            render();
+        });
+
+        render();
+    })();
+    </script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
