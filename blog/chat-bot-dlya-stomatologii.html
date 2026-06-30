@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Чат-бот с ИИ для стоматологии подтверждает записи, шлёт напоминания и снижает неявки пациентов — разбираю, как устроена автоматизация записи в клинике.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <meta name="author" content="Сергей Венчаков">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://venchakov.com https://mc.yandex.ru; script-src 'self' 'unsafe-inline' https://mc.yandex.ru; connect-src 'self' https://mc.yandex.ru wss://mc.yandex.ru;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta name="theme-color" content="#07090C">
+    <title>Чат-бот для стоматологии: как снизить неявки и автоматизировать запись — Сергей Венчаков</title>
+    <meta property="og:title" content="Чат-бот для стоматологии: как снизить неявки и автоматизировать запись">
+    <meta property="og:description" content="Чат-бот с ИИ для стоматологии подтверждает записи, шлёт напоминания и снижает неявки пациентов — разбираю, как устроена автоматизация записи в клинике.">
+    <meta property="og:url" content="https://venchakov.com/blog/chat-bot-dlya-stomatologii.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="Венчаков">
+    <meta property="og:image" content="https://venchakov.com/hero-sergey.jpg">
+    <meta property="article:published_time" content="2026-06-30">
+    <meta property="article:author" content="Сергей Венчаков">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Чат-бот для стоматологии: как снизить неявки и автоматизировать запись">
+    <meta name="twitter:description" content="Чат-бот с ИИ для стоматологии подтверждает записи, шлёт напоминания и снижает неявки пациентов — разбираю, как устроена автоматизация записи в клинике.">
+    <meta name="twitter:image" content="https://venchakov.com/hero-sergey.jpg">
+    <link rel="canonical" href="https://venchakov.com/blog/chat-bot-dlya-stomatologii.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500..900;1,500..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/style.css?v=night2026">
+    <link rel="stylesheet" href="/blog.css?v=night2026">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BlogPosting",
+          "@id": "https://venchakov.com/blog/chat-bot-dlya-stomatologii.html#article",
+          "headline": "Чат-бот для стоматологии: как снизить неявки и автоматизировать запись",
+          "description": "Чат-бот с ИИ для стоматологии подтверждает записи, шлёт напоминания и снижает неявки пациентов — разбираю, как устроена автоматизация записи в клинике.",
+          "inLanguage": "ru-RU",
+          "author": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков", "url": "https://venchakov.com/"},
+          "publisher": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков"},
+          "datePublished": "2026-06-30",
+          "dateModified": "2026-06-30",
+          "mainEntityOfPage": "https://venchakov.com/blog/chat-bot-dlya-stomatologii.html",
+          "image": "https://venchakov.com/hero-sergey.jpg",
+          "keywords": "чат-бот для стоматологии, автоматизация записи в клинику, снижение неявок пациентов, ИИ-администратор для стоматологии, напоминания о приёме пациентам"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://venchakov.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://venchakov.com/blog.html"},
+            {"@type": "ListItem", "position": 3, "name": "Чат-бот для стоматологии: как снизить неявки и автоматизировать запись"}
+          ]
+        }
+      ]
+    }
+    </script>
+    <!--
+      FAQPage — машиночитаемые вопрос-ответ по теме статьи.
+      Помогает попасть в расширенные сниппеты Google и даёт ИИ-поисковикам
+      (ChatGPT/Claude/Perplexity) готовые цитируемые ответы со ссылкой на источник.
+    -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Как чат-бот снижает неявки пациентов в стоматологии?", "acceptedAnswer": { "@type": "Answer", "text": "Бот подтверждает запись за 1-2 дня до приёма и присылает напоминание с датой, временем и адресом клиники. Если пациент не может прийти, он переносит или отменяет запись за пару сообщений в переписке — слот освобождается заранее, и администратор успевает предложить его другому пациенту." } },
+        { "@type": "Question", "name": "В каком мессенджере работает такой чат-бот?", "acceptedAnswer": { "@type": "Answer", "text": "Бот подключается к тому каналу, где пациенту удобно — Telegram, WhatsApp или чат на сайте клиники. Он не заменяет систему записи клиники, а работает поверх неё, читая расписание и статусы записей." } },
+        { "@type": "Question", "name": "Нужно ли менять программу для записи пациентов при внедрении бота?", "acceptedAnswer": { "@type": "Answer", "text": "Нет, бот подключается поверх существующей системы записи через интеграцию: он читает расписание и статусы записей, а не заменяет CRM клиники. Администратор продолжает работать в привычном интерфейсе, а рутинные звонки и напоминания забирает бот." } },
+        { "@type": "Question", "name": "С какого сценария лучше начинать внедрение чат-бота в клинике?", "acceptedAnswer": { "@type": "Answer", "text": "Разумно начинать не с полноценного диалога на все случаи, а с одного сценария — подтверждение записи и напоминание о приёме. Это закрывает основную часть неявок и не требует сложной интеграции с внутренними системами клиники. Дальше сценарии бота расширяют: перенос записи, ответы на частые вопросы, сбор обратной связи." } }
+      ]
+    }
+    </script>
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=110472799', 'ym');
+
+    ym(110472799, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/110472799" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="container nav-inner">
+            <a href="/index.html" class="nav-logo">ВЕНЧАКОВ</a>
+            <button class="nav-burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="navLinks">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/index.html" class="nav-link">Обо мне</a></li>
+                <li><a href="/services.html" class="nav-link">Услуги</a></li>
+                <li><a href="/reviews.html" class="nav-link">Кейсы и отзывы</a></li>
+                <li><a href="/blog.html" class="nav-link active">Блог</a></li>
+                <li><a href="/contacts.html" class="nav-link">Контакты</a></li>
+            </ul>
+            <a href="https://t.me/cvvjesuss" class="btn btn-accent btn-sm nav-cta" target="_blank" rel="noopener noreferrer">Написать <span class="arrow">&#8594;</span></a>
+        </div>
+    </nav>
+    <main>
+        <article class="blog-post">
+            <div class="container blog-post-container">
+                <nav class="post-breadcrumbs" aria-label="Хлебные крошки"><a href="/index.html">Главная</a> / <a href="/blog.html">Блог</a> / <span>Чат-бот для стоматологии</span></nav>
+                <header class="post-header">
+                    <div class="post-meta"><time datetime="2026-06-30">30 июня 2026</time><span class="post-meta-sep">·</span>7 мин чтения<span class="post-meta-sep">·</span><span class="post-tag">Боты</span></div>
+                    <h1>Чат-бот для стоматологии: как снизить неявки и автоматизировать запись</h1>
+                    <p class="post-lead">Администраторы стоматологий тратят часы на звонки-подтверждения, а пациенты всё равно не приходят на приём. Чат-бот с ИИ берёт эту рутину на себя: подтверждает запись, напоминает о приёме и освобождает администратора для реальной работы с клиникой.</p>
+                </header>
+                <div class="post-body">
+                    <h2>Неявки — тихая дыра в расписании стоматологии</h2>
+                    <p>Пациент записался на приём, администратор внёс его в расписание, а он просто не пришёл. Слот пустует, врач простаивает, а пациент, который реально хотел записаться на это время, узнать про свободное окно уже не успел. По опыту внедрений в разных нишах услуг вижу одну и ту же картину: чем меньше клиника напоминает о записи, тем выше доля неявок — а в стоматологии это особенно заметно, потому что приём часто планируют за неделю-две вперёд, и пациент банально забывает.</p>
+
+                    <h2>Как обычно с этим борются — и почему не работает</h2>
+                    <p>Стандартный способ — администратор вручную обзванивает пациентов накануне приёма. Это работает, пока записей немного. Как только их становится больше, звонки съедают значительную часть рабочего времени администратора, а часть пациентов всё равно не берёт трубку с незнакомого номера. SMS-рассылка чуть лучше, но это разовое сообщение без обратной связи: пациент не может тут же ответить, перенести или отменить запись — он либо приходит, либо нет.</p>
+
+                    <h2>Что делает чат-бот с ИИ в этой схеме</h2>
+                    <p>Я собираю таких ботов так, чтобы они закрывали именно эту дыру — а не были очередной модной фишкой на сайте клиники. Задача простая: довести пациента от записи до кресла врача с минимумом действий администратора. На практике бот берёт на себя:</p>
+                    <ul>
+                        <li>подтверждение записи за 1-2 дня до приёма;</li>
+                        <li>напоминание с датой, временем, адресом и именем врача;</li>
+                        <li>перенос или отмену записи прямо в переписке, без звонка администратору;</li>
+                        <li>ответы на частые вопросы — что взять с собой, как подготовиться, сколько длится приём;</li>
+                        <li>сбор истории обращений, чтобы администратор видел контекст, а не начинал разговор с нуля.</li>
+                    </ul>
+                    <p>Это близко к тому, о чём я писал в статье про <a href="/blog/ii-administrator-zapisi.html">ИИ-администратора записи</a>: бот не заменяет человека полностью, а забирает у него повторяющиеся действия — звонки, напоминания, перенос слотов — и оставляет живому администратору только те случаи, где действительно нужно решение.</p>
+
+                    <h2>Как это устроено технически</h2>
+                    <p>Бот работает поверх того канала, где пациенту удобно — Telegram, WhatsApp или чат на сайте клиники. Он не заменяет систему записи (CRM или медицинскую информационную систему), а подключается к ней: читает расписание, статусы записей и свободные слоты, вносит изменения, если пациент перенёс приём. Со стороны клиники это выглядит так же, как и раньше — администратор работает в привычном интерфейсе, просто часть рутины теперь закрывает бот.</p>
+
+                    <blockquote>Я всегда говорю клиентам на старте: бот в стоматологии — это не игрушка и не имиджевая фишка, а рабочий инструмент. Если через месяц после запуска количество пустых слотов в расписании не снизилось — значит, бот настроен неправильно, и это моя задача исправить, а не повод возвращаться к звонкам вручную.</blockquote>
+
+                    <h2>Стоматология — частный случай, а не исключение</h2>
+                    <p>Логика подтверждения записи и снижения неявок работает не только в стоматологии — шире я разбирал это в статье про <a href="/blog/ii-dlya-sfery-uslug.html">ИИ для сферы услуг</a>. У стоматологических клиник есть своя специфика: пациенты острее реагируют на перенос лечения, чем на перенос стрижки, а в клинике обычно несколько врачей с разным расписанием, и свободный слот у одного не заменит слот у другого. Это усложняет сценарии бота, но не меняет саму идею.</p>
+                    <p>Ещё одна особенность стоматологии — многоэтапное лечение. Пациент приходит не один раз, а на серию приёмов у одного и того же врача, и бот должен понимать, что напоминание нужно слать про каждый этап отдельно, а не разово. Если это не учесть на старте, бот будет путать пациента: напомнит о приёме, который уже прошёл, или пропустит следующий этап лечения. Поэтому перед настройкой я всегда смотрю, как в конкретной клинике устроено расписание — по одному приёму или по цепочке визитов.</p>
+
+                    <h2>Что чат-бот не должен делать</h2>
+                    <p>Отдельно проговариваю с клиентами границы: бот не ставит диагноз, не консультирует по медицинским вопросам и не заменяет разговор с врачом. Его зона ответственности — организационная часть: запись, подтверждение, напоминание, перенос. Как только пациент задаёт вопрос за пределами этой зоны, бот должен честно передать разговор администратору или врачу, а не пытаться выдумать ответ. Это принципиально для клиники — доверие к боту держится ровно до первого случая, когда он ответил не по делу.</p>
+
+                    <h2>С чего начать внедрение</h2>
+                    <p>По опыту, начинать имеет смысл не с полноценного диалога на все случаи жизни, а с одного сценария — подтверждение записи и напоминание. Это закрывает основную часть неявок и не требует сложной интеграции с внутренними системами клиники. Дальше, по мере того как видно, где ещё администратор тратит время на рутину, сценарии бота расширяют: перенос записи, ответы на частые вопросы, сбор обратной связи после приёма.</p>
+
+                    <h2>Частые вопросы</h2>
+                    <h3>Как чат-бот снижает неявки пациентов в стоматологии?</h3>
+                    <p>Бот подтверждает запись за 1-2 дня до приёма и присылает напоминание с датой, временем и адресом клиники. Если пациент не может прийти, он переносит или отменяет запись за пару сообщений в переписке — слот освобождается заранее, и администратор успевает предложить его другому пациенту.</p>
+                    <h3>В каком мессенджере работает такой чат-бот?</h3>
+                    <p>Бот подключается к тому каналу, где пациенту удобно — Telegram, WhatsApp или чат на сайте клиники. Он не заменяет систему записи клиники, а работает поверх неё, читая расписание и статусы записей.</p>
+                    <h3>Нужно ли менять программу для записи пациентов при внедрении бота?</h3>
+                    <p>Нет, бот подключается поверх существующей системы записи через интеграцию: он читает расписание и статусы записей, а не заменяет CRM клиники. Администратор продолжает работать в привычном интерфейсе, а рутинные звонки и напоминания забирает бот.</p>
+                    <h3>С какого сценария лучше начинать внедрение чат-бота в клинике?</h3>
+                    <p>Разумно начинать не с полноценного диалога на все случаи, а с одного сценария — подтверждение записи и напоминание о приёме. Это закрывает основную часть неявок и не требует сложной интеграции с внутренними системами клиники. Дальше сценарии бота расширяют: перенос записи, ответы на частые вопросы, сбор обратной связи.</p>
+                </div>
+                <section class="post-cta">
+                    <h2>Нужна помощь с внедрением?</h2>
+                    <p>Я Сергей Венчаков — делаю ИИ-агентов, ботов и автоматизацию под ключ. Расскажите задачу — предложу решение бесплатно.</p>
+                    <a href="https://t.me/cvvjesuss" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Написать в Telegram <span class="arrow">&#8599;</span></a>
+                    <a href="/service-bots.html" class="btn btn-ghost">Боты для бизнеса <span class="arrow">&#8599;</span></a>
+                </section>
+                <section class="post-cta">
+                    <h2>Подпишись на мой Telegram-канал</h2>
+                    <p>Разборы, кейсы и живые заметки про ИИ, автоматизацию и нейросети для бизнеса — без воды и хайпа. Новое выходит первым в канале.</p>
+                    <a href="https://telegram.me/aipo_prostomy" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Подписаться на канал <span class="arrow">&#8599;</span></a>
+                </section>
+                <footer class="post-author">
+                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a> · <a href="https://telegram.me/aipo_prostomy" target="_blank" rel="noopener noreferrer">Telegram-канал</a></p>
+                </footer>
+            </div>
+        </article>
+    </main>
+    <footer class="footer">
+        <div class="container footer-inner">
+            <a href="/index.html" class="footer-logo">ВЕНЧАКОВ</a>
+            <ul class="footer-links">
+                <li><a href="/index.html">Обо мне</a></li>
+                <li><a href="/services.html">Услуги</a></li>
+                <li><a href="/reviews.html">Кейсы и отзывы</a></li>
+                <li><a href="/blog.html">Блог</a></li>
+                <li><a href="/contacts.html">Контакты</a></li>
+            </ul>
+            <p class="footer-copy">&copy; 2026 venchakov.com</p>
+        </div>
+    </footer>
+    <script src="/script.js" defer></script>
+</body>
+</html>
