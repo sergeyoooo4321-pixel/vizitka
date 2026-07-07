@@ -8,6 +8,8 @@ Thumbs.db
 # Claude / agents / tooling
 .claude/
 .playwright-mcp/
+# Локальная рабочая память Claude (реквизиты проекта) — не публиковать
+CLAUDE.md
 
 # Local scratch
 всяична/
