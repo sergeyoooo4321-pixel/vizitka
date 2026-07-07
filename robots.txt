@@ -16,5 +16,4 @@ Allow: /
 User-agent: Googlebot
 Allow: /
 
-Host: venchakov.com
 Sitemap: https://venchakov.com/sitemap.xml

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Блог Сергея Венчакова</title>
+        <link>https://venchakov.com/blog.html</link>
+        <atom:link href="https://venchakov.com/feed.xml" rel="self" type="application/rss+xml"/>
+        <description>Мысли и разборы про ИИ для бизнеса: агенты, боты, автоматизация, контент и маркетплейсы.</description>
+        <language>ru</language>
+        <lastBuildDate>Mon, 29 Jun 2026 10:00:00 +0300</lastBuildDate>
+        <item>
+            <title>Чек-лист: готов ли ваш бизнес к внедрению ИИ</title>
+            <link>https://venchakov.com/blog/gotov-li-biznes-k-ii.html</link>
+            <guid>https://venchakov.com/blog/gotov-li-biznes-k-ii.html</guid>
+            <pubDate>Mon, 29 Jun 2026 10:00:00 +0300</pubDate>
+            <description>Чек-лист для самопроверки: готов ли ваш бизнес к внедрению ИИ и с чего начать, если пока нет.</description>
+        </item>
+        <item>
+            <title>ИИ в недвижимости: боты для застройщиков и агентств</title>
+            <link>https://venchakov.com/blog/ii-dlya-nedvizhimosti.html</link>
+            <guid>https://venchakov.com/blog/ii-dlya-nedvizhimosti.html</guid>
+            <pubDate>Mon, 22 Jun 2026 10:00:00 +0300</pubDate>
+            <description>Как боты и ИИ-агенты помогают застройщикам и агентствам недвижимости обрабатывать обращения.</description>
+        </item>
+        <item>
+            <title>Куда идут ИИ-агенты: мой прогноз на ближайшие годы</title>
+            <link>https://venchakov.com/blog/kuda-idut-ii-agenty.html</link>
+            <guid>https://venchakov.com/blog/kuda-idut-ii-agenty.html</guid>
+            <pubDate>Mon, 15 Jun 2026 10:00:00 +0300</pubDate>
+            <description>Мой прогноз, куда движутся ИИ-агенты в ближайшие годы и что это значит для бизнеса.</description>
+        </item>
+        <item>
+            <title>Автоматизация обработки заявок ИИ-ботом: как это устроено</title>
+            <link>https://venchakov.com/blog/avtomatizaciya-obrabotki-zayavok.html</link>
+            <guid>https://venchakov.com/blog/avtomatizaciya-obrabotki-zayavok.html</guid>
+            <pubDate>Mon, 08 Jun 2026 10:00:00 +0300</pubDate>
+            <description>Как устроена автоматическая обработка заявок ИИ-ботом: от приёма обращения до передачи менеджеру.</description>
+        </item>
+        <item>
+            <title>No-code ИИ-инструменты: что можно собрать без программиста</title>
+            <link>https://venchakov.com/blog/no-code-ii-instrumenty.html</link>
+            <guid>https://venchakov.com/blog/no-code-ii-instrumenty.html</guid>
+            <pubDate>Mon, 01 Jun 2026 10:00:00 +0300</pubDate>
+            <description>Что реально собрать на no-code ИИ-инструментах без программиста — и где проходит их предел.</description>
+        </item>
+        <item>
+            <title>ИИ и персональные данные: что учесть бизнесу в России</title>
+            <link>https://venchakov.com/blog/ii-i-personalnye-dannye.html</link>
+            <guid>https://venchakov.com/blog/ii-i-personalnye-dannye.html</guid>
+            <pubDate>Mon, 25 May 2026 10:00:00 +0300</pubDate>
+            <description>Что бизнесу в России учесть при работе ИИ с персональными данными, чтобы не получить штраф.</description>
+        </item>
+        <item>
+            <title>Как встроить ИИ-чат на сайт: варианты и подводные камни</title>
+            <link>https://venchakov.com/blog/ii-chat-na-sayt.html</link>
+            <guid>https://venchakov.com/blog/ii-chat-na-sayt.html</guid>
+            <pubDate>Mon, 18 May 2026 10:00:00 +0300</pubDate>
+            <description>Варианты встраивания ИИ-чата на сайт, их плюсы, минусы и подводные камни.</description>
+        </item>
+        <item>
+            <title>ИИ-бот поддержки: как снять 80% типовых вопросов</title>
+            <link>https://venchakov.com/blog/ii-bot-podderzhki.html</link>
+            <guid>https://venchakov.com/blog/ii-bot-podderzhki.html</guid>
+            <pubDate>Tue, 12 May 2026 10:00:00 +0300</pubDate>
+            <description>Как ИИ-бот поддержки снимает до 80% типовых вопросов и когда всё же нужен человек.</description>
+        </item>
+        <item>
+            <title>Нейросети для SEO-текстов: как писать под органику и не попасть под фильтр</title>
+            <link>https://venchakov.com/blog/neyroseti-dlya-seo-tekstov.html</link>
+            <guid>https://venchakov.com/blog/neyroseti-dlya-seo-tekstov.html</guid>
+            <pubDate>Mon, 04 May 2026 10:00:00 +0300</pubDate>
+            <description>Как писать SEO-тексты нейросетью так, чтобы расти в органике и не попасть под фильтры поисковиков.</description>
+        </item>
+        <item>
+            <title>Автоворонка с ИИ в Telegram: разбор механики</title>
+            <link>https://venchakov.com/blog/avtovoronka-s-ii-v-telegram.html</link>
+            <guid>https://venchakov.com/blog/avtovoronka-s-ii-v-telegram.html</guid>
+            <pubDate>Mon, 27 Apr 2026 10:00:00 +0300</pubDate>
+            <description>Разбор механики автоворонки с ИИ в Telegram: от первого касания до продажи.</description>
+        </item>
+        <item>
+            <title>ИИ для сферы услуг: салоны, клиники, автосервисы</title>
+            <link>https://venchakov.com/blog/ii-dlya-sfery-uslug.html</link>
+            <guid>https://venchakov.com/blog/ii-dlya-sfery-uslug.html</guid>
+            <pubDate>Mon, 20 Apr 2026 10:00:00 +0300</pubDate>
+            <description>Что ИИ даёт сфере услуг: салоны, клиники и автосервисы — конкретные сценарии автоматизации.</description>
+        </item>
+        <item>
+            <title>Промпт-инжиниринг: основы, которые экономят часы работы</title>
+            <link>https://venchakov.com/blog/prompt-inzhiniring-osnovy.html</link>
+            <guid>https://venchakov.com/blog/prompt-inzhiniring-osnovy.html</guid>
+            <pubDate>Mon, 13 Apr 2026 10:00:00 +0300</pubDate>
+            <description>Основы промпт-инжиниринга, которые каждый день экономят часы работы с нейросетями.</description>
+        </item>
+        <item>
+            <title>ИИ-администратор: запись клиентов без человека</title>
+            <link>https://venchakov.com/blog/ii-administrator-zapisi.html</link>
+            <guid>https://venchakov.com/blog/ii-administrator-zapisi.html</guid>
+            <pubDate>Mon, 06 Apr 2026 10:00:00 +0300</pubDate>
+            <description>Как ИИ-администратор ведёт запись клиентов без участия человека: механика и подводные камни.</description>
+        </item>
+        <item>
+            <title>RAG простыми словами: как научить ИИ отвечать по вашей базе знаний</title>
+            <link>https://venchakov.com/blog/rag-prostymi-slovami.html</link>
+            <guid>https://venchakov.com/blog/rag-prostymi-slovami.html</guid>
+            <pubDate>Mon, 30 Mar 2026 10:00:00 +0300</pubDate>
+            <description>Объясняю RAG простыми словами: как научить ИИ отвечать по вашей базе знаний, а не выдумывать.</description>
+        </item>
+        <item>
+            <title>5 ошибок при внедрении ИИ в бизнес и как их избежать</title>
+            <link>https://venchakov.com/blog/oshibki-vnedreniya-ii.html</link>
+            <guid>https://venchakov.com/blog/oshibki-vnedreniya-ii.html</guid>
+            <pubDate>Mon, 23 Mar 2026 10:00:00 +0300</pubDate>
+            <description>Пять типичных ошибок при внедрении ИИ в бизнес и как обойти каждую из них.</description>
+        </item>
+        <item>
+            <title>Контент-план на месяц за час: рабочая связка нейросетей</title>
+            <link>https://venchakov.com/blog/kontent-plan-neyrosetyu.html</link>
+            <guid>https://venchakov.com/blog/kontent-plan-neyrosetyu.html</guid>
+            <pubDate>Mon, 16 Mar 2026 10:00:00 +0300</pubDate>
+            <description>Рабочая связка нейросетей, с которой контент-план на месяц собирается за один час.</description>
+        </item>
+        <item>
+            <title>ИИ + CRM: автоматическая квалификация лидов</title>
+            <link>https://venchakov.com/blog/ii-i-crm.html</link>
+            <guid>https://venchakov.com/blog/ii-i-crm.html</guid>
+            <pubDate>Tue, 10 Mar 2026 10:00:00 +0300</pubDate>
+            <description>Как связка ИИ и CRM автоматически квалифицирует лидов и экономит время отдела продаж.</description>
+        </item>
+        <item>
+            <title>Голосовые ИИ-боты: где они реально работают, а где нет</title>
+            <link>https://venchakov.com/blog/golosovye-ii-boty.html</link>
+            <guid>https://venchakov.com/blog/golosovye-ii-boty.html</guid>
+            <pubDate>Mon, 02 Mar 2026 10:00:00 +0300</pubDate>
+            <description>Где голосовые ИИ-боты реально работают, а где пока только раздражают клиентов.</description>
+        </item>
+        <item>
+            <title>Генерация карточек для WB и Ozon нейросетью: пошаговый разбор</title>
+            <link>https://venchakov.com/blog/generaciya-kartochek-wb-ozon.html</link>
+            <guid>https://venchakov.com/blog/generaciya-kartochek-wb-ozon.html</guid>
+            <pubDate>Mon, 23 Feb 2026 10:00:00 +0300</pubDate>
+            <description>Пошаговый разбор, как генерировать карточки товаров для Wildberries и Ozon с помощью нейросети.</description>
+        </item>
+        <item>
+            <title>Claude или ChatGPT: что выбрать для рабочих задач</title>
+            <link>https://venchakov.com/blog/claude-ili-chatgpt.html</link>
+            <guid>https://venchakov.com/blog/claude-ili-chatgpt.html</guid>
+            <pubDate>Mon, 16 Feb 2026 10:00:00 +0300</pubDate>
+            <description>Сравниваю Claude и ChatGPT на рабочих задачах: тексты, код, анализ документов — и что выбрать.</description>
+        </item>
+        <item>
+            <title>ChatGPT в бизнесе: реальные сценарии, а не хайп</title>
+            <link>https://venchakov.com/blog/chatgpt-dlya-biznesa.html</link>
+            <guid>https://venchakov.com/blog/chatgpt-dlya-biznesa.html</guid>
+            <pubDate>Mon, 09 Feb 2026 10:00:00 +0300</pubDate>
+            <description>Реальные сценарии применения ChatGPT в бизнесе — без хайпа и обещаний заменить всех сотрудников.</description>
+        </item>
+        <item>
+            <title>Сколько стоит чат-бот: честный разбор цен и из чего они складываются</title>
+            <link>https://venchakov.com/blog/skolko-stoit-chat-bot.html</link>
+            <guid>https://venchakov.com/blog/skolko-stoit-chat-bot.html</guid>
+            <pubDate>Mon, 02 Feb 2026 10:00:00 +0300</pubDate>
+            <description>Честный разбор цен на чат-ботов: из чего складывается стоимость и за что вы реально платите.</description>
+        </item>
+        <item>
+            <title>Как выбрать подрядчика на ИИ-проект и не слить бюджет</title>
+            <link>https://venchakov.com/blog/kak-vybrat-podryadchika-ii.html</link>
+            <guid>https://venchakov.com/blog/kak-vybrat-podryadchika-ii.html</guid>
+            <pubDate>Mon, 26 Jan 2026 10:00:00 +0300</pubDate>
+            <description>На что смотреть при выборе подрядчика на ИИ-проект, какие вопросы задавать и как не слить бюджет.</description>
+        </item>
+        <item>
+            <title>ИИ на маркетплейсах: карточки товаров, отзывы и SEO-описания</title>
+            <link>https://venchakov.com/blog/ii-na-marketpleysah.html</link>
+            <guid>https://venchakov.com/blog/ii-na-marketpleysah.html</guid>
+            <pubDate>Mon, 19 Jan 2026 10:00:00 +0300</pubDate>
+            <description>Что ИИ умеет на маркетплейсах: карточки товаров, ответы на отзывы и SEO-описания без ручной рутины.</description>
+        </item>
+        <item>
+            <title>Автоматизация ответов клиентам: как не терять заявки ночью</title>
+            <link>https://venchakov.com/blog/avtomatizaciya-otvetov-klientam.html</link>
+            <guid>https://venchakov.com/blog/avtomatizaciya-otvetov-klientam.html</guid>
+            <pubDate>Mon, 12 Jan 2026 10:00:00 +0300</pubDate>
+            <description>Как настроить автоматические ответы клиентам, чтобы заявки не терялись ночью и в выходные.</description>
+        </item>
+        <item>
+            <title>Чат-бот с ИИ против кнопочного: в чём разница и что выбрать</title>
+            <link>https://venchakov.com/blog/chat-bot-s-ii-vs-obychnyj.html</link>
+            <guid>https://venchakov.com/blog/chat-bot-s-ii-vs-obychnyj.html</guid>
+            <pubDate>Mon, 05 Jan 2026 10:00:00 +0300</pubDate>
+            <description>Сравниваю ИИ-бота и классического кнопочного: где какой уместен и что выбрать под вашу задачу.</description>
+        </item>
+        <item>
+            <title>ИИ для малого бизнеса: 7 задач, которые можно автоматизировать</title>
+            <link>https://venchakov.com/blog/ii-dlya-malogo-biznesa.html</link>
+            <guid>https://venchakov.com/blog/ii-dlya-malogo-biznesa.html</guid>
+            <pubDate>Mon, 29 Dec 2025 10:00:00 +0300</pubDate>
+            <description>Семь конкретных задач малого бизнеса, которые уже сегодня можно отдать искусственному интеллекту.</description>
+        </item>
+        <item>
+            <title>Нейросети для контента: как генерировать посты, которые читают</title>
+            <link>https://venchakov.com/blog/neyroseti-dlya-kontenta.html</link>
+            <guid>https://venchakov.com/blog/neyroseti-dlya-kontenta.html</guid>
+            <pubDate>Mon, 22 Dec 2025 10:00:00 +0300</pubDate>
+            <description>Как использовать нейросети для генерации постов, которые действительно читают, а не пролистывают.</description>
+        </item>
+        <item>
+            <title>Telegram-бот для бизнеса: зачем нужен и с чего начать</title>
+            <link>https://venchakov.com/blog/telegram-bot-dlya-biznesa.html</link>
+            <guid>https://venchakov.com/blog/telegram-bot-dlya-biznesa.html</guid>
+            <pubDate>Mon, 15 Dec 2025 10:00:00 +0300</pubDate>
+            <description>Зачем бизнесу Telegram-бот, какие задачи он решает и с чего начать, чтобы не выбросить бюджет впустую.</description>
+        </item>
+        <item>
+            <title>Что такое ИИ-агент простыми словами и зачем он бизнесу</title>
+            <link>https://venchakov.com/blog/chto-takoe-ii-agent.html</link>
+            <guid>https://venchakov.com/blog/chto-takoe-ii-agent.html</guid>
+            <pubDate>Mon, 08 Dec 2025 10:00:00 +0300</pubDate>
+            <description>Разбираю простыми словами, что такое ИИ-агент, чем он отличается от обычного чат-бота и какие задачи бизнеса способен закрыть.</description>
+        </item>
+    </channel>
+</rss>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500..900;1,500..900&display=swap');
+
 /* ==============================
    RESET & BASE
    ============================== */
@@ -26,6 +28,14 @@
     --radius-pill: 100px;
     --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+    /* Токены варианта «Журнальный» (A8) — серифный дисплей, второй акцент, чернильные детали, глубже тени */
+    --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif; /* серифный шрифт для крупных заголовков контента */
+    --accent-2: #B4552D;                       /* терракота — второй акцент (цены, цифры, подчёркивания ссылок) */
+    --accent-2-dim: rgba(180, 85, 45, 0.12);   /* мягкая терракотовая подложка (теги, плашки) */
+    --ink: #1E1C1A;                            /* чернильный — тонкие линии/подчёркивания-детали */
+    --shadow-soft: 0 2px 8px rgba(44,42,40,0.06), 0 20px 60px rgba(44,42,40,0.12);   /* базовая мягкая тень карточек */
+    --shadow-lift: 0 4px 12px rgba(44,42,40,0.10), 0 28px 80px rgba(44,42,40,0.16);  /* тень при hover-подъёме */
 }
 
 html {
@@ -59,6 +69,60 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+/* ==============================
+   DISPLAY TYPOGRAPHY (журнальный)
+   Крупные смысловые заголовки контента набираются серифным Playfair Display.
+   НАМЕРЕННО НЕ трогаем: .nav-logo, .btn, .badge, .section-tag, формы — они остаются Inter.
+   ============================== */
+.hero-text h1,
+.hero-slide h1,
+.hero-slide .hero-slide-title,
+.section-header h2,
+.page-hero h1,
+.project-hero-text h1,
+.bento-card h3,
+.service-preview-card h3,
+.service-body h3,
+.cta-card h2,
+.audience-card h3,
+.compare-card h3,
+.tariff-card h3,
+.detail-block h2,
+.faq-section h2,
+.contact-card-big h3,
+.ba-header h2,
+.process-step h3 {
+    font-family: var(--font-display);
+}
+
+/* Blockquote-стиль (блог и любой контент): серифный курсив, левая терракотовая линия */
+blockquote {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--text);
+    border-left: 3px solid var(--accent-2);
+    padding-left: 20px;
+    margin: 24px 0;
+}
+
+/* Ссылки внутри текста статей: чернильный текст + тонкое терракотовое подчёркивание с offset */
+.post-body a,
+.post-lead a {
+    color: var(--text);
+    text-decoration: underline;
+    text-decoration-color: var(--accent-2);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: var(--transition);
+}
+
+.post-body a:hover,
+.post-lead a:hover {
+    color: var(--accent-2);
 }
 
 .container {
@@ -270,6 +334,17 @@ img {
     font-size: clamp(26px, 3.5vw + 0.5rem, 40px);
     font-weight: 800;
     line-height: 1.2;
+    letter-spacing: -0.01em;
+}
+
+/* Чернильная линия-деталь под заголовком секции (журнальный акцент) */
+.section-header::after {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 2px;
+    background: var(--ink);
+    margin: 20px auto 0;
 }
 
 .text-accent {
@@ -306,9 +381,9 @@ img {
     align-items: center;
     overflow: hidden;
     padding: 72px 64px;
-    border-radius: 34px;
+    border-radius: 40px 14px 40px 14px; /* асимметрия — знаковая hero-плашка (журнальный) */
     background: #D3AD89;
-    box-shadow: 0 24px 70px rgba(44, 42, 40, 0.12);
+    box-shadow: var(--shadow-lift);
 }
 
 .hero-text {
@@ -322,8 +397,8 @@ img {
 .hero-text h1 {
     font-size: clamp(30px, 5vw + 1rem, 64px);
     font-weight: 900;
-    line-height: 1.05;
-    letter-spacing: -2px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
     margin-bottom: 20px;
 }
 
@@ -384,13 +459,14 @@ img {
 
 .bento-card-hover {
     transition: var(--transition);
+    box-shadow: var(--shadow-soft);
 }
 
 .bento-card-hover:hover {
     background: var(--bg-card-hover);
     border-color: var(--border-hover);
-    transform: translateY(-4px);
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(142, 123, 104, 0.05);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lift);
 }
 
 .bento-grid {
@@ -506,7 +582,7 @@ img {
 .bento-stat {
     font-size: 32px;
     font-weight: 900;
-    color: var(--accent);
+    color: var(--accent-2);
     line-height: 1;
 }
 
@@ -649,6 +725,13 @@ img {
     grid-template-columns: repeat(3, 1fr);
 }
 
+/* Разнообразие форм: чередующаяся тёплая подложка у чётных карточек сеток (журнальный) */
+.bento-services-preview .bento-card:nth-child(even),
+.bento-cases-grid .bento-card:nth-child(even),
+.audience-grid .audience-card:nth-child(even) {
+    background: var(--bg-card-alt);
+}
+
 .proof-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
@@ -701,7 +784,7 @@ img {
 .page-hero h1 {
     font-size: clamp(30px, 4.5vw + 1rem, 56px);
     font-weight: 900;
-    letter-spacing: -2px;
+    letter-spacing: -0.02em;
     line-height: 1.1;
     margin-bottom: 16px;
 }
@@ -771,7 +854,7 @@ img {
 .price-tag {
     font-size: 22px;
     font-weight: 800;
-    color: var(--accent);
+    color: var(--accent-2);
     margin-bottom: 16px;
 }
 
@@ -785,7 +868,7 @@ img {
 .cta-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
+    border-radius: 32px 12px 32px 12px; /* асимметрия — знаковая CTA-карточка (журнальный) */
     padding: 48px;
     text-align: center;
 }
@@ -1076,7 +1159,8 @@ img {
 .review-card:hover {
     background: var(--bg-card-hover);
     border-color: var(--border-hover);
-    transform: translateY(-2px);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lift);
 }
 
 .review-stars {
@@ -1435,7 +1519,7 @@ img {
     font-size: clamp(28px, 4vw + 1rem, 52px);
     font-weight: 900;
     line-height: 1.1;
-    letter-spacing: -2px;
+    letter-spacing: -0.02em;
     margin-bottom: 20px;
 }
 
@@ -1460,6 +1544,7 @@ img {
     font-weight: 800;
     letter-spacing: -1px;
     line-height: 1;
+    color: var(--accent-2);
 }
 
 .stat-label {
@@ -1572,7 +1657,7 @@ img {
 .tariff-price {
     font-size: 28px;
     font-weight: 800;
-    color: var(--accent);
+    color: var(--accent-2);
     margin-bottom: 16px;
 }
 
@@ -1745,7 +1830,8 @@ img {
 .audience-card:hover {
     background: var(--bg-card-hover);
     border-color: var(--border-hover);
-    transform: translateY(-4px);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lift);
 }
 
 .audience-card h3 {
@@ -1831,6 +1917,21 @@ img {
     height: 8px;
     border-radius: 50%;
     background: var(--accent);
+}
+
+/* ==============================
+   DEPTH — базовые мягкие тени карточек (журнальный, «убрать пластик»)
+   Отдельные smysловые карточки получают глубину; hover-подъём усиливает тень (см. :hover выше).
+   ============================== */
+.cta-card,
+.tariff-card,
+.audience-card,
+.process-step,
+.stat-card,
+.compare-card,
+.detail-block,
+.review-card {
+    box-shadow: var(--shadow-soft);
 }
 
 /* ==============================
@@ -2382,13 +2483,14 @@ img {
 .process-step:hover {
     background: var(--bg-card-hover);
     border-color: var(--border-hover);
-    transform: translateY(-4px);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lift);
 }
 
 .process-number {
     font-size: 32px;
     font-weight: 900;
-    color: var(--accent);
+    color: var(--accent-2);
     margin-bottom: 12px;
     line-height: 1;
 }
@@ -2886,8 +2988,8 @@ img {
 .hero-slide .hero-slide-title {
     font-size: clamp(28px, 4.4vw + 0.5rem, 56px);
     font-weight: 900;
-    line-height: 1.06;
-    letter-spacing: -1.5px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
     margin-bottom: 18px;
     color: var(--text);
     overflow-wrap: anywhere;

@@ -8,7 +8,7 @@
     <meta name="keywords" content="отзывы Венчаков, отзывы о разработке ботов, отзывы автоматизация бизнеса, реальные кейсы ИИ-агенты">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
     <meta name="author" content="Сергей Венчаков">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://venchakov.com; script-src 'self' 'unsafe-inline';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://venchakov.com https://mc.yandex.ru; script-src 'self' 'unsafe-inline' https://mc.yandex.ru; connect-src 'self' https://mc.yandex.ru;">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     <meta http-equiv="X-Frame-Options" content="DENY">
@@ -31,8 +31,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="stylesheet" href="style.css?v=fa49d60">
+    <link rel="stylesheet" href="style.css?v=blog2026">
     <script>document.documentElement.classList.add('js')</script>
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=110472799', 'ym');
+
+    ym(110472799, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/110472799" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </head>
 <body>
 
@@ -46,11 +59,14 @@
                 <li><a href="index.html" class="nav-link">Обо мне</a></li>
                 <li><a href="services.html" class="nav-link">Услуги</a></li>
                 <li><a href="reviews.html" class="nav-link active">Кейсы и отзывы</a></li>
+                <li><a href="blog.html" class="nav-link">Блог</a></li>
                 <li><a href="contacts.html" class="nav-link">Контакты</a></li>
             </ul>
             <a href="https://t.me/cvvjesuss" class="btn btn-accent btn-sm nav-cta" target="_blank" rel="noopener noreferrer">Написать <span class="arrow">&#8594;</span></a>
         </div>
     </nav>
+
+    <main>
 
     <!-- Hero -->
     <section class="page-hero">
@@ -100,6 +116,15 @@
                     <h3>«StepLine» — кроссовки</h3>
                     <p>Telegram-бот без кнопок как живой ИИ-продавец: подбирает пары под запрос, делает допродажу, снимает возражения и доводит до заявки.</p>
                     <span class="card-link">Открыть кейс <span class="arrow">&#8599;</span></span>
+                </a>
+                <a href="project-openclaw.html" class="bento-card bento-card-hover service-preview-card project-link">
+                    <div class="service-preview-top">
+                        <div class="chrome-sphere chrome-xs"></div>
+                    </div>
+                    <span class="review-project-tag" style="align-self:flex-start; margin-bottom:10px;">Личный AI-работник</span>
+                    <h3>«OpenClaw» — AI под ключ</h3>
+                    <p>Личный AI-работник, который берёт рутину на себя: отвечает клиентам, ведёт задачи и работает без выходных. Запуск за день, тарифы от 3 900 ₽.</p>
+                    <span class="card-link">Открыть проект <span class="arrow">&#8599;</span></span>
                 </a>
             </div>
             <div class="section-cta">
@@ -491,6 +516,8 @@
         </div>
     </section>
 
+    </main>
+
     <footer class="footer">
         <div class="container footer-inner">
             <a href="index.html" class="footer-logo">ВЕНЧАКОВ</a>
@@ -498,6 +525,7 @@
                 <li><a href="index.html">Обо мне</a></li>
                 <li><a href="services.html">Услуги</a></li>
                 <li><a href="reviews.html">Кейсы и отзывы</a></li>
+                <li><a href="blog.html">Блог</a></li>
                 <li><a href="contacts.html">Контакты</a></li>
             </ul>
             <p class="footer-copy">&copy; 2026 venchakov.com</p>
@@ -607,7 +635,17 @@
         "reviewCount": "34",
         "bestRating": "5",
         "worstRating": "1"
-      }
+      },
+      "review": [
+        {"@type": "Review", "author": {"@type": "Person", "name": "Алина М."}, "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1"}, "reviewBody": "Подключили бота 2 недели назад. Клиенты записываются ночью и в выходные — за первую неделю через бота пришло 23 записи."},
+        {"@type": "Review", "author": {"@type": "Person", "name": "Дмитрий К."}, "reviewRating": {"@type": "Rating", "ratingValue": "4", "bestRating": "5", "worstRating": "1"}, "reviewBody": "В целом работает хорошо, клиенты записываются. Иногда путает свободные слоты при смене расписания — Сергей дорабатывает синхронизацию."},
+        {"@type": "Review", "author": {"@type": "Person", "name": "Оксана Д."}, "reviewRating": {"@type": "Rating", "ratingValue": "3", "bestRating": "5", "worstRating": "1"}, "reviewBody": "Бот работает, но ответы иногда слишком шаблонные. Сергей пообещал доработать промпт."},
+        {"@type": "Review", "author": {"@type": "Person", "name": "Марат Т."}, "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1"}, "reviewBody": "Подключили на 3 филиала сразу. Экономим на двух администраторах — около 120к в месяц. Сделал быстро и без косяков."},
+        {"@type": "Review", "author": {"@type": "Person", "name": "Андрей Г."}, "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1"}, "reviewBody": "Бот квалифицирует заявки с сайта и передаёт менеджерам тёплых лидов. Конверсия в продажу выросла с 12% до 21%."},
+        {"@type": "Review", "author": {"@type": "Person", "name": "Лариса Б."}, "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1"}, "reviewBody": "Подключила в инстаграм: бот ведёт консультацию, уточняет размеры, предлагает варианты. За первый месяц продаж на 340к без менеджера."},
+        {"@type": "Review", "author": {"@type": "Person", "name": "Константин Р."}, "reviewRating": {"@type": "Rating", "ratingValue": "4", "bestRating": "5", "worstRating": "1"}, "reviewBody": "Неплохо работает для первичной квалификации — выясняет бюджет, сроки и потребность. Просил смягчить тон, Сергей поправил за день."},
+        {"@type": "Review", "author": {"@type": "Person", "name": "Евгения Ш."}, "reviewRating": {"@type": "Rating", "ratingValue": "3", "bestRating": "5", "worstRating": "1"}, "reviewBody": "Идея хорошая, но для недвижимости бот пока сыроват — клиенты задают специфичные вопросы про ипотеку и документы."}
+      ]
     }
     </script>
     <script type="application/ld+json">

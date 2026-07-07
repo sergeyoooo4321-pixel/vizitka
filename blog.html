@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Блог Сергея Венчакова про ИИ для бизнеса: разборы, гайды и мысли об ИИ-агентах, чат-ботах, автоматизации, нейросетях для контента и маркетплейсов. 30 статей без воды.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <meta name="author" content="Сергей Венчаков">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://venchakov.com https://mc.yandex.ru; script-src 'self' 'unsafe-inline' https://mc.yandex.ru; connect-src 'self' https://mc.yandex.ru;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta name="theme-color" content="#FBF9F6">
+    <title>Блог о ИИ и автоматизации — Сергей Венчаков</title>
+    <meta property="og:title" content="Блог о ИИ и автоматизации — Сергей Венчаков">
+    <meta property="og:description" content="Разборы, гайды и мысли про ИИ для бизнеса: агенты, боты, автоматизация, контент и маркетплейсы.">
+    <meta property="og:url" content="https://venchakov.com/blog.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="Венчаков">
+    <meta property="og:image" content="https://venchakov.com/hero-sergey.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Блог о ИИ и автоматизации — Сергей Венчаков">
+    <meta name="twitter:description" content="Разборы, гайды и мысли про ИИ для бизнеса: агенты, боты, автоматизация, контент и маркетплейсы.">
+    <meta name="twitter:image" content="https://venchakov.com/hero-sergey.jpg">
+    <link rel="canonical" href="https://venchakov.com/blog.html">
+    <link rel="alternate" type="application/rss+xml" title="Блог Сергея Венчакова" href="/feed.xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500..900;1,500..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css?v=blog2026">
+    <link rel="stylesheet" href="blog.css?v=blog2026">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Blog",
+          "@id": "https://venchakov.com/blog.html#blog",
+          "url": "https://venchakov.com/blog.html",
+          "name": "Блог Сергея Венчакова",
+          "description": "Разборы, гайды и мысли про ИИ для бизнеса: агенты, боты, автоматизация, контент и маркетплейсы.",
+          "inLanguage": "ru-RU",
+          "author": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков", "url": "https://venchakov.com/"},
+          "publisher": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков"}
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://venchakov.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Блог"}
+          ]
+        }
+      ]
+    }
+    </script>
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=110472799', 'ym');
+
+    ym(110472799, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/110472799" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</head>
+<body>
+
+    <!-- Навигация -->
+    <nav class="nav" id="nav">
+        <div class="container nav-inner">
+            <a href="index.html" class="nav-logo">ВЕНЧАКОВ</a>
+            <button class="nav-burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Обо мне</a></li>
+                <li><a href="services.html" class="nav-link">Услуги</a></li>
+                <li><a href="reviews.html" class="nav-link">Кейсы и отзывы</a></li>
+                <li><a href="blog.html" class="nav-link active">Блог</a></li>
+                <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+            </ul>
+            <a href="https://t.me/cvvjesuss" class="btn btn-accent btn-sm nav-cta" target="_blank" rel="noopener noreferrer">Написать <span class="arrow">&#8594;</span></a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Хиро блога -->
+        <section class="blog-index">
+            <div class="container">
+                <div class="section-header blog-index-header">
+                    <span class="section-tag">Блог</span>
+                    <h1>Мысли и разборы про <span class="text-accent">ИИ для бизнеса</span></h1>
+                    <p class="blog-index-subtitle">Пишу про ИИ-агентов, ботов и автоматизацию без хайпа: что реально работает, сколько стоит и как внедрить. Новые статьи — каждую неделю.</p>
+                </div>
+
+                <!-- Сетка карточек: все 30 статей, новые сверху -->
+                <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="post-meta"><time datetime="2026-06-29">29 июня 2026</time><span class="post-meta-sep">&middot;</span><span class="post-tag">ИИ для бизнеса</span></div>
+                    <h2 class="blog-card-title"><a href="/blog/gotov-li-biznes-k-ii.html">Чек-лист: готов ли ваш бизнес к внедрению ИИ</a></h2>
+                    <p class="blog-card-desc">Чек-лист для самопроверки: готов ли ваш бизнес к внедрению ИИ и с чего начать, если пока нет.</p>
+                </article>
+                <article class="blog-card">
+                    <div class="post-meta"><time datetime="2026-06-22">22 июня 2026</time><span class="post-meta-sep">&middot;</span><span class="post-tag">ИИ для бизнеса</span></div>
+                    <h2 class="blog-card-title"><a href="/blog/ii-dlya-nedvizhimosti.html">ИИ в недвижимости: боты для застройщиков и агентств</a></h2>
+                    <p class="blog-card-desc">Как боты и ИИ-агенты помогают застройщикам и агентствам недвижимости обрабатывать обращения.</p>
+                </article>
+                <article class="blog-card">
+                    <div class="post-meta"><time datetime="2026-06-15">15 июня 2026</time><span class="post-meta-sep">&middot;</span><span class="post-tag">Мысли</span></div>
+                    <h2 class="blog-card-title"><a href="/blog/kuda-idut-ii-agenty.html">Куда идут ИИ-агенты: мой прогноз на ближайшие годы</a></h2>
+                    <p class="blog-card-desc">Мой прогноз, куда движутся ИИ-агенты в ближайшие годы и что это значит для бизнеса.</p>
+                </article>
+                <article class="blog-card">
+                    <div class="post-meta"><time datetime="2026-06-08">8 июня 2026</time><span class="post-meta-sep">&middot;</span><span class="post-tag">ИИ для бизнеса</span></div>
+                    <h2 class="blog-card-title"><a href="/blog/avtomatizaciya-obrabotki-zayavok.html">Автоматизация обработки заявок ИИ-ботом: как это устроено</a></h2>
+                    <p class="blog-card-desc">Как устроена автоматическая обработка заявок ИИ-ботом: от приёма обращения до передачи менеджеру.</p>
+                </article>
+                <article class="blog-card">
+                    <div class="post-meta"><time datetime="2026-06-01">1 июня 2026</time><span class="post-meta-sep">&middot;</span><span class="post-tag">Разбор</span></div>
+                    <h2 class="blog-card-title"><a href="/blog/no-code-ii-instrumenty.html">No-code ИИ-инструменты: что можно собрать без программиста</a></h2>
+                    <p class="blog-card-desc">Что реально собрать на no-code ИИ-инструментах без программиста — и где проходит их предел.</p>
+                </article>
+                <article class="blog-card">
+                    <div class="post-meta"><time datetime="2026-05-25">25 мая 2026</time><span class="post-meta-sep">&middot;</span><span class="post-tag">Мысли</span></div>
+                    <h2 class="blog-card-title"><a href="/blog/ii-i-personalnye-dannye.html">ИИ и персональные данные: что учесть бизнесу в России</a></h2>
+                    <p class="blog-card-desc">Что бизнесу в России учесть при работе ИИ с персональными данными, чтобы не получить штраф.</p>
+                </article>
+                <article class="blog-card">
+                    <div class="post-meta"><time datetime="2026-05-18">18 мая 2026</time><span class="post-meta-sep">&middot;</span><span class="post-tag">Разбор</span></div>
+                    <h2 class="blog-card-title"><a href="/blog/ii-chat-na-sayt.html">Как встроить ИИ-чат на сайт: варианты и подводные камни</a></h2>
+                    <p class="blog-card-desc">Варианты встраивания ИИ-чата на сайт, их плюсы, минусы и подводные камни.</p>
+                </article>
+                <article class="blog-card">
+                    <div class="post-meta"><time datetime="2026-05-12">12 мая 2026</time><span class="post-meta-sep">&middot;</span><span class="post-tag">Боты</span></div>
+                    <h2 class="blog-card-title"><a href="/blog/ii-bot-podderzhki.html">ИИ-бот поддержки: как снять 80% типовых вопросов</a></h2>
+                    <p class="blog-card-desc">Как ИИ-бот поддержки снимает до 80% типовых вопросов и когда всё же нужен человек.</p>
+                </article>
+                <article class="blog-card">
+                    <div class="post-meta"><time datetime="2026-05-04">4 мая 2026</time><span class="post-meta-sep">&middot;</span><span class="post-tag">Контент</span></div>
+                    <h2 class="blog-card-title"><a href="/blog/neyroseti-dlya-seo-tekstov.html">Нейросети для SEO-текстов: как писать под органику и не попасть под фильтр</a></h2>
+                    <p class="blog-card-desc">Как писать SEO-тексты нейросетью так, чтобы расти в органике и не попасть под фильтры поисковиков.</p>
+                </article>
+                <article class="blog-card">
+                    <div class="post-meta"><time datetime="2026-04-27">27 апреля 2026</time><span class="post-meta-sep">&middot;</span><span class="post-tag">Боты</span></div>
+                    <h2 class="blog-card-title"><a href="/blog/avtovoronka-s-ii-v-telegram.html">Автоворонка с ИИ в Telegram: разбор механики</a></h2>
+                    <p class="blog-card-desc">Разбор механики автоворонки с ИИ в Telegram: от первого касания до продажи.</p>
+                </article>
+                <article class="blog-card">
+                    <div class="post-meta"><time datetime="2026-04-20">20 апреля 2026</time><span class="post-meta-sep">&middot;</span><span class="post-tag">ИИ для бизнеса</span></div>
+                    <h2 class="blog-card-title"><a href="/blog/ii-dlya-sfery-uslug.html">ИИ для сферы услуг: салоны, клиники, автосервисы</a></h2>
+                    <p class="blog-card-desc">Что ИИ даёт сфере услуг: салоны, клиники и автосервисы — конкретные сценарии автоматизации.</p>
+                </article>
+                <article class="blog-card">
+                    <div class="post-meta"><time datetime="2026-04-13">13 апреля 2026</time><span class="post-meta-sep">&middot;</span><span class="post-tag">Разбор</span></div>
+                    <h2 class="blog-card-title"><a href="/blog/prompt-inzhiniring-osnovy.html">Промпт-инжиниринг: основы, которые экономят часы работы</a></h2>
+                    <p class="blog-card-desc">Основы промпт-инжиниринга, которые каждый день экономят часы работы с нейросетями.</p>
+                </article>
+                <article class="blog-card">
+                    <div class="post-meta"><time datetime="2026-04-06">6 апреля 2026</time><span class="post-meta-sep">&middot;</span><span class="post-tag">Боты</span></div>
+                    <h2 class="blog-card-title"><a href="/blog/ii-administrator-zapisi.html">ИИ-администратор: запись клиентов без человека</a></h2>
+                    <p class="blog-card-desc">Как ИИ-администратор ведёт запись клиентов без участия человека: механика и подводные камни.</p>
+                </article>
+                <article class="blog-card">
+                    <div class="post-meta"><time datetime="2026-03-30">30 марта 2026</time><span class="post-meta-sep">&middot;</span><span class="post-tag">Разбор</span></div>
+                    <h2 class="blog-card-title"><a href="/blog/rag-prostymi-slovami.html">RAG простыми словами: как научить ИИ отвечать по вашей базе знаний</a></h2>
+                    <p class="blog-card-desc">Объясняю RAG простыми словами: как научить ИИ отвечать по вашей базе знаний, а не выдумывать.</p>
+                </article>
+                <article class="blog-card">
+                    <div class="post-meta"><time datetime="2026-03-23">23 марта 2026</time><span class="post-meta-sep">&middot;</span><span class="post-tag">Мысли</span></div>
+                    <h2 class="blog-card-title"><a href="/blog/oshibki-vnedreniya-ii.html">5 ошибок при внедрении ИИ в бизнес и как их избежать</a></h2>
+                    <p class="blog-card-desc">Пять типичных ошибок при внедрении ИИ в бизнес и как обойти каждую из них.</p>
+                </article>
+                <article class="blog-card">
+                    <div class="post-meta"><time datetime="2026-03-16">16 марта 2026</time><span class="post-meta-sep">&middot;</span><span class="post-tag">Контент</span></div>
+                    <h2 class="blog-card-title"><a href="/blog/kontent-plan-neyrosetyu.html">Контент-план на месяц за час: рабочая связка нейросетей</a></h2>
+                    <p class="blog-card-desc">Рабочая связка нейросетей, с которой контент-план на месяц собирается за один час.</p>
+                </article>
+                <article class="blog-card">
+                    <div class="post-meta"><time datetime="2026-03-10">10 марта 2026</time><span class="post-meta-sep">&middot;</span><span class="post-tag">ИИ для бизнеса</span></div>
+                    <h2 class="blog-card-title"><a href="/blog/ii-i-crm.html">ИИ + CRM: автоматическая квалификация лидов</a></h2>
+                    <p class="blog-card-desc">Как связка ИИ и CRM автоматически квалифицирует лидов и экономит время отдела продаж.</p>
+                </article>
+                <article class="blog-card">
+                    <div class="post-meta"><time datetime="2026-03-02">2 марта 2026</time><span class="post-meta-sep">&middot;</span><span class="post-tag">Боты</span></div>
+                    <h2 class="blog-card-title"><a href="/blog/golosovye-ii-boty.html">Голосовые ИИ-боты: где они реально работают, а где нет</a></h2>
+                    <p class="blog-card-desc">Где голосовые ИИ-боты реально работают, а где пока только раздражают клиентов.</p>
+                </article>
+                <article class="blog-card">
+                    <div class="post-meta"><time datetime="2026-02-23">23 февраля 2026</time><span class="post-meta-sep">&middot;</span><span class="post-tag">Маркетплейсы</span></div>
+                    <h2 class="blog-card-title"><a href="/blog/generaciya-kartochek-wb-ozon.html">Генерация карточек для WB и Ozon нейросетью: пошаговый разбор</a></h2>
+                    <p class="blog-card-desc">Пошаговый разбор, как генерировать карточки товаров для Wildberries и Ozon с помощью нейросети.</p>
+                </article>
+                <article class="blog-card">
+                    <div class="post-meta"><time datetime="2026-02-16">16 февраля 2026</time><span class="post-meta-sep">&middot;</span><span class="post-tag">Разбор</span></div>
+                    <h2 class="blog-card-title"><a href="/blog/claude-ili-chatgpt.html">Claude или ChatGPT: что выбрать для рабочих задач</a></h2>
+                    <p class="blog-card-desc">Сравниваю Claude и ChatGPT на рабочих задачах: тексты, код, анализ документов — и что выбрать.</p>
+                </article>
+                <article class="blog-card">
+                    <div class="post-meta"><time datetime="2026-02-09">9 февраля 2026</time><span class="post-meta-sep">&middot;</span><span class="post-tag">ИИ для бизнеса</span></div>
+                    <h2 class="blog-card-title"><a href="/blog/chatgpt-dlya-biznesa.html">ChatGPT в бизнесе: реальные сценарии, а не хайп</a></h2>
+                    <p class="blog-card-desc">Реальные сценарии применения ChatGPT в бизнесе — без хайпа и обещаний заменить всех сотрудников.</p>
+                </article>
+                <article class="blog-card">
+                    <div class="post-meta"><time datetime="2026-02-02">2 февраля 2026</time><span class="post-meta-sep">&middot;</span><span class="post-tag">Боты</span></div>
+                    <h2 class="blog-card-title"><a href="/blog/skolko-stoit-chat-bot.html">Сколько стоит чат-бот: честный разбор цен и из чего они складываются</a></h2>
+                    <p class="blog-card-desc">Честный разбор цен на чат-ботов: из чего складывается стоимость и за что вы реально платите.</p>
+                </article>
+                <article class="blog-card">
+                    <div class="post-meta"><time datetime="2026-01-26">26 января 2026</time><span class="post-meta-sep">&middot;</span><span class="post-tag">Мысли</span></div>
+                    <h2 class="blog-card-title"><a href="/blog/kak-vybrat-podryadchika-ii.html">Как выбрать подрядчика на ИИ-проект и не слить бюджет</a></h2>
+                    <p class="blog-card-desc">На что смотреть при выборе подрядчика на ИИ-проект, какие вопросы задавать и как не слить бюджет.</p>
+                </article>
+                <article class="blog-card">
+                    <div class="post-meta"><time datetime="2026-01-19">19 января 2026</time><span class="post-meta-sep">&middot;</span><span class="post-tag">Маркетплейсы</span></div>
+                    <h2 class="blog-card-title"><a href="/blog/ii-na-marketpleysah.html">ИИ на маркетплейсах: карточки товаров, отзывы и SEO-описания</a></h2>
+                    <p class="blog-card-desc">Что ИИ умеет на маркетплейсах: карточки товаров, ответы на отзывы и SEO-описания без ручной рутины.</p>
+                </article>
+                <article class="blog-card">
+                    <div class="post-meta"><time datetime="2026-01-12">12 января 2026</time><span class="post-meta-sep">&middot;</span><span class="post-tag">ИИ для бизнеса</span></div>
+                    <h2 class="blog-card-title"><a href="/blog/avtomatizaciya-otvetov-klientam.html">Автоматизация ответов клиентам: как не терять заявки ночью</a></h2>
+                    <p class="blog-card-desc">Как настроить автоматические ответы клиентам, чтобы заявки не терялись ночью и в выходные.</p>
+                </article>
+                <article class="blog-card">
+                    <div class="post-meta"><time datetime="2026-01-05">5 января 2026</time><span class="post-meta-sep">&middot;</span><span class="post-tag">Боты</span></div>
+                    <h2 class="blog-card-title"><a href="/blog/chat-bot-s-ii-vs-obychnyj.html">Чат-бот с ИИ против кнопочного: в чём разница и что выбрать</a></h2>
+                    <p class="blog-card-desc">Сравниваю ИИ-бота и классического кнопочного: где какой уместен и что выбрать под вашу задачу.</p>
+                </article>
+                <article class="blog-card">
+                    <div class="post-meta"><time datetime="2025-12-29">29 декабря 2025</time><span class="post-meta-sep">&middot;</span><span class="post-tag">ИИ для бизнеса</span></div>
+                    <h2 class="blog-card-title"><a href="/blog/ii-dlya-malogo-biznesa.html">ИИ для малого бизнеса: 7 задач, которые можно автоматизировать</a></h2>
+                    <p class="blog-card-desc">Семь конкретных задач малого бизнеса, которые уже сегодня можно отдать искусственному интеллекту.</p>
+                </article>
+                <article class="blog-card">
+                    <div class="post-meta"><time datetime="2025-12-22">22 декабря 2025</time><span class="post-meta-sep">&middot;</span><span class="post-tag">Контент</span></div>
+                    <h2 class="blog-card-title"><a href="/blog/neyroseti-dlya-kontenta.html">Нейросети для контента: как генерировать посты, которые читают</a></h2>
+                    <p class="blog-card-desc">Как использовать нейросети для генерации постов, которые действительно читают, а не пролистывают.</p>
+                </article>
+                <article class="blog-card">
+                    <div class="post-meta"><time datetime="2025-12-15">15 декабря 2025</time><span class="post-meta-sep">&middot;</span><span class="post-tag">Боты</span></div>
+                    <h2 class="blog-card-title"><a href="/blog/telegram-bot-dlya-biznesa.html">Telegram-бот для бизнеса: зачем нужен и с чего начать</a></h2>
+                    <p class="blog-card-desc">Зачем бизнесу Telegram-бот, какие задачи он решает и с чего начать, чтобы не выбросить бюджет впустую.</p>
+                </article>
+                <article class="blog-card">
+                    <div class="post-meta"><time datetime="2025-12-08">8 декабря 2025</time><span class="post-meta-sep">&middot;</span><span class="post-tag">ИИ для бизнеса</span></div>
+                    <h2 class="blog-card-title"><a href="/blog/chto-takoe-ii-agent.html">Что такое ИИ-агент простыми словами и зачем он бизнесу</a></h2>
+                    <p class="blog-card-desc">Разбираю простыми словами, что такое ИИ-агент, чем он отличается от обычного чат-бота и какие задачи бизнеса способен закрыть.</p>
+                </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <a href="index.html" class="footer-logo">ВЕНЧАКОВ</a>
+            <ul class="footer-links">
+                <li><a href="index.html">Обо мне</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="reviews.html">Кейсы и отзывы</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+            <p class="footer-copy">&copy; 2026 venchakov.com</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

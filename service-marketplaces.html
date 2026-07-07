@@ -8,7 +8,7 @@
     <meta name="keywords" content="автоматизация Wildberries, бот для Ozon, ИИ селлер Amazon, автоответчик отзывов, маркетплейс автоматизация">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
     <meta name="author" content="Сергей Венчаков">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://venchakov.com; script-src 'self' 'unsafe-inline';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://venchakov.com https://mc.yandex.ru; script-src 'self' 'unsafe-inline' https://mc.yandex.ru; connect-src 'self' https://mc.yandex.ru;">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     <meta name="theme-color" content="#FBF9F6">
@@ -30,7 +30,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="stylesheet" href="style.css?v=fa49d60">
+    <link rel="stylesheet" href="style.css?v=blog2026">
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=110472799', 'ym');
+
+    ym(110472799, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/110472799" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </head>
 <body>
     <nav class="nav" id="nav">
@@ -43,11 +56,14 @@
                 <li><a href="index.html" class="nav-link">Обо мне</a></li>
                 <li><a href="services.html" class="nav-link active">Услуги</a></li>
                 <li><a href="reviews.html" class="nav-link">Кейсы и отзывы</a></li>
+                <li><a href="blog.html" class="nav-link">Блог</a></li>
                 <li><a href="contacts.html" class="nav-link">Контакты</a></li>
             </ul>
             <a href="https://t.me/cvvjesuss" class="btn btn-accent btn-sm nav-cta" target="_blank">Написать <span class="arrow">&#8594;</span></a>
         </div>
     </nav>
+
+    <main>
 
     <section class="project-hero" style="padding-top: 140px; padding-bottom: 40px;">
         <div class="container">
@@ -245,9 +261,18 @@
         </div>
     </section>
 
+    </main>
+
     <footer class="footer">
         <div class="container footer-inner">
             <a href="index.html" class="footer-logo">ВЕНЧАКОВ</a>
+            <ul class="footer-links">
+                <li><a href="index.html">Обо мне</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="reviews.html">Кейсы и отзывы</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
             <p class="footer-copy">&copy; 2026 venchakov.com</p>
         </div>
     </footer>
@@ -267,7 +292,8 @@
         "image": "https://venchakov.com/hero-sergey.jpg"
       },
       "areaServed": "Worldwide",
-      "inLanguage": "ru-RU"
+      "inLanguage": "ru-RU",
+      "offers": {"@type": "Offer", "priceCurrency": "RUB", "price": "60000", "description": "от 60 000 ₽ за проект"}
     }
     </script>
     <script type="application/ld+json">

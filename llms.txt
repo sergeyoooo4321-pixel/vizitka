@@ -1,0 +1,39 @@
+# Сергей Венчаков — разработка ИИ-агентов и автоматизация бизнеса
+
+> Сергей Венчаков — разработчик ИИ-агентов, Telegram- и WhatsApp-ботов и автоматизаций бизнеса под ключ. Готовые ИИ-сотрудники по подписке от 5 000 ₽/мес, индивидуальные проекты от 60 000 ₽. Работаю удалённо — вся Россия и мир. Контакты: Telegram @cvvjesuss (https://t.me/cvvjesuss), email hello@venchakov.com.
+
+## Услуги
+
+- [Все услуги и цены](https://venchakov.com/services.html): каталог услуг — ИИ-агенты, боты, контент, маркетплейсы; проекты от 60 000 ₽, ИИ-сотрудники от 5 000 ₽/мес
+- [Настройка OpenClaw и Hermes](https://venchakov.com/service-openclaw.html): развёртывание готовых ИИ-платформ под задачи бизнеса, запуск за 1–2 недели; подписка от 5 000 ₽/мес
+- [ИИ-агенты с нуля](https://venchakov.com/service-custom-ai.html): проектирование и обучение уникальных ИИ-агентов, интеграции с CRM и мессенджерами; от 60 000 ₽ за проект
+- [Чат-боты Telegram, WhatsApp, Viber](https://venchakov.com/service-bots.html): умные боты с ИИ, CRM и платёжными системами, запуск за 2–4 недели; проекты от 60 000 ₽
+- [ИИ для маркетплейсов](https://venchakov.com/service-marketplaces.html): автоматизация Wildberries, Ozon, Amazon — отзывы, заказы, аналитика 24/7; проекты от 60 000 ₽
+- [Контент-заводы](https://venchakov.com/service-content.html): автоматическое производство видео и текстов, от 100 роликов в месяц; проекты от 60 000 ₽
+- [Кастомные решения](https://venchakov.com/service-custom-dev.html): интеграции, парсеры, внутренние системы под нестандартные задачи; проекты от 60 000 ₽
+
+## Кейсы и отзывы
+
+- [Отзывы клиентов](https://venchakov.com/reviews.html): 34 отзыва, рейтинг 4.6 из 5, кейсы проектов
+- [Кейс «АэроДом»](https://venchakov.com/case-aerodom.html): ИИ-техподдержка на сайте магазина техники
+- [Кейс «StepLine»](https://venchakov.com/case-stepline.html): ИИ-продавец кроссовок в Telegram без кнопок
+- [Кейс «Своя Среда»](https://venchakov.com/case-svoyasreda.html): ИИ-менеджер мебельного магазина с интеграцией Bitrix24
+- [Проект OpenClaw](https://venchakov.com/project-openclaw.html): личный AI-работник под ключ
+
+## Блог
+
+- [Блог о ИИ и автоматизации](https://venchakov.com/blog.html): 30 статей — разборы, гайды и мысли про ИИ для бизнеса
+- [RSS-лента блога](https://venchakov.com/feed.xml)
+- [Что такое ИИ-агент простыми словами и зачем он бизнесу](https://venchakov.com/blog/chto-takoe-ii-agent.html)
+- [Telegram-бот для бизнеса: зачем нужен и с чего начать](https://venchakov.com/blog/telegram-bot-dlya-biznesa.html)
+- [ИИ для малого бизнеса: 7 задач, которые можно автоматизировать](https://venchakov.com/blog/ii-dlya-malogo-biznesa.html)
+- [Сколько стоит чат-бот: честный разбор цен](https://venchakov.com/blog/skolko-stoit-chat-bot.html)
+- [Как выбрать подрядчика на ИИ-проект и не слить бюджет](https://venchakov.com/blog/kak-vybrat-podryadchika-ii.html)
+- [RAG простыми словами: как научить ИИ отвечать по вашей базе знаний](https://venchakov.com/blog/rag-prostymi-slovami.html)
+- [Чек-лист: готов ли ваш бизнес к внедрению ИИ](https://venchakov.com/blog/gotov-li-biznes-k-ii.html)
+
+## Контакты
+
+- [Контакты](https://venchakov.com/contacts.html): бесплатная консультация, ответ в течение дня
+- Telegram: https://t.me/cvvjesuss
+- Email: hello@venchakov.com
