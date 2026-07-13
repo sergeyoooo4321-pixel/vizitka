@@ -1,103 +1,143 @@
-/* ============================================================
-   blog.css — стили блога venchakov.com (агент A7).
-   Подключается ПОСЛЕ style.css на blog.html и blog/*.html.
-   Использует токены style.css (:root), в т.ч. журнальные из ТЗ:
-   --font-display, --accent-2, --accent-2-dim, --ink,
-   --shadow-soft, --shadow-lift — их добавляет A8.
-   Блоки: 1) индекс блога (blog.html)  2) общая мета статей
-          3) страница статьи (blog/*.html)  4) адаптив ≤768px.
-   ============================================================ */
+/* Blog listing and article shell. Loaded after style.css. */
 
-/* ---------- 1. Индекс блога (blog.html) ---------- */
+/* ---------- Blog index ---------- */
 
-.blog-index {
-    padding: 140px 0 96px;
+.blog-index,
+.blog-post {
+    overflow-x: hidden;
+    overflow-x: clip;
 }
 
-/* h1 хиро-секции — серифный «журнальный», как заголовки статей */
+.blog-index {
+    padding: 136px 0 96px;
+}
+
+.blog-index-header {
+    position: relative;
+    isolation: isolate;
+    max-width: 860px;
+    margin-inline: auto;
+    padding-bottom: 52px;
+}
+
+.blog-index-header::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -72px;
+    left: 50%;
+    width: min(72vw, 680px);
+    height: 280px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--accent-glow) 0, transparent 68%);
+    opacity: 0.55;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
 .blog-index-header h1 {
-    font-family: var(--font-display);
-    font-size: clamp(38px, 6vw, 64px);
-    font-weight: 700;
-    line-height: 1.15;
-    letter-spacing: -0.02em;
+    max-width: 14ch;
+    margin: 18px auto 0;
     color: var(--text);
-    margin: 16px 0 0;
+    font-family: var(--font-display);
+    font-size: clamp(42px, 6vw, 72px);
+    font-weight: 700;
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+    text-wrap: balance;
 }
 
 .blog-index-subtitle {
-    max-width: 640px;
-    margin: 18px auto 0;
+    max-width: 62ch;
+    margin: 22px auto 0;
+    color: var(--text-secondary);
     font-size: 17px;
     line-height: 1.7;
-    color: var(--text-secondary);
+    text-wrap: pretty;
 }
 
-/* Сетка карточек: колонки одной ширины, карточки естественной
-   (разной) высоты — выравнивание по верху ряда */
 .blog-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 24px;
-    align-items: start;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    align-items: stretch;
 }
 
 .blog-card {
+    position: relative;
+    min-width: 0;
+    height: 100%;
+    padding: 26px;
+    overflow: hidden;
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
-    padding: 28px;
     box-shadow: var(--shadow-soft);
-    transition: var(--transition);
+    transition: transform 200ms ease, border-color 200ms ease, background-color 200ms ease, box-shadow 200ms ease;
 }
 
-/* Каждая третья карточка — на альтернативном фоне, для «журнальной» рваности */
 .blog-card:nth-child(3n) {
     background: var(--bg-card-alt);
 }
 
-.blog-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-lift);
-    border-color: var(--border-hover);
-}
-
 .blog-card-title {
+    margin: 16px 0 12px;
     font-family: var(--font-display);
-    font-size: 22px;
+    font-size: clamp(21px, 2vw, 25px);
     font-weight: 700;
-    line-height: 1.25;
-    letter-spacing: -0.01em;
-    margin: 14px 0 10px;
+    line-height: 1.2;
+    letter-spacing: -0.018em;
+    text-wrap: balance;
 }
 
 .blog-card-title a {
     color: var(--text);
     text-decoration: none;
-    transition: var(--transition);
+    overflow-wrap: anywhere;
+    transition: color 180ms ease;
+}
+
+.blog-card-title a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
 }
 
 .blog-card-title a:hover {
     color: var(--accent-2);
 }
 
-.blog-card-desc {
-    font-size: 15px;
-    line-height: 1.65;
-    color: var(--text-secondary);
-    margin: 0;
+.blog-card-title a:focus-visible {
+    outline: 2px solid var(--accent-2);
+    outline-offset: 5px;
+    border-radius: 4px;
 }
 
-/* ---------- 2. Мета статьи (общая для индекса и страниц статей) ---------- */
+.blog-card-desc {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 16px;
+    line-height: 1.65;
+    overflow-wrap: anywhere;
+}
+
+.blog-load-more {
+    display: none;
+}
+
+/* ---------- Shared post metadata ---------- */
 
 .post-meta {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 10px;
-    font-size: 13px;
-    font-weight: 500;
+    gap: 8px;
     color: var(--text-muted);
+    font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.45;
+    letter-spacing: 0.015em;
 }
 
 .post-meta-sep {
@@ -105,42 +145,47 @@
 }
 
 .post-tag {
-    display: inline-block;
-    padding: 4px 12px;
-    border-radius: var(--radius-pill);
-    background: var(--accent-2-dim);
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
+    padding: 4px 10px;
     color: var(--accent-2);
-    font-size: 12px;
+    background: var(--accent-2-dim);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-pill);
+    font-size: 11px;
     font-weight: 600;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.035em;
 }
 
-/* ---------- 3. Страница статьи (blog/*.html) ---------- */
+/* ---------- Article pages ---------- */
 
 .blog-post {
-    padding: 140px 0 96px;
+    padding: 136px 0 96px;
 }
 
-/* Узкая читабельная колонка внутри общего .container */
 .blog-post-container {
-    max-width: 760px;
+    width: min(100%, 68ch);
+    max-width: 68ch;
 }
 
 .post-breadcrumbs {
-    font-size: 13px;
+    margin-bottom: 30px;
     color: var(--text-muted);
-    margin-bottom: 32px;
+    font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+    font-size: 12px;
+    line-height: 1.6;
 }
 
 .post-breadcrumbs a {
-    color: var(--text-muted);
+    color: inherit;
     text-decoration: none;
 }
 
 .post-breadcrumbs a:hover {
     color: var(--accent-2);
     text-decoration: underline;
-    text-underline-offset: 3px;
+    text-underline-offset: 4px;
 }
 
 .post-header .post-meta {
@@ -148,170 +193,395 @@
 }
 
 .post-header h1 {
-    font-family: var(--font-display);
-    font-size: clamp(32px, 5vw, 52px);
-    font-weight: 700;
-    line-height: 1.15;
-    letter-spacing: -0.02em;
+    margin: 0 0 22px;
     color: var(--text);
-    margin: 0 0 20px;
+    font-family: var(--font-display);
+    font-size: clamp(36px, 5vw, 58px);
+    font-weight: 700;
+    line-height: 1.06;
+    letter-spacing: -0.032em;
+    overflow-wrap: anywhere;
+    text-wrap: balance;
 }
 
 .post-lead {
-    font-size: 19px;
-    line-height: 1.7;
+    margin: 0 0 42px;
+    padding-bottom: 34px;
     color: var(--text-secondary);
-    margin: 0 0 40px;
-    padding-bottom: 32px;
     border-bottom: 1px solid var(--border);
+    font-size: clamp(18px, 2vw, 20px);
+    line-height: 1.7;
+    text-wrap: pretty;
 }
 
-/* Тело статьи: 17–18px / 1.8 по ТЗ */
 .post-body {
-    font-size: 18px;
-    line-height: 1.8;
+    max-width: 68ch;
+    min-width: 0;
     color: var(--text);
+    font-size: clamp(16px, 1.3vw, 18px);
+    line-height: 1.78;
+    overflow-wrap: anywhere;
 }
 
 .post-body h2 {
+    margin: 52px 0 16px;
     font-family: var(--font-display);
-    font-size: 30px;
+    font-size: clamp(27px, 3vw, 34px);
     font-weight: 700;
-    line-height: 1.2;
-    letter-spacing: -0.01em;
-    margin: 48px 0 16px;
+    line-height: 1.18;
+    letter-spacing: -0.018em;
+    text-wrap: balance;
 }
 
 .post-body h3 {
-    font-size: 21px;
+    margin: 34px 0 12px;
+    font-size: clamp(20px, 2vw, 23px);
     font-weight: 700;
     line-height: 1.3;
-    margin: 32px 0 12px;
+    text-wrap: balance;
 }
 
 .post-body p {
-    margin: 0 0 20px;
+    margin: 0 0 22px;
 }
 
 .post-body ul,
 .post-body ol {
-    margin: 0 0 20px;
-    padding-left: 28px;
+    margin: 0 0 24px;
+    padding-left: 1.4em;
 }
 
 .post-body li {
     margin-bottom: 10px;
+    padding-left: 0.2em;
 }
 
-/* Ссылки в тексте: тонкое подчёркивание вторым акцентом */
 .post-body a {
     color: var(--text);
     text-decoration: underline;
     text-decoration-color: var(--accent-2);
     text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
-    transition: var(--transition);
+    text-underline-offset: 4px;
+    transition: color 180ms ease;
 }
 
 .post-body a:hover {
     color: var(--accent-2);
 }
 
-/* Цитата: серифный курсив с чернильно-терракотовой линией слева */
 .post-body blockquote {
-    font-family: var(--font-display);
-    font-style: italic;
-    font-size: 20px;
-    line-height: 1.6;
+    margin: 36px 0;
+    padding: 14px 0 14px 24px;
     color: var(--text);
-    border-left: 3px solid var(--accent-2);
-    padding: 8px 0 8px 24px;
+    border-left: 2px solid var(--accent-2);
+    font-family: var(--font-display);
+    font-size: clamp(19px, 2vw, 22px);
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.post-body blockquote > :last-child {
+    margin-bottom: 0;
+}
+
+.post-body figure,
+.post-body picture,
+.post-body img,
+.post-body svg,
+.post-body video,
+.post-body iframe {
+    max-width: 100%;
+}
+
+.post-body figure {
     margin: 32px 0;
 }
 
-/* CTA-карточка в конце статьи */
+.post-body img,
+.post-body svg,
+.post-body video {
+    height: auto;
+}
+
+.post-body img,
+.post-body video,
+.post-body iframe {
+    display: block;
+    border-radius: var(--radius-sm);
+}
+
+.post-body video,
+.post-body iframe {
+    width: 100%;
+}
+
+.post-body iframe {
+    aspect-ratio: 16 / 9;
+    border: 0;
+}
+
+.post-body figcaption {
+    margin-top: 10px;
+    color: var(--text-muted);
+    font-size: 0.82em;
+    line-height: 1.5;
+}
+
+.post-body table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 30px 0;
+    overflow-x: auto;
+    border-collapse: collapse;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-size: 0.88em;
+    line-height: 1.5;
+    -webkit-overflow-scrolling: touch;
+}
+
+.post-body th,
+.post-body td {
+    min-width: 10rem;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    vertical-align: top;
+}
+
+.post-body th {
+    color: var(--text);
+    background: var(--bg-card-alt);
+    font-weight: 700;
+}
+
+.post-body pre {
+    max-width: 100%;
+    margin: 28px 0;
+    padding: 18px;
+    overflow-x: auto;
+    color: var(--text);
+    background: var(--bg-card-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+    font-size: 0.88em;
+    line-height: 1.6;
+    white-space: pre;
+    -webkit-overflow-scrolling: touch;
+}
+
+.post-body code {
+    font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+    font-size: 0.9em;
+}
+
+.post-body :not(pre) > code {
+    padding: 0.15em 0.38em;
+    background: var(--accent-2-dim);
+    border: 1px solid var(--border);
+    border-radius: 0.35em;
+    overflow-wrap: anywhere;
+}
+
 .post-cta {
+    margin: 58px 0 34px;
+    padding: 38px 34px;
     background: var(--bg-card-alt);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
-    padding: 40px 36px;
-    margin: 56px 0 32px;
     box-shadow: var(--shadow-soft);
 }
 
 .post-cta h2 {
+    margin: 0 0 12px;
     font-family: var(--font-display);
-    font-size: 26px;
+    font-size: clamp(25px, 3vw, 30px);
     font-weight: 700;
     line-height: 1.2;
-    letter-spacing: -0.01em;
-    margin: 0 0 12px;
+    letter-spacing: -0.015em;
 }
 
 .post-cta p {
+    margin: 0 0 24px;
+    color: var(--text-secondary);
     font-size: 16px;
     line-height: 1.7;
-    color: var(--text-secondary);
-    margin: 0 0 24px;
 }
 
 .post-cta .btn {
-    margin: 0 12px 12px 0;
+    margin: 0 10px 10px 0;
 }
 
-/* Подпись автора */
 .post-author {
-    border-top: 1px solid var(--border);
     padding-top: 24px;
-    font-size: 15px;
-    line-height: 1.7;
     color: var(--text-secondary);
+    border-top: 1px solid var(--border);
+    font-size: 16px;
+    line-height: 1.7;
 }
 
 .post-author a {
     color: var(--text);
     text-decoration: underline;
     text-decoration-color: var(--accent-2);
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
+    text-underline-offset: 4px;
 }
 
 .post-author a:hover {
     color: var(--accent-2);
 }
 
-/* ---------- 4. Адаптив ---------- */
+@media (hover: hover) and (pointer: fine) {
+    .blog-card:hover {
+        background: var(--bg-card-hover);
+        border-color: var(--border-hover);
+        box-shadow: var(--shadow-lift);
+        transform: translateY(-4px);
+    }
+}
 
-@media (max-width: 768px) {
+/* ---------- Medium ---------- */
+
+@media (min-width: 821px) and (max-width: 1024px) {
+    .blog-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* ---------- Compact ---------- */
+
+@media (max-width: 820px) {
     .blog-index,
     .blog-post {
-        padding: 120px 0 64px;
+        padding: 104px 0 64px;
+    }
+
+    .blog-index-header {
+        padding-bottom: 34px;
+        text-align: left;
+    }
+
+    .blog-index-header::before {
+        top: -54px;
+        width: 120vw;
+        height: 220px;
+        opacity: 0.38;
+    }
+
+    .blog-index-header h1 {
+        max-width: 12ch;
+        margin-inline: 0;
+        font-size: clamp(38px, 12vw, 52px);
+        line-height: 1.02;
+    }
+
+    .blog-index-subtitle {
+        margin-top: 18px;
+        font-size: 16px;
+        line-height: 1.65;
     }
 
     .blog-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .blog-grid.is-collapsed .blog-card:nth-child(n+7) {
+        display: none;
+    }
+
+    .blog-grid.is-collapsed + .blog-load-more {
+        display: inline-flex;
+        width: 100%;
+        min-height: 48px;
+        margin-top: 16px;
+        align-items: center;
+        justify-content: center;
     }
 
     .blog-card {
-        padding: 22px;
+        padding: 20px;
+        border-radius: calc(var(--radius-lg) - 4px);
+    }
+
+    .blog-card-title {
+        margin-top: 14px;
+        font-size: clamp(21px, 6.5vw, 25px);
+        line-height: 1.22;
+    }
+
+    .blog-card-desc {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .post-breadcrumbs {
+        margin-bottom: 24px;
+    }
+
+    .post-header h1 {
+        font-size: clamp(34px, 10vw, 46px);
+        line-height: 1.08;
+    }
+
+    .post-lead {
+        margin-bottom: 34px;
+        padding-bottom: 28px;
+        font-size: 17px;
+        line-height: 1.65;
     }
 
     .post-body {
-        font-size: 17px;
+        font-size: 16px;
+        line-height: 1.72;
     }
 
     .post-body h2 {
-        font-size: 26px;
+        margin-top: 42px;
+        font-size: 28px;
+    }
+
+    .post-body h3 {
+        margin-top: 30px;
+        font-size: 21px;
+    }
+
+    .post-body blockquote {
+        margin: 30px 0;
+        padding-left: 18px;
+        font-size: 19px;
+    }
+
+    .post-body th,
+    .post-body td {
+        min-width: 9rem;
+        padding: 10px 12px;
+    }
+
+    .post-body pre {
+        margin-inline: 0;
+        padding: 15px;
+        font-size: 13px;
     }
 
     .post-cta {
-        padding: 28px 22px;
+        margin-top: 46px;
+        padding: 26px 20px;
     }
 
     .post-cta .btn {
         width: 100%;
+        min-height: 48px;
+        margin: 0 0 10px;
         justify-content: center;
-        margin: 0 0 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .blog-card,
+    .blog-card-title a {
+        transition: none;
     }
 }

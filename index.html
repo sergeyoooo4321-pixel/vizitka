@@ -11,7 +11,7 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://venchakov.com https://mc.yandex.ru; script-src 'self' 'unsafe-inline' https://mc.yandex.ru; connect-src 'self' https://mc.yandex.ru wss://mc.yandex.ru;">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-    <meta name="theme-color" content="#FBF9F6">
+    <meta name="theme-color" content="#07090C">
     <meta name="yandex-verification" content="14eb7ac6cc18a04d">
     <title>Сергей Венчаков — разработка ИИ-агентов и автоматизация бизнеса под ключ</title>
     <meta property="og:title" content="Сергей Венчаков — ИИ-агенты и автоматизация бизнеса">
@@ -29,10 +29,9 @@
     <link rel="canonical" href="https://venchakov.com/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="image" href="hero-sergey.jpg" fetchpriority="high">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="stylesheet" href="style.css?v=blog2026">
+    <link rel="stylesheet" href="style.css?v=night2026">
     <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -53,7 +52,7 @@
     <nav class="nav" id="nav">
         <div class="container nav-inner">
             <a href="index.html" class="nav-logo">ВЕНЧАКОВ</a>
-            <button class="nav-burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+            <button class="nav-burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="navLinks">
                 <span></span><span></span><span></span>
             </button>
             <ul class="nav-links" id="navLinks">
@@ -70,46 +69,39 @@
     <main>
 
     <!-- Hero -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-grid">
-                <div class="hero-text">
-                    <div class="hero-slider" data-autoplay="6500" aria-roledescription="carousel" aria-label="О Сергее Венчакове">
-                        <div class="hero-slider-viewport">
-                            <div class="hero-slider-track">
-                                <div class="hero-slide" role="group" aria-roledescription="slide" aria-label="1 из 3">
-                                    <div class="badge">№1 на рынке <span class="badge-dot"></span></div>
-                                    <h1>venchakov.com — <span class="text-accent">№1 дилер</span> ИИ-агентов</h1>
-                                    <p class="hero-desc">Превращаем передовые нейросети в ваш главный автономный капитал и абсолютное превосходство над конкурентами.</p>
-                                </div>
-                                <div class="hero-slide" role="group" aria-roledescription="slide" aria-label="2 из 3" aria-hidden="true">
-                                    <div class="badge">Что я делаю <span class="badge-dot"></span></div>
-                                    <h2 class="hero-slide-title">Освобождаю бизнес от <span class="text-accent">человеческого фактора</span></h2>
-                                    <p class="hero-desc">Проектирую кастомных ИИ-сотрудников, умных ботов и автономные контент-заводы, которые работают на вас 24/7 — без выгорания и выходных.</p>
-                                </div>
-                                <div class="hero-slide" role="group" aria-roledescription="slide" aria-label="3 из 3" aria-hidden="true">
-                                    <div class="badge">Пожизненная гарантия <span class="badge-dot"></span></div>
-                                    <h2 class="hero-slide-title">Рост продуктивности <span class="text-accent">с 10% до 90%</span></h2>
-                                    <p class="hero-desc">Жёсткая пожизненная гарантия: если что-то ломается по моей вине — чиню бесплатно и мгновенно. Без отговорок и платных «доработок».</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hero-slider-dots" role="tablist" aria-label="Навигация по слайдам">
-                            <button type="button" class="hero-slider-dot is-active" role="tab" aria-selected="true" aria-label="Слайд 1: №1 на рынке" data-go="0"></button>
-                            <button type="button" class="hero-slider-dot" role="tab" aria-selected="false" aria-label="Слайд 2: что я делаю" data-go="1"></button>
-                            <button type="button" class="hero-slider-dot" role="tab" aria-selected="false" aria-label="Слайд 3: пожизненная гарантия" data-go="2"></button>
-                        </div>
-                    </div>
-                    <div class="hero-buttons">
-                        <a href="https://t.me/cvvjesuss" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Бесплатная консультация <span class="arrow">&#8599;</span></a>
-                        <a href="https://t.me/cvvjesuss" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Связаться <span class="arrow">&#8599;</span></a>
-                        <a href="services.html" class="btn btn-ghost">Мои услуги <span class="arrow">&#8599;</span></a>
-                    </div>
-                </div>
-                <div class="hero-photo">
-                    <img src="hero-sergey.jpg" alt="Сергей Венчаков — разработчик ИИ-агентов и автоматизаций" class="hero-photo-img" width="1200" height="900" fetchpriority="high" decoding="async">
-                </div>
+    <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-orbits" aria-hidden="true">
+            <span class="hero-orbit hero-orbit-outer"><i></i></span>
+            <span class="hero-orbit hero-orbit-middle"><i></i></span>
+            <span class="hero-orbit hero-orbit-inner"><i></i></span>
+        </div>
+        <div class="container hero-stage">
+            <a class="hero-journal-pill" href="blog.html">
+                <span>Новое</span>
+                <b>Блог · практикум по ИИ</b>
+                <span aria-hidden="true">→</span>
+            </a>
+            <p class="hero-kicker">ИИ-архитектор для бизнеса</p>
+            <h1 id="hero-title">Проектирую и запускаю <em>ИИ-системы</em>, которые забирают рутину</h1>
+            <div class="hero-identity" aria-label="Сергей Венчаков, AI-разработчик">
+                <span>Привет, я Сергей</span>
+                <span class="hero-avatar">
+                    <img src="hero-sergey-320.jpg" alt="" width="320" height="179" decoding="async">
+                </span>
+                <span>AI-разработчик</span>
             </div>
+            <p class="hero-desc">Создаю ИИ-сотрудников, ботов и автоматизации под конкретные процессы. Они работают 24/7, экономят время команды и не зависят от шаблонных сервисов.</p>
+            <div class="hero-buttons">
+                <a href="https://t.me/cvvjesuss" class="btn btn-accent hero-primary-cta" target="_blank" rel="noopener noreferrer">
+                    <span>Обсудить задачу</span><span class="hero-cta-icon" aria-hidden="true">→</span>
+                </a>
+                <a href="reviews.html" class="hero-cases-link">Смотреть кейсы <span aria-hidden="true">↗</span></a>
+            </div>
+            <ul class="hero-proof-inline" aria-label="Ключевые принципы работы">
+                <li><span class="status-dot"></span> На связи каждый день</li>
+                <li>Пожизненная гарантия</li>
+                <li>Решение под ваш процесс</li>
+            </ul>
         </div>
     </section>
 
