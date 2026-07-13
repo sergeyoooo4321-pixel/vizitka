@@ -7,7 +7,7 @@
     <meta name="description" content="Блог Сергея Венчакова про ИИ для бизнеса: разборы, гайды и мысли об ИИ-агентах, чат-ботах, автоматизации, нейросетях для контента и маркетплейсов. 30 статей без воды.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
     <meta name="author" content="Сергей Венчаков">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://venchakov.com https://mc.yandex.ru; script-src 'self' 'unsafe-inline' https://mc.yandex.ru; connect-src 'self' https://mc.yandex.ru wss://mc.yandex.ru;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://venchakov.com https://venchakov-api-proxy.venchakov.workers.dev https://mc.yandex.ru; script-src 'self' 'unsafe-inline' https://mc.yandex.ru; connect-src 'self' https://venchakov-api-proxy.venchakov.workers.dev https://mc.yandex.ru wss://mc.yandex.ru;">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     <meta name="theme-color" content="#07090C">
@@ -32,6 +32,77 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="style.css?v=night2026">
     <link rel="stylesheet" href="blog.css?v=night2026">
+
+    <!--
+      Стили ленты постов из Telegram-канала (блок «Из моего канала» на странице блога).
+      Только дизайн-токены сайта (:root в style.css) — цвета/радиусы/тени не хардкодим,
+      чтобы блок оставался «родным» и менялся вместе с темой.
+    -->
+    <style>
+        .channel-notes {
+            max-width: 720px;
+            margin: 0 auto 56px;
+        }
+        .channel-notes__title {
+            margin-bottom: 24px;
+            font-family: var(--font-display);
+            font-size: clamp(24px, 4vw, 32px);
+            font-weight: 700;
+            text-align: center;
+        }
+        .vlog-feed {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .vlog-card {
+            position: relative;
+            min-width: 0;
+            padding: 26px;
+            overflow: hidden;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+        }
+        .vlog-card__date {
+            margin-bottom: 14px;
+            color: var(--text-muted);
+            font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.015em;
+        }
+        .vlog-card__img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 16px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+        }
+        .vlog-card__text {
+            color: var(--text-secondary);
+            font-size: 16px;
+            line-height: 1.7;
+            overflow-wrap: anywhere;
+            white-space: normal;
+        }
+        .vlog-card__text a {
+            color: var(--text);
+            text-decoration: underline;
+            text-decoration-color: var(--accent-2);
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+            overflow-wrap: anywhere;
+        }
+        .vlog-card__text a:hover {
+            color: var(--accent-2);
+        }
+        @media (max-width: 560px) {
+            .vlog-card { padding: 20px; }
+        }
+    </style>
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -84,7 +155,6 @@
                 <li><a href="services.html" class="nav-link">Услуги</a></li>
                 <li><a href="reviews.html" class="nav-link">Кейсы и отзывы</a></li>
                 <li><a href="blog.html" class="nav-link active">Блог</a></li>
-                <li><a href="vlog.html" class="nav-link">Влог</a></li>
                 <li><a href="contacts.html" class="nav-link">Контакты</a></li>
             </ul>
             <a href="https://t.me/cvvjesuss" class="btn btn-accent btn-sm nav-cta" target="_blank" rel="noopener noreferrer">Написать <span class="arrow">&#8594;</span></a>
@@ -99,10 +169,17 @@
                     <span class="section-tag">Блог</span>
                     <h1>Мысли и разборы про <span class="text-accent">ИИ для бизнеса</span></h1>
                     <p class="blog-index-subtitle">Пишу про ИИ-агентов, ботов и автоматизацию без хайпа: что реально работает, сколько стоит и как внедрить. Новые статьи — каждую неделю.</p>
-                    <div style="text-align:center;margin-top:28px;">
-                        <a href="vlog.html" class="btn btn-ghost">Смотреть влог <span class="arrow">&#8594;</span></a>
-                    </div>
                 </div>
+
+                <!--
+                  Живые заметки из Telegram-канала. Наполняется скриптом из воркера
+                  (GET /vlog), новые сверху. По умолчанию скрыт (hidden) — показывается
+                  только если в канале реально есть посты, чтобы не мусорить блог.
+                -->
+                <section class="channel-notes" id="channelNotes" hidden>
+                    <h2 class="channel-notes__title">Из моего <span class="text-accent">Telegram-канала</span></h2>
+                    <div class="vlog-feed" id="vlogFeed"></div>
+                </section>
 
                 <!-- Сетка карточек: все 30 статей, новые сверху -->
                 <div class="blog-grid" id="blogGrid">
@@ -271,7 +348,6 @@
                 <li><a href="services.html">Услуги</a></li>
                 <li><a href="reviews.html">Кейсы и отзывы</a></li>
                 <li><a href="blog.html">Блог</a></li>
-                <li><a href="vlog.html">Влог</a></li>
                 <li><a href="contacts.html">Контакты</a></li>
             </ul>
             <p class="footer-copy">&copy; 2026 venchakov.com</p>
@@ -279,5 +355,116 @@
     </footer>
 
     <script src="script.js" defer></script>
+
+    <!--
+      Клиентская логика блока «Из моего Telegram-канала».
+      Тянет посты из Cloudflare Worker (ЗАМОРОЖЕННЫЙ КОНТРАКТ формата ответа GET /vlog),
+      сортирует по дате убыв. и рисует ленту. Весь текст постов экранируется (XSS)
+      ДО линкификации; file_id фото уходит в URL через encodeURIComponent.
+      Пусто/ошибка → блок остаётся скрытым (не мешает статьям блога).
+    -->
+    <script>
+    (function () {
+        'use strict';
+
+        // ЗАМОРОЖЕННЫЙ КОНТРАКТ: базовый URL воркера-прокси (Telegram → JSON).
+        var API_BASE = 'https://venchakov-api-proxy.venchakov.workers.dev';
+
+        var MONTHS = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
+                      'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+
+        /**
+         * Форматирует дату вида «13 июля 2026» из времени в миллисекундах.
+         * Возвращает '' если дата некорректна.
+         */
+        function formatDate(ms) {
+            var d = new Date(Number(ms));
+            if (isNaN(d.getTime())) return '';
+            return d.getDate() + ' ' + MONTHS[d.getMonth()] + ' ' + d.getFullYear();
+        }
+
+        /** Экранирует HTML-спецсимволы — защита от XSS. Вызывается ДО линкификации. */
+        function escapeHtml(s) {
+            return String(s).replace(/[&<>"']/g, function (c) {
+                return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+            });
+        }
+
+        /**
+         * Готовит текст поста к вставке: экранирует → делает URL-ссылки кликабельными
+         * → превращает переносы строк в <br>. Порядок важен: экранирование первым.
+         */
+        function formatText(raw) {
+            var safe = escapeHtml(raw);
+            safe = safe.replace(/(https?:\/\/[^\s<]+)/g, function (url) {
+                return '<a href="' + url + '" target="_blank" rel="noopener">' + url + '</a>';
+            });
+            return safe.replace(/\n/g, '<br>');
+        }
+
+        /** Собирает одну карточку поста: дата → фото (если есть) → текст. */
+        function buildCard(item) {
+            var card = document.createElement('article');
+            card.className = 'vlog-card';
+
+            var date = document.createElement('div');
+            date.className = 'vlog-card__date';
+            date.textContent = formatDate(item.date);
+            card.appendChild(date);
+
+            if (item.photoId) {
+                var img = document.createElement('img');
+                img.className = 'vlog-card__img';
+                img.loading = 'lazy';
+                img.alt = '';
+                // encodeURIComponent — file_id уходит в query-параметр безопасно.
+                img.src = API_BASE + '/tg-media?file_id=' + encodeURIComponent(item.photoId);
+                // Битая картинка не должна ломать карточку — просто убираем <img>.
+                img.onerror = function () { img.remove(); };
+                card.appendChild(img);
+            }
+
+            if (item.text) {
+                var body = document.createElement('div');
+                body.className = 'vlog-card__text';
+                body.innerHTML = formatText(item.text); // строка уже экранирована
+                card.appendChild(body);
+            }
+
+            return card;
+        }
+
+        /** Сортирует ленту по дате убыв. (новые сверху), рисует карточки и показывает блок. */
+        function render(section, feed, items) {
+            items.sort(function (a, b) { return (Number(b.date) || 0) - (Number(a.date) || 0); });
+            feed.innerHTML = '';
+            items.forEach(function (item) { feed.appendChild(buildCard(item)); });
+            section.hidden = false; // показываем блок только когда есть посты
+        }
+
+        /** Загружает посты из воркера; пусто/ошибка → блок остаётся скрытым. */
+        function load() {
+            var section = document.getElementById('channelNotes');
+            var feed = document.getElementById('vlogFeed');
+            if (!section || !feed) return;
+            fetch(API_BASE + '/vlog', { headers: { 'Accept': 'application/json' } })
+                .then(function (res) {
+                    if (!res.ok) throw new Error('HTTP ' + res.status);
+                    return res.json();
+                })
+                .then(function (data) {
+                    var items = data && Array.isArray(data.items) ? data.items : [];
+                    if (items.length) render(section, feed, items);
+                })
+                .catch(function () { /* воркер недоступен — блок просто не показываем */ });
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', load);
+        } else {
+            load();
+        }
+    })();
+    </script>
 </body>
 </html>
