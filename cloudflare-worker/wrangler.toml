@@ -2,6 +2,15 @@ name = "venchakov-api-proxy"
 main = "worker.js"
 compatibility_date = "2024-12-01"
 
-# После деплоя, добавьте секрет:
-# wrangler secret put OLLAMA_API_KEY
-# и вставьте ваш ключ
+# ── Секреты (в toml их НЕ пишем, ставятся через CLI) ──────────────────
+# wrangler secret put OLLAMA_API_KEY   # ключ Ollama Cloud для /chat
+# wrangler secret put BOT_TOKEN        # токен Telegram-бота (для /tg-webhook)
+# wrangler secret put ADMIN_ID         # Telegram user id владельца
+# wrangler secret put WEBHOOK_SECRET   # секрет вебхука (X-Telegram-Bot-Api-Secret-Token)
+
+# ── KV namespace для ленты мини-аппки ─────────────────────────────────
+# Создать namespace:  wrangler kv namespace create FEED_KV
+# затем вставить выданный id ниже вместо плейсхолдера.
+[[kv_namespaces]]
+binding = "FEED_KV"
+id = "8055605cf37e4bb49b54138e10b64b94"
