@@ -1,0 +1,37 @@
+{
+  "items": [
+    {
+      "id": "9bZkp7q19f0",
+      "type": "youtube",
+      "videoId": "9bZkp7q19f0",
+      "title": "Как собрать ИИ-агента без кода",
+      "desc": "Разбираем по шагам, как за вечер запустить рабочего агента на готовых блоках и подключить его к Telegram.",
+      "material": "https://venchakov.com/blog.html",
+      "thumb": "https://i.ytimg.com/vi/9bZkp7q19f0/hqdefault.jpg",
+      "tag": "Агенты",
+      "addedAt": 1717000000000
+    },
+    {
+      "id": "jNQXAC9IVRw",
+      "type": "youtube",
+      "videoId": "jNQXAC9IVRw",
+      "title": "Автоматизация рутины в бизнесе",
+      "desc": "",
+      "material": "https://venchakov.com/services.html",
+      "thumb": "https://i.ytimg.com/vi/jNQXAC9IVRw/hqdefault.jpg",
+      "tag": "Автоматизация",
+      "addedAt": 1716500000000
+    },
+    {
+      "id": "dQw4w9WgXcQ",
+      "type": "youtube",
+      "videoId": "dQw4w9WgXcQ",
+      "title": "Чат-боты, которые реально продают",
+      "desc": "Показываю связку бот + база знаний: как отвечать клиентам 24/7 и не терять заявки ночью.",
+      "material": "https://venchakov.com",
+      "thumb": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+      "tag": "Боты",
+      "addedAt": 1716000000000
+    }
+  ]
+}
