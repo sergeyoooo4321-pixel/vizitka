@@ -193,6 +193,74 @@ export default {
       });
     }
 
+    // GET /vlog — влог для сайта (обычные посты канала). Читается из KV, отдаётся всем.
+    // Как /feed: данные не секретны, чужому Origin отдаём без CORS (не блокируем).
+    if (url.pathname === '/vlog') {
+      const vlogCors = isAllowedOrigin(origin)
+        ? {
+            'Access-Control-Allow-Origin': origin,
+            'Access-Control-Allow-Methods': 'GET, OPTIONS',
+            'Access-Control-Allow-Headers': 'Content-Type',
+            'Access-Control-Max-Age': '86400',
+          }
+        : {};
+
+      // CORS preflight
+      if (request.method === 'OPTIONS') {
+        return new Response(null, { status: 204, headers: vlogCors });
+      }
+      if (request.method !== 'GET') {
+        return jsonError('Method not allowed', 405, origin);
+      }
+
+      // Читаем массив влога из KV (null → пустой список). Новые — первыми (как хранится).
+      const items = (await env.FEED_KV.get('vlog', 'json')) || [];
+      return new Response(JSON.stringify({ items }), {
+        headers: { 'Content-Type': 'application/json', ...vlogCors },
+      });
+    }
+
+    // GET /tg-media?file_id=<id> — прокси фото из Telegram.
+    // Токен бота остаётся на сервере: клиент получает только байты картинки.
+    // Фото не секретны → CORS '*'. Любая ошибка → 404, воркер не роняем.
+    if (url.pathname === '/tg-media' && request.method === 'GET') {
+      const fileId = url.searchParams.get('file_id');
+      if (!fileId) {
+        return new Response('file_id required', { status: 400 });
+      }
+      try {
+        // Шаг 1: getFile → получаем внутренний file_path.
+        const gf = await fetch(
+          `https://api.telegram.org/bot${env.BOT_TOKEN}/getFile?file_id=${encodeURIComponent(fileId)}`
+        );
+        const gfData = await gf.json();
+        const filePath = gfData && gfData.result && gfData.result.file_path;
+        if (!filePath) {
+          return new Response('Not found', { status: 404 });
+        }
+
+        // Шаг 2: скачиваем сам файл по file_path (URL с токеном не покидает сервер).
+        const fileResp = await fetch(
+          `https://api.telegram.org/file/bot${env.BOT_TOKEN}/${filePath}`
+        );
+        if (!fileResp.ok) {
+          return new Response('Not found', { status: 404 });
+        }
+
+        const contentType = fileResp.headers.get('Content-Type') || 'application/octet-stream';
+        return new Response(fileResp.body, {
+          status: 200,
+          headers: {
+            'Content-Type': contentType,
+            'Cache-Control': 'public, max-age=86400',
+            'Access-Control-Allow-Origin': '*',
+          },
+        });
+      } catch {
+        return new Response('Not found', { status: 404 });
+      }
+    }
+
     // POST /tg-webhook — вебхук Telegram. Владелец шлёт 2 ссылки → карточка в ленту.
     if (url.pathname === '/tg-webhook' && request.method === 'POST') {
       // Секрет вебхука отсекает чужие запросы к этому роуту (Telegram шлёт его в заголовке).
@@ -210,6 +278,93 @@ export default {
       try {
         update = await request.json();
       } catch {
+        return ok();
+      }
+
+      // ────────────────────────────────────────────────────────────────
+      // Ветка постов канала: бот — админ канала, апдейты channel_post
+      // (или edited_channel_post при правке) приходят от самого канала.
+      // ADMIN_ID здесь НЕ проверяем — достаточно секрета вебхука выше.
+      // ────────────────────────────────────────────────────────────────
+      const post = update && (update.channel_post || update.edited_channel_post);
+      if (post) {
+        const postText = post.text || post.caption || '';
+
+        // Кодовое слово «новый ролик» → видео идёт в ленту мини-аппки (/feed).
+        if (/новы[йе]\s+ролик/i.test(postText)) {
+          // Собираем ссылки поста, ищем первую именно YouTube.
+          const postUrls = postText.split(/\s+/).filter(isUrl);
+          let videoUrl = null;
+          let ytId = null;
+          for (const u of postUrls) {
+            const id = extractYouTubeId(u);
+            if (id) { videoUrl = u; ytId = id; break; }
+          }
+          // Без YouTube-ссылки добавлять в ленту нечего — молча подтверждаем.
+          if (!ytId) return ok();
+
+          // material — вторая ссылка поста, при отсутствии — сама video-ссылка.
+          const material = postUrls[1] || videoUrl;
+
+          // desc — текст без кодового слова и без ссылок, обрезанный по краям.
+          const desc = postText
+            .replace(/новы[йе]\s+ролик/gi, '')
+            .replace(/https?:\/\/\S+/gi, '')
+            .replace(/\s+/g, ' ')
+            .trim();
+
+          // Название тянем через публичный oEmbed (без ключа), fallback — 'Видео'.
+          let title = 'Видео';
+          try {
+            const oe = await fetch(
+              'https://www.youtube.com/oembed?url=' + encodeURIComponent(videoUrl) + '&format=json'
+            );
+            if (oe.ok) {
+              const data = await oe.json();
+              if (data && data.title) title = data.title;
+            }
+          } catch {
+            /* oEmbed недоступен — оставляем title = 'Видео' */
+          }
+
+          // Карточка в том же формате, что и лента /feed (единый контракт).
+          const card = {
+            id: ytId,
+            type: 'youtube',
+            videoId: ytId,
+            title,
+            desc: desc || '',
+            material,
+            thumb: 'https://i.ytimg.com/vi/' + ytId + '/hqdefault.jpg',
+            tag: 'Все',
+            addedAt: Date.now(),
+          };
+
+          const feedArr = (await env.FEED_KV.get('feed', 'json')) || [];
+          feedArr.unshift(card);
+          await env.FEED_KV.put('feed', JSON.stringify(feedArr));
+          return ok();
+        }
+
+        // Обычный пост → влог для сайта (/vlog). Замороженный контракт объекта.
+        const chatId = post.chat && post.chat.id;
+        const messageId = post.message_id;
+        const vlogPost = {
+          id: `${chatId}_${messageId}`,
+          date: post.date ? post.date * 1000 : Date.now(),
+          text: postText,
+          photoId:
+            post.photo && post.photo.length
+              ? post.photo[post.photo.length - 1].file_id
+              : null,
+        };
+
+        // Дедуп по id: правка поста (edited_channel_post) заменяет запись, не дублирует.
+        const vlogArr = (await env.FEED_KV.get('vlog', 'json')) || [];
+        const idx = vlogArr.findIndex((p) => p && p.id === vlogPost.id);
+        if (idx >= 0) vlogArr[idx] = vlogPost;
+        else vlogArr.unshift(vlogPost);
+        await env.FEED_KV.put('vlog', JSON.stringify(vlogArr));
         return ok();
       }
 

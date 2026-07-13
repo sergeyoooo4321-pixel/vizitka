@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Влог — заметки и посты Сергея Венчакова про ИИ и автоматизацию. Короткие мысли, наблюдения и апдейты прямиком из Telegram-канала.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <meta name="author" content="Сергей Венчаков">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; script-src 'self' 'unsafe-inline' https://mc.yandex.ru; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://venchakov-api-proxy.venchakov.workers.dev https://mc.yandex.ru; connect-src 'self' https://venchakov-api-proxy.venchakov.workers.dev https://mc.yandex.ru wss://mc.yandex.ru;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta name="theme-color" content="#07090C">
+    <title>Влог — заметки про ИИ и автоматизацию · Сергей Венчаков</title>
+    <meta property="og:title" content="Влог — заметки про ИИ и автоматизацию · Сергей Венчаков">
+    <meta property="og:description" content="Короткие мысли, наблюдения и апдейты про ИИ и автоматизацию — прямиком из Telegram-канала.">
+    <meta property="og:url" content="https://venchakov.com/vlog.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="Венчаков">
+    <meta property="og:image" content="https://venchakov.com/hero-sergey.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Влог — заметки про ИИ и автоматизацию · Сергей Венчаков">
+    <meta name="twitter:description" content="Короткие мысли, наблюдения и апдейты про ИИ и автоматизацию — прямиком из Telegram-канала.">
+    <meta name="twitter:image" content="https://venchakov.com/hero-sergey.jpg">
+    <link rel="canonical" href="https://venchakov.com/vlog.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500..900;1,500..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css?v=night2026">
+    <link rel="stylesheet" href="blog.css?v=night2026">
+
+    <!--
+      Стили ленты влога.
+      Используем только дизайн-токены сайта (:root в style.css) — цвета/радиусы/тени
+      не хардкодим, чтобы страница оставалась «родной» и менялась вместе с темой.
+    -->
+    <style>
+        .vlog-feed {
+            max-width: 720px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .vlog-card {
+            position: relative;
+            min-width: 0;
+            padding: 26px;
+            overflow: hidden;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+        }
+        .vlog-card__date {
+            margin-bottom: 14px;
+            color: var(--text-muted);
+            font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.015em;
+        }
+        .vlog-card__img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 16px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+        }
+        .vlog-card__text {
+            color: var(--text-secondary);
+            font-size: 16px;
+            line-height: 1.7;
+            overflow-wrap: anywhere;
+            white-space: normal;
+        }
+        .vlog-card__text a {
+            color: var(--text);
+            text-decoration: underline;
+            text-decoration-color: var(--accent-2);
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+            overflow-wrap: anywhere;
+        }
+        .vlog-card__text a:hover {
+            color: var(--accent-2);
+        }
+        .vlog-status {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 16px;
+            padding: 40px 0;
+        }
+        @media (max-width: 560px) {
+            .vlog-card { padding: 20px; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://venchakov.com/vlog.html",
+      "url": "https://venchakov.com/vlog.html",
+      "name": "Влог — заметки про ИИ и автоматизацию",
+      "description": "Короткие мысли, наблюдения и апдейты про ИИ и автоматизацию — прямиком из Telegram-канала.",
+      "inLanguage": "ru-RU",
+      "author": {"@type": "Person", "name": "Сергей Венчаков", "url": "https://venchakov.com/"}
+    }
+    </script>
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=110472799', 'ym');
+
+    ym(110472799, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/110472799" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</head>
+<body>
+
+    <!-- Навигация -->
+    <nav class="nav" id="nav">
+        <div class="container nav-inner">
+            <a href="index.html" class="nav-logo">ВЕНЧАКОВ</a>
+            <button class="nav-burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="navLinks">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Обо мне</a></li>
+                <li><a href="services.html" class="nav-link">Услуги</a></li>
+                <li><a href="reviews.html" class="nav-link">Кейсы и отзывы</a></li>
+                <li><a href="blog.html" class="nav-link">Блог</a></li>
+                <li><a href="vlog.html" class="nav-link active">Влог</a></li>
+                <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+            </ul>
+            <a href="https://t.me/cvvjesuss" class="btn btn-accent btn-sm nav-cta" target="_blank" rel="noopener noreferrer">Написать <span class="arrow">&#8594;</span></a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Хиро влога -->
+        <section class="blog-index">
+            <div class="container">
+                <div class="section-header blog-index-header">
+                    <span class="section-tag">Влог</span>
+                    <h1>Заметки из моего <span class="text-accent">Telegram-канала</span></h1>
+                    <p class="blog-index-subtitle">Короткие мысли, наблюдения и апдейты про ИИ и автоматизацию — без длинных статей, живьём из канала. Новое сверху.</p>
+                </div>
+
+                <!-- Лента постов: наполняется скриптом из воркера, новые сверху -->
+                <div class="vlog-feed" id="vlogFeed">
+                    <p class="vlog-status">Загружаю посты…</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <a href="index.html" class="footer-logo">ВЕНЧАКОВ</a>
+            <ul class="footer-links">
+                <li><a href="index.html">Обо мне</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="reviews.html">Кейсы и отзывы</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="vlog.html">Влог</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+            <p class="footer-copy">&copy; 2026 venchakov.com</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+
+    <!--
+      Клиентская логика влога.
+      Тянет посты из Cloudflare Worker (ЗАМОРОЖЕННЫЙ КОНТРАКТ формата ответа),
+      сортирует по дате убыв. и рисует ленту. Весь текст постов экранируется (XSS)
+      ДО линкификации; file_id фото уходит в URL через encodeURIComponent.
+    -->
+    <script>
+    (function () {
+        'use strict';
+
+        // ЗАМОРОЖЕННЫЙ КОНТРАКТ: базовый URL воркера-прокси (Telegram → JSON).
+        var API_BASE = 'https://venchakov-api-proxy.venchakov.workers.dev';
+
+        var MONTHS = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
+                      'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+
+        /**
+         * Форматирует дату вида «13 июля 2026» из времени в миллисекундах.
+         * Возвращает '' если дата некорректна.
+         */
+        function formatDate(ms) {
+            var d = new Date(Number(ms));
+            if (isNaN(d.getTime())) return '';
+            return d.getDate() + ' ' + MONTHS[d.getMonth()] + ' ' + d.getFullYear();
+        }
+
+        /** Экранирует HTML-спецсимволы — защита от XSS. Вызывается ДО линкификации. */
+        function escapeHtml(s) {
+            return String(s).replace(/[&<>"']/g, function (c) {
+                return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+            });
+        }
+
+        /**
+         * Готовит текст поста к вставке: экранирует → делает URL-ссылки кликабельными
+         * → превращает переносы строк в <br>. Порядок важен: экранирование первым.
+         */
+        function formatText(raw) {
+            var safe = escapeHtml(raw);
+            safe = safe.replace(/(https?:\/\/[^\s<]+)/g, function (url) {
+                return '<a href="' + url + '" target="_blank" rel="noopener">' + url + '</a>';
+            });
+            return safe.replace(/\n/g, '<br>');
+        }
+
+        /** Показывает дружелюбную заглушку пустой/недоступной ленты. */
+        function showEmpty(feed) {
+            feed.innerHTML = '';
+            var p = document.createElement('p');
+            p.className = 'vlog-status';
+            p.textContent = 'Пока пусто';
+            feed.appendChild(p);
+        }
+
+        /** Собирает одну карточку поста: дата → фото (если есть) → текст. */
+        function buildCard(item) {
+            var card = document.createElement('article');
+            card.className = 'vlog-card';
+
+            var date = document.createElement('div');
+            date.className = 'vlog-card__date';
+            date.textContent = formatDate(item.date);
+            card.appendChild(date);
+
+            if (item.photoId) {
+                var img = document.createElement('img');
+                img.className = 'vlog-card__img';
+                img.loading = 'lazy';
+                img.alt = '';
+                // encodeURIComponent — file_id уходит в query-параметр безопасно.
+                img.src = API_BASE + '/tg-media?file_id=' + encodeURIComponent(item.photoId);
+                // Битая картинка не должна ломать карточку — просто убираем <img>.
+                img.onerror = function () { img.remove(); };
+                card.appendChild(img);
+            }
+
+            if (item.text) {
+                var body = document.createElement('div');
+                body.className = 'vlog-card__text';
+                body.innerHTML = formatText(item.text); // строка уже экранирована
+                card.appendChild(body);
+            }
+
+            return card;
+        }
+
+        /** Сортирует ленту по дате убыв. (новые сверху) и рисует карточки. */
+        function render(feed, items) {
+            items.sort(function (a, b) { return (Number(b.date) || 0) - (Number(a.date) || 0); });
+            feed.innerHTML = '';
+            items.forEach(function (item) { feed.appendChild(buildCard(item)); });
+        }
+
+        /** Загружает посты из воркера; при любой ошибке показывает заглушку. */
+        function load() {
+            var feed = document.getElementById('vlogFeed');
+            if (!feed) return;
+            fetch(API_BASE + '/vlog', { headers: { 'Accept': 'application/json' } })
+                .then(function (res) {
+                    if (!res.ok) throw new Error('HTTP ' + res.status);
+                    return res.json();
+                })
+                .then(function (data) {
+                    var items = data && Array.isArray(data.items) ? data.items : [];
+                    if (!items.length) { showEmpty(feed); return; }
+                    render(feed, items);
+                })
+                .catch(function () { showEmpty(feed); });
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', load);
+        } else {
+            load();
+        }
+    })();
+    </script>
+</body>
+</html>
