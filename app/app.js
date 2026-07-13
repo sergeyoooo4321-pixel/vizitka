@@ -5,7 +5,7 @@
  */
 
 // ЗАМЕНИ на URL своего Cloudflare Worker (тот же, что в connect-src CSP в index.html):
-const API_BASE = 'https://YOUR-WORKER-SUBDOMAIN.workers.dev';
+const API_BASE = 'https://venchakov-api-proxy.venchakov.workers.dev';
 
 // ---- Telegram SDK: готовность + разворот на весь экран (безопасно, если SDK нет) ----
 const tg = window.Telegram && window.Telegram.WebApp ? window.Telegram.WebApp : null;
