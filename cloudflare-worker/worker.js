@@ -290,8 +290,12 @@ export default {
       if (post) {
         const postText = post.text || post.caption || '';
 
-        // Кодовое слово «новый ролик» → видео идёт в ленту мини-аппки (/feed).
-        if (/новы[йе]\s+ролик/i.test(postText)) {
+        // Кодовое слово «новый ролик» есть в тексте?
+        const hasCodeword = /новы[йе]\s+ролик/i.test(postText);
+
+        // Кодовое слово «новый ролик» → видео ДОПОЛНИТЕЛЬНО идёт в ленту мини-аппки (/feed).
+        // ВАЖНО: тут нет early-return — такой пост всё равно попадает и в блог (/vlog) ниже.
+        if (hasCodeword) {
           // Собираем ссылки поста, ищем первую именно YouTube.
           const postUrls = postText.split(/\s+/).filter(isUrl);
           let videoUrl = null;
@@ -300,59 +304,65 @@ export default {
             const id = extractYouTubeId(u);
             if (id) { videoUrl = u; ytId = id; break; }
           }
-          // Без YouTube-ссылки добавлять в ленту нечего — молча подтверждаем.
-          if (!ytId) return ok();
 
-          // material — вторая ссылка поста, при отсутствии — сама video-ссылка.
-          const material = postUrls[1] || videoUrl;
+          // В ленту мини-аппки добавляем только если есть YouTube-ссылка
+          // (без ролика карточке неоткуда взяться). В блог пост всё равно уйдёт.
+          if (ytId) {
+            // material — вторая ссылка поста, при отсутствии — сама video-ссылка.
+            const material = postUrls[1] || videoUrl;
 
-          // desc — текст без кодового слова и без ссылок, обрезанный по краям.
-          const desc = postText
-            .replace(/новы[йе]\s+ролик/gi, '')
-            .replace(/https?:\/\/\S+/gi, '')
-            .replace(/\s+/g, ' ')
-            .trim();
+            // desc — текст без кодового слова и без ссылок, обрезанный по краям.
+            const desc = postText
+              .replace(/новы[йе]\s+ролик[ \t!.,:;—–-]*/gi, '')
+              .replace(/https?:\/\/\S+/gi, '')
+              .replace(/\s+/g, ' ')
+              .trim();
 
-          // Название тянем через публичный oEmbed (без ключа), fallback — 'Видео'.
-          let title = 'Видео';
-          try {
-            const oe = await fetch(
-              'https://www.youtube.com/oembed?url=' + encodeURIComponent(videoUrl) + '&format=json'
-            );
-            if (oe.ok) {
-              const data = await oe.json();
-              if (data && data.title) title = data.title;
+            // Название тянем через публичный oEmbed (без ключа), fallback — 'Видео'.
+            let title = 'Видео';
+            try {
+              const oe = await fetch(
+                'https://www.youtube.com/oembed?url=' + encodeURIComponent(videoUrl) + '&format=json'
+              );
+              if (oe.ok) {
+                const data = await oe.json();
+                if (data && data.title) title = data.title;
+              }
+            } catch {
+              /* oEmbed недоступен — оставляем title = 'Видео' */
             }
-          } catch {
-            /* oEmbed недоступен — оставляем title = 'Видео' */
+
+            // Карточка в том же формате, что и лента /feed (единый контракт).
+            const card = {
+              id: ytId,
+              type: 'youtube',
+              videoId: ytId,
+              title,
+              desc: desc || '',
+              material,
+              thumb: 'https://i.ytimg.com/vi/' + ytId + '/hqdefault.jpg',
+              tag: 'Все',
+              addedAt: Date.now(),
+            };
+
+            const feedArr = (await env.FEED_KV.get('feed', 'json')) || [];
+            feedArr.unshift(card);
+            await env.FEED_KV.put('feed', JSON.stringify(feedArr));
           }
-
-          // Карточка в том же формате, что и лента /feed (единый контракт).
-          const card = {
-            id: ytId,
-            type: 'youtube',
-            videoId: ytId,
-            title,
-            desc: desc || '',
-            material,
-            thumb: 'https://i.ytimg.com/vi/' + ytId + '/hqdefault.jpg',
-            tag: 'Все',
-            addedAt: Date.now(),
-          };
-
-          const feedArr = (await env.FEED_KV.get('feed', 'json')) || [];
-          feedArr.unshift(card);
-          await env.FEED_KV.put('feed', JSON.stringify(feedArr));
-          return ok();
         }
 
-        // Обычный пост → влог для сайта (/vlog). Замороженный контракт объекта.
+        // ЛЮБОЙ пост канала (в т.ч. «новый ролик») → лента блога (/vlog). Замороженный контракт.
         const chatId = post.chat && post.chat.id;
         const messageId = post.message_id;
+        // Для блога убираем служебное слово «новый ролик», чтобы оно не светилось в тексте;
+        // ссылки и описание остаются как есть (в блоге станут кликабельными).
+        const vlogText = hasCodeword
+          ? postText.replace(/новы[йе]\s+ролик[ \t!.,:;—–-]*/gi, '').replace(/[ \t]+\n/g, '\n').replace(/\n{3,}/g, '\n\n').trim()
+          : postText;
         const vlogPost = {
           id: `${chatId}_${messageId}`,
           date: post.date ? post.date * 1000 : Date.now(),
-          text: postText,
+          text: vlogText,
           photoId:
             post.photo && post.photo.length
               ? post.photo[post.photo.length - 1].file_id
