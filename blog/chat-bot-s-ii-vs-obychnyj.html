@@ -46,7 +46,7 @@
           "author": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков", "url": "https://venchakov.com/"},
           "publisher": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков"},
           "datePublished": "2026-01-05",
-          "dateModified": "2026-01-05",
+          "dateModified": "2026-07-14",
           "mainEntityOfPage": "https://venchakov.com/blog/chat-bot-s-ii-vs-obychnyj.html",
           "image": "https://venchakov.com/hero-sergey.jpg",
           "keywords": "чат-бот с ИИ, кнопочный бот, ИИ-бот против обычного, какой чат-бот выбрать, умный чат-бот"
@@ -58,6 +58,39 @@
             {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://venchakov.com/blog.html"},
             {"@type": "ListItem", "position": 3, "name": "Чат-бот с ИИ против кнопочного: в чём разница и что выбрать"}
           ]
+        }
+      ]
+    }
+    </script>
+    <!--
+      FAQPage — машиночитаемые вопрос-ответ по теме статьи.
+      Помогает попасть в расширенные сниппеты Google и даёт ИИ-поисковикам
+      (ChatGPT/Claude/Perplexity) готовые цитируемые ответы со ссылкой на источник.
+    -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Чем чат-бот с ИИ отличается от кнопочного?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Кнопочный бот работает по меню: показывает варианты, клиент нажимает кнопку и получает заранее написанный ответ — слов он не понимает. Чат-бот с ИИ понимает живую речь: клиент пишет своими словами, а бот улавливает смысл и отвечает по вашей базе знаний, даже если в сообщении ошибки, сокращения или сразу несколько вопросов." }
+        },
+        {
+          "@type": "Question",
+          "name": "Когда достаточно кнопочного бота?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Когда сценариев мало и они простые, нужна полная предсказуемость ответов, клиенту удобнее выбрать из вариантов, чем печатать, или ограничен бюджет. В таких задачах кнопочный бот отлично работает и стоит дешевле — платить за ИИ незачем." }
+        },
+        {
+          "@type": "Question",
+          "name": "В каких случаях нужен именно ИИ-бот?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Когда вопросов много и они разные, качество ответа влияет на продажу, нужно работать с большой базой знаний или хочется, чтобы бот был похож на живого менеджера. ИИ-бот — это ближайшее к живому сотруднику на первой линии: не устаёт, не забывает прайс и отвечает одинаково хорошо в любое время суток." }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли объединить кнопки и ИИ в одном боте?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Да, и часто это лучшее решение. Кнопки ведут клиента по основным сценариям — быстро и предсказуемо, — а ИИ подключается, когда человек задаёт вопрос не из меню. Получается и удобно, и без лишних трат на то, что можно решить кнопкой." }
         }
       ]
     }
@@ -168,8 +201,13 @@
                     <a href="https://t.me/cvvjesuss" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Написать в Telegram <span class="arrow">&#8599;</span></a>
                     <a href="/services.html" class="btn btn-ghost">Услуги и цены <span class="arrow">&#8599;</span></a>
                 </section>
+                <section class="post-cta">
+                    <h2>Подпишись на мой Telegram-канал</h2>
+                    <p>Разборы, кейсы и живые заметки про ИИ, автоматизацию и нейросети для бизнеса — без воды и хайпа. Новое выходит первым в канале.</p>
+                    <a href="https://telegram.me/aipo_prostomy" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Подписаться на канал <span class="arrow">&#8599;</span></a>
+                </section>
                 <footer class="post-author">
-                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a></p>
+                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a> · <a href="https://telegram.me/aipo_prostomy" target="_blank" rel="noopener noreferrer">Telegram-канал</a></p>
                 </footer>
             </div>
         </article>

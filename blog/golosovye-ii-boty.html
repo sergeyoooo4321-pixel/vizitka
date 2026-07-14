@@ -46,7 +46,7 @@
           "author": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков", "url": "https://venchakov.com/"},
           "publisher": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков"},
           "datePublished": "2026-03-02",
-          "dateModified": "2026-03-02",
+          "dateModified": "2026-07-14",
           "mainEntityOfPage": "https://venchakov.com/blog/golosovye-ii-boty.html",
           "image": "https://venchakov.com/hero-sergey.jpg",
           "keywords": "голосовые ИИ-боты, голосовой робот для бизнеса, голосовой ассистент, автоматизация звонков, ИИ-обзвон"
@@ -59,6 +59,23 @@
             {"@type": "ListItem", "position": 3, "name": "Голосовые ИИ-боты: где они реально работают, а где нет"}
           ]
         }
+      ]
+    }
+    </script>
+    <!--
+      FAQPage — машиночитаемые вопрос-ответ по теме статьи.
+      Помогает попасть в расширенные сниппеты Google и даёт ИИ-поисковикам
+      (ChatGPT/Claude/Perplexity) готовые цитируемые ответы со ссылкой на источник.
+    -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Где голосовой ИИ-бот действительно работает?", "acceptedAnswer": { "@type": "Answer", "text": "Там, где разговор короткий и предсказуемый, а цена ошибки невелика: подтверждение записи и напоминания, первичная квалификация входящих, обзвон холодной базы по чёткому скрипту, сбор простых данных и опросы, разгрузка линии в пик. На таких задачах бот снимает десятки однотипных звонков." } },
+        { "@type": "Question", "name": "Когда голосовой бот только навредит?", "acceptedAnswer": { "@type": "Answer", "text": "Там, где нужны эмпатия и долгий разбор: сложные консультации и продажи «в долгую», жалобы и конфликты, дорогие редкие сделки, а также при плохой телефонии и шумной базе. Простое правило: чем выше цена ошибки в разговоре, тем меньше там места для голосового бота без подстраховки человеком." } },
+        { "@type": "Question", "name": "Чем голосовой бот сложнее текстового?", "acceptedAnswer": { "@type": "Answer", "text": "По телефону у клиента нет терпения и кнопок: бот должен разобрать живую речь с шумом и акцентом, ответить без задержки и вовремя уловить раздражение. Пауза в пару секунд, незаметная в чате, по телефону звучит как обрыв связи, поэтому голос — более требовательный класс решений." } },
+        { "@type": "Question", "name": "Заменит ли голосовой бот весь колл-центр?", "acceptedAnswer": { "@type": "Answer", "text": "Нет, правильнее строить его как первый слой — фильтр, который берёт на себя простое и предсказуемое, а сложное передаёт человеку с уже собранным контекстом. В сценарий обязательно закладывают честный «аварийный выход»: как только клиент раздражён или просит человека, бот сразу переводит звонок." } }
       ]
     }
     </script>
@@ -161,8 +178,13 @@
                     <a href="https://t.me/cvvjesuss" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Написать в Telegram <span class="arrow">&#8599;</span></a>
                     <a href="/services.html" class="btn btn-ghost">Услуги и цены <span class="arrow">&#8599;</span></a>
                 </section>
+                <section class="post-cta">
+                    <h2>Подпишись на мой Telegram-канал</h2>
+                    <p>Разборы, кейсы и живые заметки про ИИ, автоматизацию и нейросети для бизнеса — без воды и хайпа. Новое выходит первым в канале.</p>
+                    <a href="https://telegram.me/aipo_prostomy" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Подписаться на канал <span class="arrow">&#8599;</span></a>
+                </section>
                 <footer class="post-author">
-                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a></p>
+                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a> · <a href="https://telegram.me/aipo_prostomy" target="_blank" rel="noopener noreferrer">Telegram-канал</a></p>
                 </footer>
             </div>
         </article>

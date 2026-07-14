@@ -46,7 +46,7 @@
           "author": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков", "url": "https://venchakov.com/"},
           "publisher": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков"},
           "datePublished": "2026-04-27",
-          "dateModified": "2026-04-27",
+          "dateModified": "2026-07-14",
           "mainEntityOfPage": "https://venchakov.com/blog/avtovoronka-s-ii-v-telegram.html",
           "image": "https://venchakov.com/hero-sergey.jpg",
           "keywords": "автоворонка с ИИ в Telegram, автоворонка в телеграм, ИИ-бот для продаж, чат-бот воронка, автоматизация продаж в Telegram"
@@ -58,6 +58,39 @@
             {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://venchakov.com/blog.html"},
             {"@type": "ListItem", "position": 3, "name": "Автоворонка с ИИ в Telegram: разбор механики"}
           ]
+        }
+      ]
+    }
+    </script>
+    <!--
+      FAQPage — машиночитаемые вопрос-ответ по теме статьи.
+      Помогает попасть в расширенные сниппеты Google и даёт ИИ-поисковикам
+      (ChatGPT/Claude/Perplexity) готовые цитируемые ответы со ссылкой на источник.
+    -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Чем автоворонка с ИИ отличается от обычной?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Обычная автоворонка — это цепочка сообщений по расписанию: всем одинаково, независимо от того, что человек ответил. Автоворонка с ИИ читает свободный текст, понимает смысл ответа и решает, что делать дальше — ответить на вопрос, снять возражение, предложить следующий шаг или позвать менеджера. Клиент пишет своими словами и не чувствует, что общается со скриптом." }
+        },
+        {
+          "@type": "Question",
+          "name": "Из каких блоков состоит автоворонка в Telegram?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Из точки входа (ссылка на бота из рекламы, сайта или профиля), приветствия с квалификацией, прогрева полезным контентом, оффера с ценой, дожима отставших и финала — оплаты прямо в боте или передачи менеджеру. ИИ здесь не отдельный блок, а слой, который проходит сквозь всю цепочку и делает каждый шаг живым." }
+        },
+        {
+          "@type": "Question",
+          "name": "Где именно в воронке подключается нейросеть?",
+          "acceptedAnswer": { "@type": "Answer", "text": "В трёх местах. На квалификации она вытаскивает из свободного ответа нишу, бюджет и срочность вместо анкеты с кнопками. На обработке возражений подбирает ответ под конкретное сомнение — рассрочку, гарантию или сроки — а не выдаёт шаблон. На дожиме анализирует, где человек завис, и подбирает повод вернуться под конкретную причину паузы." }
+        },
+        {
+          "@type": "Question",
+          "name": "Сколько времени занимает сборка такой воронки?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Минимально рабочую версию — вход, квалификация, оффер, оплата — обычно можно собрать за одну-две недели. Дальше воронка дорабатывается по реальным данным: это не разовый проект, а инструмент, который живёт и улучшается вместе с бизнесом." }
         }
       ]
     }
@@ -164,8 +197,13 @@
                     <a href="https://t.me/cvvjesuss" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Написать в Telegram <span class="arrow">&#8599;</span></a>
                     <a href="/services.html" class="btn btn-ghost">Услуги и цены <span class="arrow">&#8599;</span></a>
                 </section>
+                <section class="post-cta">
+                    <h2>Подпишись на мой Telegram-канал</h2>
+                    <p>Разборы, кейсы и живые заметки про ИИ, автоматизацию и нейросети для бизнеса — без воды и хайпа. Новое выходит первым в канале.</p>
+                    <a href="https://telegram.me/aipo_prostomy" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Подписаться на канал <span class="arrow">&#8599;</span></a>
+                </section>
                 <footer class="post-author">
-                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a></p>
+                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a> · <a href="https://telegram.me/aipo_prostomy" target="_blank" rel="noopener noreferrer">Telegram-канал</a></p>
                 </footer>
             </div>
         </article>

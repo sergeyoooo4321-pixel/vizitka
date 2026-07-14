@@ -46,7 +46,7 @@
           "author": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков", "url": "https://venchakov.com/"},
           "publisher": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков"},
           "datePublished": "2026-05-25",
-          "dateModified": "2026-05-25",
+          "dateModified": "2026-07-14",
           "mainEntityOfPage": "https://venchakov.com/blog/ii-i-personalnye-dannye.html",
           "image": "https://venchakov.com/hero-sergey.jpg",
           "keywords": "ИИ и персональные данные, персональные данные и нейросети, 152-ФЗ и ИИ, защита данных клиентов, ИИ в бизнесе Россия"
@@ -59,6 +59,23 @@
             {"@type": "ListItem", "position": 3, "name": "ИИ и персональные данные: что учесть бизнесу в России"}
           ]
         }
+      ]
+    }
+    </script>
+    <!--
+      FAQPage — машиночитаемые вопрос-ответ по теме статьи.
+      Помогает попасть в расширенные сниппеты Google и даёт ИИ-поисковикам
+      (ChatGPT/Claude/Perplexity) готовые цитируемые ответы со ссылкой на источник.
+    -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Нужно ли согласие клиента, если с ним общается ИИ, а не человек?", "acceptedAnswer": { "@type": "Answer", "text": "Да. Для закона не важно, кто обрабатывает данные — человек или нейросеть. Если система собирает и хранит персональные данные, клиент должен об этом знать и дать согласие. То, что диалог ведёт бот, ничего не меняет: ответственность всё равно на бизнесе." } },
+        { "@type": "Question", "name": "Кто отвечает за персональные данные, которые собирает ИИ-бот?", "acceptedAnswer": { "@type": "Answer", "text": "Ответственность лежит на бизнесе, который собрал данные, а не на нейросети или сервисе, где она работает. Главный закон в России — 152-ФЗ: собирать и обрабатывать данные людей можно с их согласия, для понятной цели и с заботой о сохранности." } },
+        { "@type": "Question", "name": "Можно ли использовать зарубежные нейросети и не нарушать закон?", "acceptedAnswer": { "@type": "Answer", "text": "Это зависит от того, какие данные и как через них проходят, и здесь стоит свериться с юристом под вашу ситуацию. С технической стороны риск снижают простые вещи: не отправлять в модель лишние персональные данные, обезличивать их где возможно и осознанно выбирать, где обрабатывается информация." } },
+        { "@type": "Question", "name": "С чего начать, если бот уже работает, а про данные не думали?", "acceptedAnswer": { "@type": "Answer", "text": "С простого аудита: выпишите, какие данные вы собираете, где они хранятся и кто имеет к ним доступ. Уже одно это обычно вскрывает пару очевидных проблем, которые можно быстро закрыть. Принцип простой — собирать минимум, показывать согласие и ограничивать доступ." } }
       ]
     }
     </script>
@@ -164,8 +181,13 @@
                     <a href="https://t.me/cvvjesuss" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Написать в Telegram <span class="arrow">&#8599;</span></a>
                     <a href="/services.html" class="btn btn-ghost">Услуги и цены <span class="arrow">&#8599;</span></a>
                 </section>
+                <section class="post-cta">
+                    <h2>Подпишись на мой Telegram-канал</h2>
+                    <p>Разборы, кейсы и живые заметки про ИИ, автоматизацию и нейросети для бизнеса — без воды и хайпа. Новое выходит первым в канале.</p>
+                    <a href="https://telegram.me/aipo_prostomy" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Подписаться на канал <span class="arrow">&#8599;</span></a>
+                </section>
                 <footer class="post-author">
-                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a></p>
+                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a> · <a href="https://telegram.me/aipo_prostomy" target="_blank" rel="noopener noreferrer">Telegram-канал</a></p>
                 </footer>
             </div>
         </article>

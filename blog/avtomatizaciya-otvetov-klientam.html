@@ -46,7 +46,7 @@
           "author": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков", "url": "https://venchakov.com/"},
           "publisher": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков"},
           "datePublished": "2026-01-12",
-          "dateModified": "2026-01-12",
+          "dateModified": "2026-07-14",
           "mainEntityOfPage": "https://venchakov.com/blog/avtomatizaciya-otvetov-klientam.html",
           "image": "https://venchakov.com/hero-sergey.jpg",
           "keywords": "автоматизация ответов клиентам, не терять заявки ночью, чат-бот для заявок, ИИ-ассистент, автоответчик для бизнеса, обработка заявок"
@@ -58,6 +58,39 @@
             {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://venchakov.com/blog.html"},
             {"@type": "ListItem", "position": 3, "name": "Автоматизация ответов клиентам: как не терять заявки ночью"}
           ]
+        }
+      ]
+    }
+    </script>
+    <!--
+      FAQPage — машиночитаемые вопрос-ответ по теме статьи.
+      Помогает попасть в расширенные сниппеты Google и даёт ИИ-поисковикам
+      (ChatGPT/Claude/Perplexity) готовые цитируемые ответы со ссылкой на источник.
+    -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Как не терять заявки, которые приходят ночью и в выходные?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Поставить автоматизацию первого ответа: бот мгновенно встречает клиента в любое время суток, отвечает на частые вопросы про цену, адрес и график и собирает заявку, пока менеджеры спят. Утром сотрудник получает готовую карточку клиента, а не остывший контакт. Скорость первого ответа напрямую влияет на то, купит человек или уйдёт к тому, кто ответил быстрее." }
+        },
+        {
+          "@type": "Question",
+          "name": "С какого уровня автоматизации ответов стоит начать?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Обычно двигаются по ступеням: сначала мгновенный первый ответ на частые вопросы, затем сбор и квалификация заявки в CRM, и только потом полноценный диалог с ИИ. Большинству малого бизнеса хватает первых двух уровней, чтобы перестать терять ночные и выходные обращения." }
+        },
+        {
+          "@type": "Question",
+          "name": "Клиентов не будет раздражать, что отвечает бот?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Раздражает не бот, а плохой бот, который не понимает вопрос и гоняет по меню. Если ассистент отвечает по делу, быстро и честно предупреждает, что он бот и в сложном случае позовёт человека, люди воспринимают это нормально. Многим наоборот удобнее получить ответ ночью, чем ждать до утра." }
+        },
+        {
+          "@type": "Question",
+          "name": "В каких каналах работает автоматизация ответов?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Один и тот же ассистент можно поставить в Telegram, в WhatsApp, виджетом на сайт и в директ соцсетей — логика ответов одна, меняется только канал. Чаще всего начинают с того канала, куда клиенты пишут больше всего, а остальные подключают позже." }
         }
       ]
     }
@@ -155,8 +188,13 @@
                     <a href="https://t.me/cvvjesuss" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Написать в Telegram <span class="arrow">&#8599;</span></a>
                     <a href="/services.html" class="btn btn-ghost">Услуги и цены <span class="arrow">&#8599;</span></a>
                 </section>
+                <section class="post-cta">
+                    <h2>Подпишись на мой Telegram-канал</h2>
+                    <p>Разборы, кейсы и живые заметки про ИИ, автоматизацию и нейросети для бизнеса — без воды и хайпа. Новое выходит первым в канале.</p>
+                    <a href="https://telegram.me/aipo_prostomy" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Подписаться на канал <span class="arrow">&#8599;</span></a>
+                </section>
                 <footer class="post-author">
-                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a></p>
+                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a> · <a href="https://telegram.me/aipo_prostomy" target="_blank" rel="noopener noreferrer">Telegram-канал</a></p>
                 </footer>
             </div>
         </article>

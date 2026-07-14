@@ -46,7 +46,7 @@
           "author": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков", "url": "https://venchakov.com/"},
           "publisher": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков"},
           "datePublished": "2026-05-04",
-          "dateModified": "2026-05-04",
+          "dateModified": "2026-07-14",
           "mainEntityOfPage": "https://venchakov.com/blog/neyroseti-dlya-seo-tekstov.html",
           "image": "https://venchakov.com/hero-sergey.jpg",
           "keywords": "нейросети для SEO-текстов, SEO-тексты нейросетью, ИИ-контент под фильтр, генерация статей нейросетью, SEO-оптимизация текста"
@@ -59,6 +59,23 @@
             {"@type": "ListItem", "position": 3, "name": "Нейросети для SEO-текстов: как писать под органику"}
           ]
         }
+      ]
+    }
+    </script>
+    <!--
+      FAQPage — машиночитаемые вопрос-ответ по теме статьи.
+      Помогает попасть в расширенные сниппеты Google и даёт ИИ-поисковикам
+      (ChatGPT/Claude/Perplexity) готовые цитируемые ответы со ссылкой на источник.
+    -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Правда ли, что за тексты, написанные нейросетью, сайт попадает под фильтр?", "acceptedAnswer": { "@type": "Answer", "text": "Нет. Ни Google, ни Яндекс не наказывают за сам факт использования нейросети — им важно, полезен ли текст человеку. Под фильтр попадает не «ИИ-контент», а плохой контент: вода без фактов, переспам ключами, тысячи однотипных страниц. Проблемы начинаются, когда нейросеть публикует напрямую, без редактуры и фактов." } },
+        { "@type": "Question", "name": "Что изменилось для ИИ-текстов после обновления Google в марте 2024 года?", "acceptedAnswer": { "@type": "Answer", "text": "Google встроил систему Helpful Content прямо в ядро ранжирования и выделил массовую генерацию слабых страниц в отдельное нарушение — «scaled content abuse». По итогам чистки низкокачественного контента в выдаче стало меньше примерно на 45%. Пускать генерацию на самотёк стало прямо опасно." } },
+        { "@type": "Question", "name": "Что доверить нейросети при написании SEO-текста, а что оставить человеку?", "acceptedAnswer": { "@type": "Answer", "text": "Нейросети — структуру и план статьи, черновики разделов, варианты заголовков, перефразирование и вычитку опечаток. Человеку — реальные факты и цифры, экспертные детали, личный опыт, финальный смысл и проверку на правду. При таком разделении ИИ ускоряет работу и не превращает текст в мусор." } },
+        { "@type": "Question", "name": "Можно ли полностью автоматизировать написание SEO-статей?", "acceptedAnswer": { "@type": "Answer", "text": "Черновик — да, финальную публикацию — нет. Полная автоматизация «от запроса до опубликованной статьи» рано или поздно приводит к падению качества и позиций. Рабочая схема — нейросеть готовит основу, человек добавляет экспертизу и проверяет." } }
       ]
     }
     </script>
@@ -171,8 +188,13 @@
                     <a href="https://t.me/cvvjesuss" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Написать в Telegram <span class="arrow">&#8599;</span></a>
                     <a href="/services.html" class="btn btn-ghost">Услуги и цены <span class="arrow">&#8599;</span></a>
                 </section>
+                <section class="post-cta">
+                    <h2>Подпишись на мой Telegram-канал</h2>
+                    <p>Разборы, кейсы и живые заметки про ИИ, автоматизацию и нейросети для бизнеса — без воды и хайпа. Новое выходит первым в канале.</p>
+                    <a href="https://telegram.me/aipo_prostomy" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Подписаться на канал <span class="arrow">&#8599;</span></a>
+                </section>
                 <footer class="post-author">
-                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a></p>
+                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a> · <a href="https://telegram.me/aipo_prostomy" target="_blank" rel="noopener noreferrer">Telegram-канал</a></p>
                 </footer>
             </div>
         </article>

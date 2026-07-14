@@ -46,7 +46,7 @@
           "author": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков", "url": "https://venchakov.com/"},
           "publisher": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков"},
           "datePublished": "2026-03-10",
-          "dateModified": "2026-03-10",
+          "dateModified": "2026-07-14",
           "mainEntityOfPage": "https://venchakov.com/blog/ii-i-crm.html",
           "image": "https://venchakov.com/hero-sergey.jpg",
           "keywords": "ИИ и CRM, автоматическая квалификация лидов, скоринг лидов нейросетью, автоматизация продаж, обработка заявок ИИ"
@@ -59,6 +59,23 @@
             {"@type": "ListItem", "position": 3, "name": "ИИ + CRM: автоматическая квалификация лидов"}
           ]
         }
+      ]
+    }
+    </script>
+    <!--
+      FAQPage — машиночитаемые вопрос-ответ по теме статьи.
+      Помогает попасть в расширенные сниппеты Google и даёт ИИ-поисковикам
+      (ChatGPT/Claude/Perplexity) готовые цитируемые ответы со ссылкой на источник.
+    -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Что делает ИИ в связке с CRM?", "acceptedAnswer": { "@type": "Answer", "text": "ИИ встаёт между потоком заявок и вашей CRM: читает каждое обращение по единым правилам круглосуточно, оценивает, насколько лид близок к покупке, ставит тег (горячий, тёплый, холодный или нецелевой) и заносит вывод прямо в карточку. Горячих сразу отдаёт менеджеру, а нецелевых вежливо закрывает." } },
+        { "@type": "Question", "name": "Подойдёт ли ИИ-квалификация лидов к моей CRM?", "acceptedAnswer": { "@type": "Answer", "text": "Почти наверняка да. Современные CRM умеют принимать и отдавать данные, поэтому ИИ-слой подключается без замены вашей системы. Команда продолжает работать в привычном интерфейсе, а меняется только качество заявок, которые в него попадают." } },
+        { "@type": "Question", "name": "Что будет, если ИИ ошибётся и отсеет хорошего клиента?", "acceptedAnswer": { "@type": "Answer", "text": "Система не удаляет нецелевые заявки молча, а помечает их и оставляет в отдельной корзине для контроля. Правила квалификации всегда можно донастроить по реальным данным. На дистанции ИИ ошибается реже уставшего человека, а спорные случаи легко вынести на ручную проверку." } },
+        { "@type": "Question", "name": "Сколько времени занимает внедрение ИИ-квалификации?", "acceptedAnswer": { "@type": "Answer", "text": "Базовый квалификатор на один канал заявок собирается довольно быстро — это не многомесячный проект. Больше всего времени уходит на согласование правил: что для вашего бизнеса горячий лид, а что мусор. Начать стоит с самого проблемного источника заявок." } }
       ]
     }
     </script>
@@ -154,8 +171,13 @@
                     <a href="https://t.me/cvvjesuss" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Написать в Telegram <span class="arrow">&#8599;</span></a>
                     <a href="/services.html" class="btn btn-ghost">Услуги и цены <span class="arrow">&#8599;</span></a>
                 </section>
+                <section class="post-cta">
+                    <h2>Подпишись на мой Telegram-канал</h2>
+                    <p>Разборы, кейсы и живые заметки про ИИ, автоматизацию и нейросети для бизнеса — без воды и хайпа. Новое выходит первым в канале.</p>
+                    <a href="https://telegram.me/aipo_prostomy" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Подписаться на канал <span class="arrow">&#8599;</span></a>
+                </section>
                 <footer class="post-author">
-                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a></p>
+                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a> · <a href="https://telegram.me/aipo_prostomy" target="_blank" rel="noopener noreferrer">Telegram-канал</a></p>
                 </footer>
             </div>
         </article>

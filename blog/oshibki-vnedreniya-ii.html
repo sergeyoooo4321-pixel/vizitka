@@ -46,7 +46,7 @@
           "author": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков", "url": "https://venchakov.com/"},
           "publisher": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков"},
           "datePublished": "2026-03-23",
-          "dateModified": "2026-03-23",
+          "dateModified": "2026-07-14",
           "mainEntityOfPage": "https://venchakov.com/blog/oshibki-vnedreniya-ii.html",
           "image": "https://venchakov.com/hero-sergey.jpg",
           "keywords": "внедрение ИИ в бизнес, ошибки внедрения ИИ, автоматизация бизнеса, ИИ-агент, окупаемость ИИ"
@@ -59,6 +59,23 @@
             {"@type": "ListItem", "position": 3, "name": "5 ошибок при внедрении ИИ в бизнес и как их избежать"}
           ]
         }
+      ]
+    }
+    </script>
+    <!--
+      FAQPage — машиночитаемые вопрос-ответ по теме статьи.
+      Помогает попасть в расширенные сниппеты Google и даёт ИИ-поисковикам
+      (ChatGPT/Claude/Perplexity) готовые цитируемые ответы со ссылкой на источник.
+    -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Почему внедрение ИИ в бизнес чаще всего проваливается?", "acceptedAnswer": { "@type": "Answer", "text": "Причина почти никогда не в модели, а в подходе: неверно выбранная задача, отсутствие данных, ожидание магии и экономия там, где экономить нельзя. ИИ — это усилитель: отлаженный процесс он ускоряет в разы, а хаос в переписках просто ускорит хаос. По прогнозу Gartner, больше 40% проектов агентного ИИ будут закрыты до конца 2027 года." } },
+        { "@type": "Question", "name": "С какой задачи лучше начать внедрение ИИ?", "acceptedAnswer": { "@type": "Answer", "text": "С той, что болит каждый день и легко измеряется: ответы клиентам, обработка заявок, запись. Узкая задача с понятной метрикой окупается быстро и даёт уверенность двигаться дальше. Начинать лучше с малого — один процесс, один измеримый результат." } },
+        { "@type": "Question", "name": "Почему ИИ-ассистент выдумывает цены и факты?", "acceptedAnswer": { "@type": "Answer", "text": "Общая модель знает язык и здравый смысл, но не знает ваши цены, условия и регламенты — и без них вежливо выдумывает, а это хуже молчания. Чтобы ассистент отвечал по делу, его подключают к вашей базе знаний через связку RAG, когда модель перед ответом достаёт нужный кусок из ваших документов. Качество ответов ИИ равно качеству данных, которые вы ему дали." } },
+        { "@type": "Question", "name": "Можно ли полностью убрать человека и оставить только ИИ?", "acceptedAnswer": { "@type": "Answer", "text": "Нет. Полностью бесчеловечная система рано или поздно попадает в ситуацию, которую не предусмотрели, и уносит с собой репутацию. Правильная модель — «ИИ плюс человек»: ассистент берёт рутину и массовые обращения, а сложные и денежные случаи передаёт менеджеру с уже собранным контекстом." } }
       ]
     }
     </script>
@@ -162,8 +179,13 @@
                     <a href="https://t.me/cvvjesuss" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Написать в Telegram <span class="arrow">&#8599;</span></a>
                     <a href="/services.html" class="btn btn-ghost">Услуги и цены <span class="arrow">&#8599;</span></a>
                 </section>
+                <section class="post-cta">
+                    <h2>Подпишись на мой Telegram-канал</h2>
+                    <p>Разборы, кейсы и живые заметки про ИИ, автоматизацию и нейросети для бизнеса — без воды и хайпа. Новое выходит первым в канале.</p>
+                    <a href="https://telegram.me/aipo_prostomy" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Подписаться на канал <span class="arrow">&#8599;</span></a>
+                </section>
                 <footer class="post-author">
-                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a></p>
+                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a> · <a href="https://telegram.me/aipo_prostomy" target="_blank" rel="noopener noreferrer">Telegram-канал</a></p>
                 </footer>
             </div>
         </article>

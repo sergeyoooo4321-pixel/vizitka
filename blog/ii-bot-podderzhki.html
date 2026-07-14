@@ -46,7 +46,7 @@
           "author": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков", "url": "https://venchakov.com/"},
           "publisher": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков"},
           "datePublished": "2026-05-12",
-          "dateModified": "2026-05-12",
+          "dateModified": "2026-07-14",
           "mainEntityOfPage": "https://venchakov.com/blog/ii-bot-podderzhki.html",
           "image": "https://venchakov.com/hero-sergey.jpg",
           "keywords": "ИИ-бот поддержки, бот техподдержки, автоматизация поддержки клиентов, чат-бот для поддержки, снизить нагрузку на операторов"
@@ -59,6 +59,23 @@
             {"@type": "ListItem", "position": 3, "name": "ИИ-бот поддержки: как снять 80% типовых вопросов"}
           ]
         }
+      ]
+    }
+    </script>
+    <!--
+      FAQPage — машиночитаемые вопрос-ответ по теме статьи.
+      Помогает попасть в расширенные сниппеты Google и даёт ИИ-поисковикам
+      (ChatGPT/Claude/Perplexity) готовые цитируемые ответы со ссылкой на источник.
+    -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Сколько типовых вопросов может закрыть ИИ-бот поддержки?", "acceptedAnswer": { "@type": "Answer", "text": "В большинстве проектов повторяющиеся сценарии — статус заказа, доставка, оплата, режим работы, возврат — составляют порядка 70–80% всех обращений. Именно эту рутину и берёт на себя ИИ-бот, разгружая операторов. Сложные и нестандартные случаи остаются людям." } },
+        { "@type": "Question", "name": "Заменит ли ИИ-бот поддержки операторов полностью?", "acceptedAnswer": { "@type": "Answer", "text": "Нет. Задача бота — снять рутинные повторяющиеся вопросы, а не уволить сотрудников. Конфликтные, эмоциональные и нестандартные обращения всегда остаются за людьми. Правильный бот усиливает поддержку, а не имитирует её отсутствие." } },
+        { "@type": "Question", "name": "Будет ли ИИ-бот выдумывать ответы?", "acceptedAnswer": { "@type": "Answer", "text": "Нет, если он построен на базе знаний из ваших реальных документов и не отвечает по темам, которых там нет. Когда бот чего-то не знает, он честно передаёт вопрос человеку. Поэтому качество базы знаний важнее самой модели." } },
+        { "@type": "Question", "name": "Когда ИИ-бот передаёт диалог живому оператору?", "acceptedAnswer": { "@type": "Answer", "text": "Когда клиент раздражён, когда вопроса нет в базе знаний, когда речь о деньгах и спорах или когда клиент сам просит человека. Такая честная эскалация повышает доверие к поддержке. Диалог уходит оператору вместе со всей историей переписки." } }
       ]
     }
     </script>
@@ -160,8 +177,13 @@
                     <a href="https://t.me/cvvjesuss" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Написать в Telegram <span class="arrow">&#8599;</span></a>
                     <a href="/services.html" class="btn btn-ghost">Услуги и цены <span class="arrow">&#8599;</span></a>
                 </section>
+                <section class="post-cta">
+                    <h2>Подпишись на мой Telegram-канал</h2>
+                    <p>Разборы, кейсы и живые заметки про ИИ, автоматизацию и нейросети для бизнеса — без воды и хайпа. Новое выходит первым в канале.</p>
+                    <a href="https://telegram.me/aipo_prostomy" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Подписаться на канал <span class="arrow">&#8599;</span></a>
+                </section>
                 <footer class="post-author">
-                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a></p>
+                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a> · <a href="https://telegram.me/aipo_prostomy" target="_blank" rel="noopener noreferrer">Telegram-канал</a></p>
                 </footer>
             </div>
         </article>

@@ -46,7 +46,7 @@
           "author": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков", "url": "https://venchakov.com/"},
           "publisher": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков"},
           "datePublished": "2026-04-13",
-          "dateModified": "2026-04-13",
+          "dateModified": "2026-07-14",
           "mainEntityOfPage": "https://venchakov.com/blog/prompt-inzhiniring-osnovy.html",
           "image": "https://venchakov.com/hero-sergey.jpg",
           "keywords": "промпт-инжиниринг, основы промптов, как писать промпты, промпты для нейросети, промпт для ChatGPT"
@@ -59,6 +59,23 @@
             {"@type": "ListItem", "position": 3, "name": "Промпт-инжиниринг"}
           ]
         }
+      ]
+    }
+    </script>
+    <!--
+      FAQPage — машиночитаемые вопрос-ответ по теме статьи.
+      Помогает попасть в расширенные сниппеты Google и даёт ИИ-поисковикам
+      (ChatGPT/Claude/Perplexity) готовые цитируемые ответы со ссылкой на источник.
+    -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Что такое промпт-инжиниринг простыми словами?", "acceptedAnswer": { "@type": "Answer", "text": "Промпт — это задача, вопрос или инструкция, которые вы пишете нейросети. Промпт-инжиниринг — это навык формулировать их обычным языком так, чтобы модель поняла вас правильно. Программировать не нужно: достаточно понятных правил постановки задачи." } },
+        { "@type": "Question", "name": "Какие основы промпт-инжиниринга дают лучший результат?", "acceptedAnswer": { "@type": "Answer", "text": "Работают пять принципов: дайте модели роль, опишите контекст, задайте формат ответа, приведите пример и укажите, чего делать не нужно. По отдельности каждый улучшает ответ, а вместе они превращают приблизительный результат в нужный." } },
+        { "@type": "Question", "name": "Почему нейросеть выдаёт общий и бесполезный ответ?", "acceptedAnswer": { "@type": "Answer", "text": "Чаще всего дело не в модели, а в постановке задачи. Слишком общий запрос, несколько задач в одном сообщении, отсутствие критерия «хорошо» и фактуры заставляют модель лить воду. Чёткий промпт с ролью, контекстом и форматом убирает эту проблему." } },
+        { "@type": "Question", "name": "Нужно ли учить особый язык, чтобы писать промпты?", "acceptedAnswer": { "@type": "Answer", "text": "Нет, особого языка не существует. Промпты пишут обычным человеческим языком, а принципы — роль, задача, контекст, формат, ограничения — работают одинаково в ChatGPT, Claude и других моделях. Отличаются лишь мелкие детали формулировок." } }
       ]
     }
     </script>
@@ -163,8 +180,13 @@
                     <a href="https://t.me/cvvjesuss" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Написать в Telegram <span class="arrow">&#8599;</span></a>
                     <a href="/services.html" class="btn btn-ghost">Услуги и цены <span class="arrow">&#8599;</span></a>
                 </section>
+                <section class="post-cta">
+                    <h2>Подпишись на мой Telegram-канал</h2>
+                    <p>Разборы, кейсы и живые заметки про ИИ, автоматизацию и нейросети для бизнеса — без воды и хайпа. Новое выходит первым в канале.</p>
+                    <a href="https://telegram.me/aipo_prostomy" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Подписаться на канал <span class="arrow">&#8599;</span></a>
+                </section>
                 <footer class="post-author">
-                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a></p>
+                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a> · <a href="https://telegram.me/aipo_prostomy" target="_blank" rel="noopener noreferrer">Telegram-канал</a></p>
                 </footer>
             </div>
         </article>

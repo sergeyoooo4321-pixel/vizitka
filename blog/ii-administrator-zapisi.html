@@ -46,7 +46,7 @@
           "author": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков", "url": "https://venchakov.com/"},
           "publisher": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков"},
           "datePublished": "2026-04-06",
-          "dateModified": "2026-04-06",
+          "dateModified": "2026-07-14",
           "mainEntityOfPage": "https://venchakov.com/blog/ii-administrator-zapisi.html",
           "image": "https://venchakov.com/hero-sergey.jpg",
           "keywords": "ИИ-администратор, запись клиентов, бот для записи, автоматизация записи, ИИ для салонов и клиник"
@@ -59,6 +59,23 @@
             {"@type": "ListItem", "position": 3, "name": "ИИ-администратор"}
           ]
         }
+      ]
+    }
+    </script>
+    <!--
+      FAQPage — машиночитаемые вопрос-ответ по теме статьи.
+      Помогает попасть в расширенные сниппеты Google и даёт ИИ-поисковикам
+      (ChatGPT/Claude/Perplexity) готовые цитируемые ответы со ссылкой на источник.
+    -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Что такое ИИ-администратор?", "acceptedAnswer": { "@type": "Answer", "text": "Это программа в мессенджере или на сайте, которая ведёт запись клиентов вместо живого администратора: мгновенно отвечает в любое время, уточняет услугу, подбирает свободный слот, фиксирует запись в расписании и напоминает о визите. Для клиента это выглядит как обычный человеческий диалог, а не сухая форма с полями." } },
+        { "@type": "Question", "name": "Как ИИ-администратор записывает клиентов без человека?", "acceptedAnswer": { "@type": "Answer", "text": "По понятной цепочке шагов: принимает обращение в Telegram, WhatsApp или чате на сайте в любое время суток, уточняет услугу и мастера, смотрит в расписание и предлагает свободные слоты, фиксирует выбранное время с подтверждением и присылает напоминание за день и за пару часов до визита." } },
+        { "@type": "Question", "name": "Кому подходит ИИ-администратор?", "acceptedAnswer": { "@type": "Answer", "text": "Бизнесам, которые живут от записи и теряют деньги на каждом пропущенном сообщении: салонам красоты, барбершопам, косметологии, стоматологиям и медцентрам, автосервисам, студиям, репетиторам и коучам. Общий признак простой — есть услуга, время и очередь." } },
+        { "@type": "Question", "name": "Заменяет ли ИИ-администратор живого сотрудника?", "acceptedAnswer": { "@type": "Answer", "text": "Полностью убирать человека не стоит. Ассистент блестяще закрывает типовой поток — записи, переносы и частые вопросы, — но конфликты, нестандартные запросы и тонкие продажи лучше оставить живому сотруднику. Правильная схема — ассистент плюс человек, которому бот передаёт сложное с уже собранным контекстом." } }
       ]
     }
     </script>
@@ -160,8 +177,13 @@
                     <a href="https://t.me/cvvjesuss" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Написать в Telegram <span class="arrow">&#8599;</span></a>
                     <a href="/services.html" class="btn btn-ghost">Услуги и цены <span class="arrow">&#8599;</span></a>
                 </section>
+                <section class="post-cta">
+                    <h2>Подпишись на мой Telegram-канал</h2>
+                    <p>Разборы, кейсы и живые заметки про ИИ, автоматизацию и нейросети для бизнеса — без воды и хайпа. Новое выходит первым в канале.</p>
+                    <a href="https://telegram.me/aipo_prostomy" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Подписаться на канал <span class="arrow">&#8599;</span></a>
+                </section>
                 <footer class="post-author">
-                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a></p>
+                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a> · <a href="https://telegram.me/aipo_prostomy" target="_blank" rel="noopener noreferrer">Telegram-канал</a></p>
                 </footer>
             </div>
         </article>

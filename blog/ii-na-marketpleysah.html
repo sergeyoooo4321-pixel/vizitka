@@ -46,7 +46,7 @@
           "author": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков", "url": "https://venchakov.com/"},
           "publisher": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков"},
           "datePublished": "2026-01-19",
-          "dateModified": "2026-01-19",
+          "dateModified": "2026-07-14",
           "mainEntityOfPage": "https://venchakov.com/blog/ii-na-marketpleysah.html",
           "image": "https://venchakov.com/hero-sergey.jpg",
           "keywords": "ИИ на маркетплейсах, карточки товаров, SEO-описания, отзывы на маркетплейсах, нейросеть для WB и Ozon, автоматизация селлера"
@@ -59,6 +59,23 @@
             {"@type": "ListItem", "position": 3, "name": "ИИ на маркетплейсах: карточки товаров, отзывы и SEO-описания"}
           ]
         }
+      ]
+    }
+    </script>
+    <!--
+      FAQPage — машиночитаемые вопрос-ответ по теме статьи.
+      Помогает попасть в расширенные сниппеты Google и даёт ИИ-поисковикам
+      (ChatGPT/Claude/Perplexity) готовые цитируемые ответы со ссылкой на источник.
+    -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Помогает ли ИИ поднять продажи на маркетплейсах?", "acceptedAnswer": { "@type": "Answer", "text": "Напрямую нет: ИИ не волшебная кнопка «сделать продажи», а инструмент, который снимает рутину — заполнение карточек товаров, ответы на отзывы и SEO-описания. Продажи растут не сами по себе, а потому что вы освобождаете время и подтягиваете качество карточек." } },
+        { "@type": "Question", "name": "Банят ли на Wildberries и Ozon за тексты, написанные нейросетью?", "acceptedAnswer": { "@type": "Answer", "text": "Площадки банят не за нейросети, а за плохие карточки: переспам ключевыми словами, пустые характеристики и недостоверные данные. Честный и точный текст проходит независимо от того, кто его набрал — человек или ИИ." } },
+        { "@type": "Question", "name": "Можно ли доверить ИИ ответы на отзывы полностью?", "acceptedAnswer": { "@type": "Answer", "text": "Лучше не отдавать это на полный автопилот. ИИ хорошо готовит спокойные конструктивные черновики, особенно на негатив, но финальную отправку стоит держать под контролем человека — иначе есть риск неуместного ответа на нестандартную ситуацию." } },
+        { "@type": "Question", "name": "Где ИИ на маркетплейсах может навредить?", "acceptedAnswer": { "@type": "Answer", "text": "Три главные грабли: слепая генерация без проверки, когда модель уверенно выдумывает характеристику, которой у товара нет; одинаковые описания под один и тот же промпт; и полностью автоматические ответы на отзывы без человека. Правильная схема — машина готовит, человек контролирует ключевые точки." } }
       ]
     }
     </script>
@@ -149,8 +166,13 @@
                     <a href="https://t.me/cvvjesuss" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Написать в Telegram <span class="arrow">&#8599;</span></a>
                     <a href="/services.html" class="btn btn-ghost">Услуги и цены <span class="arrow">&#8599;</span></a>
                 </section>
+                <section class="post-cta">
+                    <h2>Подпишись на мой Telegram-канал</h2>
+                    <p>Разборы, кейсы и живые заметки про ИИ, автоматизацию и нейросети для бизнеса — без воды и хайпа. Новое выходит первым в канале.</p>
+                    <a href="https://telegram.me/aipo_prostomy" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Подписаться на канал <span class="arrow">&#8599;</span></a>
+                </section>
                 <footer class="post-author">
-                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a></p>
+                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a> · <a href="https://telegram.me/aipo_prostomy" target="_blank" rel="noopener noreferrer">Telegram-канал</a></p>
                 </footer>
             </div>
         </article>

@@ -46,7 +46,7 @@
           "author": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков", "url": "https://venchakov.com/"},
           "publisher": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков"},
           "datePublished": "2025-12-08",
-          "dateModified": "2025-12-08",
+          "dateModified": "2026-07-14",
           "mainEntityOfPage": "https://venchakov.com/blog/chto-takoe-ii-agent.html",
           "image": "https://venchakov.com/hero-sergey.jpg",
           "keywords": "ИИ-агент, что такое ИИ-агент, ИИ агент для бизнеса, автоматизация бизнеса, нейросети для бизнеса"
@@ -58,6 +58,51 @@
             {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://venchakov.com/blog.html"},
             {"@type": "ListItem", "position": 3, "name": "Что такое ИИ-агент простыми словами и зачем он бизнесу"}
           ]
+        }
+      ]
+    }
+    </script>
+    <!--
+      FAQPage — машиночитаемые вопрос-ответ по теме статьи.
+      Помогает попасть в расширенные сниппеты Google и даёт ИИ-поисковикам
+      (ChatGPT/Claude/Perplexity) готовые цитируемые ответы со ссылкой на источник.
+    -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Что такое ИИ-агент простыми словами?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ИИ-агент — это программа на основе нейросети, которая понимает поставленную цель и сама доводит задачу до результата, а не ждёт нажатия кнопок. Вы задаёте ему задачу словами, а он сам решает, что спросить у клиента, куда посмотреть и что сделать. Если коротко: чат-бот отвечает на вопросы, а ИИ-агент выполняет работу."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Чем ИИ-агент отличается от чат-бота и ChatGPT?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "От кнопочного чат-бота ИИ-агент отличается тремя вещами: понимает смысл сообщения, умеет действовать (залезть в базу, оформить заявку, записать в CRM) и сам выбирает шаги к цели. От ChatGPT — обвязкой: база знаний, инструкция и доступы к вашим системам. Нейросеть внутри та же, ценность — в настройке под ваш бизнес."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Из чего состоит ИИ-агент?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Из четырёх частей: «мозг» — языковая модель (нейросеть вроде ChatGPT или Claude); инструкция — описание, как агент себя ведёт; память и знания — ваши прайсы, регламенты, ответы на частые вопросы; «руки» — подключения к Telegram, сайту, CRM, календарю, через которые агент не только говорит, но и делает."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "С чего начать внедрение ИИ-агента в бизнес?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Не автоматизируйте всё сразу. Возьмите одну узкую задачу, где вы теряете время или деньги прямо сейчас (ответы на первичные вопросы, запись, разбор заявок), и закройте именно её. Соберите материал — прайсы, частые вопросы, правила работы, — а техническую часть отдайте специалисту. Когда агент показал результат на понятном участке, его легко расширять."
+          }
         }
       ]
     }
@@ -164,8 +209,13 @@
                     <a href="https://t.me/cvvjesuss" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Написать в Telegram <span class="arrow">&#8599;</span></a>
                     <a href="/services.html" class="btn btn-ghost">Услуги и цены <span class="arrow">&#8599;</span></a>
                 </section>
+                <section class="post-cta">
+                    <h2>Подпишись на мой Telegram-канал</h2>
+                    <p>Разборы, кейсы и живые заметки про ИИ, автоматизацию и нейросети для бизнеса — без воды и хайпа. Новое выходит первым в канале.</p>
+                    <a href="https://telegram.me/aipo_prostomy" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Подписаться на канал <span class="arrow">&#8599;</span></a>
+                </section>
                 <footer class="post-author">
-                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a></p>
+                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a> · <a href="https://telegram.me/aipo_prostomy" target="_blank" rel="noopener noreferrer">Telegram-канал</a></p>
                 </footer>
             </div>
         </article>

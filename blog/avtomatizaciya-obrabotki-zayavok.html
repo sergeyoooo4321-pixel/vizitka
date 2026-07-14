@@ -46,7 +46,7 @@
           "author": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков", "url": "https://venchakov.com/"},
           "publisher": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков"},
           "datePublished": "2026-06-08",
-          "dateModified": "2026-06-08",
+          "dateModified": "2026-07-14",
           "mainEntityOfPage": "https://venchakov.com/blog/avtomatizaciya-obrabotki-zayavok.html",
           "image": "https://venchakov.com/hero-sergey.jpg",
           "keywords": "автоматизация обработки заявок, ИИ-бот для заявок, обработка лидов ботом, квалификация лидов, автоматизация заявок с сайта, чат-бот приём заявок"
@@ -58,6 +58,39 @@
             {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://venchakov.com/blog.html"},
             {"@type": "ListItem", "position": 3, "name": "Автоматизация обработки заявок ИИ-ботом: как это устроено"}
           ]
+        }
+      ]
+    }
+    </script>
+    <!--
+      FAQPage — машиночитаемые вопрос-ответ по теме статьи.
+      Помогает попасть в расширенные сниппеты Google и даёт ИИ-поисковикам
+      (ChatGPT/Claude/Perplexity) готовые цитируемые ответы со ссылкой на источник.
+    -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Как ИИ-бот обрабатывает входящие заявки?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Бот сводит обращения из всех каналов — сайт, Telegram, WhatsApp, соцсети, почта — в одну точку, понимает суть запроса, по одному вопросу собирает недостающие данные (имя, телефон, город, задачу), квалифицирует клиента по бюджету и региону и передаёт менеджеру готовую карточку с пометкой «горячий/тёплый». Если человек пропал на полпути, бот сам возвращается с напоминанием." }
+        },
+        {
+          "@type": "Question",
+          "name": "Заменит ли бот менеджеров по продажам?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Нет. Бот снимает рутину — приём обращений, первичные вопросы, сбор данных и квалификацию. Сложные переговоры и дожим остаются за людьми. Правильная связка — бот на входе, человек на закрытии сделки." }
+        },
+        {
+          "@type": "Question",
+          "name": "Из-за чего автоматизация обработки заявок не работает?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Чаще всего мешают четыре ошибки: бот отвечает шаблонами и это заметно, нет выхода на живого человека, собранные заявки не попадают в CRM, а анкета слишком длинная. Уберите эти дыры — и система начинает приносить заявки, а не отпугивать их." }
+        },
+        {
+          "@type": "Question",
+          "name": "С чего начать внедрение автоматизации заявок?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Начните с одного самого нагруженного канала и самого частого типа заявки. Соберите бота, который качественно ведёт этот сценарий, обкатайте его на реальных клиентах и только потом расширяйте. Такой путь надёжнее и дешевле, чем автоматизировать весь бизнес за один заход." }
         }
       ]
     }
@@ -160,8 +193,13 @@
                     <a href="https://t.me/cvvjesuss" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Написать в Telegram <span class="arrow">&#8599;</span></a>
                     <a href="/services.html" class="btn btn-ghost">Услуги и цены <span class="arrow">&#8599;</span></a>
                 </section>
+                <section class="post-cta">
+                    <h2>Подпишись на мой Telegram-канал</h2>
+                    <p>Разборы, кейсы и живые заметки про ИИ, автоматизацию и нейросети для бизнеса — без воды и хайпа. Новое выходит первым в канале.</p>
+                    <a href="https://telegram.me/aipo_prostomy" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Подписаться на канал <span class="arrow">&#8599;</span></a>
+                </section>
                 <footer class="post-author">
-                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a></p>
+                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a> · <a href="https://telegram.me/aipo_prostomy" target="_blank" rel="noopener noreferrer">Telegram-канал</a></p>
                 </footer>
             </div>
         </article>

@@ -46,7 +46,7 @@
           "author": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков", "url": "https://venchakov.com/"},
           "publisher": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков"},
           "datePublished": "2026-05-18",
-          "dateModified": "2026-05-18",
+          "dateModified": "2026-07-14",
           "mainEntityOfPage": "https://venchakov.com/blog/ii-chat-na-sayt.html",
           "image": "https://venchakov.com/hero-sergey.jpg",
           "keywords": "как встроить ИИ-чат на сайт, ИИ-чат на сайт, чат-бот для сайта, виджет чата с ИИ, нейросеть на сайте"
@@ -59,6 +59,23 @@
             {"@type": "ListItem", "position": 3, "name": "Как встроить ИИ-чат на сайт: варианты и подводные камни"}
           ]
         }
+      ]
+    }
+    </script>
+    <!--
+      FAQPage — машиночитаемые вопрос-ответ по теме статьи.
+      Помогает попасть в расширенные сниппеты Google и даёт ИИ-поисковикам
+      (ChatGPT/Claude/Perplexity) готовые цитируемые ответы со ссылкой на источник.
+    -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Какими способами можно встроить ИИ-чат на сайт?", "acceptedAnswer": { "@type": "Answer", "text": "Есть три пути: готовый виджет-сервис (быстро и дёшево, но чужие правила и чужие серверы), конструктор без кода (своя логика при ограниченном бюджете) и кастомная разработка (полный контроль и свои данные, но дороже и дольше). Выбирать стоит от задачи, а не от моды." } },
+        { "@type": "Question", "name": "Какой вариант ИИ-чата выбрать под свою задачу?", "acceptedAnswer": { "@type": "Answer", "text": "Чтобы просто протестировать спрос — берите готовый виджет и не тратьте бюджет раньше времени. Нужна своя логика без больших вложений — конструктор без кода. Если чат критичен для бизнеса, много интеграций и чувствительные данные — только кастомная разработка." } },
+        { "@type": "Question", "name": "Какие подводные камни всплывают после запуска ИИ-чата?", "acceptedAnswer": { "@type": "Answer", "text": "Чаще всего это галлюцинации без привязки к базе знаний, медленный ответ, вопрос приватности данных клиентов, отсутствие выхода на живого человека и скрытая абонплата, которая растёт вместе с трафиком. О большинстве из них узнают уже после запуска." } },
+        { "@type": "Question", "name": "Что важнее для полезного ИИ-чата — модель или контент?", "acceptedAnswer": { "@type": "Answer", "text": "Полезность чата определяет не «крутость» модели, а подготовленный контент: реальные вопросы клиентов и точные ответы на них — условия, цены, гарантии, частые возражения. Собрать его стоит ещё до выбора технологии, иначе даже дорогая разработка выдаст красивый, но бесполезный виджет." } }
       ]
     }
     </script>
@@ -159,8 +176,13 @@
                     <a href="https://t.me/cvvjesuss" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Написать в Telegram <span class="arrow">&#8599;</span></a>
                     <a href="/services.html" class="btn btn-ghost">Услуги и цены <span class="arrow">&#8599;</span></a>
                 </section>
+                <section class="post-cta">
+                    <h2>Подпишись на мой Telegram-канал</h2>
+                    <p>Разборы, кейсы и живые заметки про ИИ, автоматизацию и нейросети для бизнеса — без воды и хайпа. Новое выходит первым в канале.</p>
+                    <a href="https://telegram.me/aipo_prostomy" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Подписаться на канал <span class="arrow">&#8599;</span></a>
+                </section>
                 <footer class="post-author">
-                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a></p>
+                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a> · <a href="https://telegram.me/aipo_prostomy" target="_blank" rel="noopener noreferrer">Telegram-канал</a></p>
                 </footer>
             </div>
         </article>

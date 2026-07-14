@@ -46,7 +46,7 @@
           "author": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков", "url": "https://venchakov.com/"},
           "publisher": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков"},
           "datePublished": "2026-03-30",
-          "dateModified": "2026-03-30",
+          "dateModified": "2026-07-14",
           "mainEntityOfPage": "https://venchakov.com/blog/rag-prostymi-slovami.html",
           "image": "https://venchakov.com/hero-sergey.jpg",
           "keywords": "RAG простыми словами, база знаний ИИ, retrieval augmented generation, ИИ отвечает по документам, ассистент по базе знаний"
@@ -59,6 +59,23 @@
             {"@type": "ListItem", "position": 3, "name": "RAG простыми словами"}
           ]
         }
+      ]
+    }
+    </script>
+    <!--
+      FAQPage — машиночитаемые вопрос-ответ по теме статьи.
+      Помогает попасть в расширенные сниппеты Google и даёт ИИ-поисковикам
+      (ChatGPT/Claude/Perplexity) готовые цитируемые ответы со ссылкой на источник.
+    -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Что такое RAG простыми словами?", "acceptedAnswer": { "@type": "Answer", "text": "RAG (retrieval augmented generation) — это обвязка, при которой ИИ перед ответом сначала находит нужный кусок в ваших документах, а потом отвечает, опираясь на него. Модель отвечает не по памяти, а по факту — как сотрудник, который подсматривает в справочник перед каждым ответом." } },
+        { "@type": "Question", "name": "Почему обычный ИИ не отвечает по моим данным?", "acceptedAnswer": { "@type": "Answer", "text": "Большая модель обучена на текстах из интернета, где нет вашего прайса, условий доставки и свежих регламентов. Показать документы один раз недостаточно: в следующем диалоге модель снова чистый лист. RAG решает это, подкладывая нужный документ прямо в момент вопроса." } },
+        { "@type": "Question", "name": "Чем RAG отличается от дообучения модели?", "acceptedAnswer": { "@type": "Answer", "text": "Дообучение меняет саму модель под ваши данные — это дорого и требует повторения при каждом обновлении. RAG модель не трогает, а подкладывает ей актуальный документ в момент вопроса. Для большинства бизнес-задач RAG проще, дешевле и гибче." } },
+        { "@type": "Question", "name": "Может ли ассистент с RAG всё равно выдумывать?", "acceptedAnswer": { "@type": "Answer", "text": "Риск снижается в разы, но не до нуля. Многое зависит от чистоты базы знаний и от инструкции модели. Если прямо приказать отвечать только по найденным фрагментам и честно признаваться в незнании, выдумки становятся редкостью." } }
       ]
     }
     </script>
@@ -160,8 +177,13 @@
                     <a href="https://t.me/cvvjesuss" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Написать в Telegram <span class="arrow">&#8599;</span></a>
                     <a href="/services.html" class="btn btn-ghost">Услуги и цены <span class="arrow">&#8599;</span></a>
                 </section>
+                <section class="post-cta">
+                    <h2>Подпишись на мой Telegram-канал</h2>
+                    <p>Разборы, кейсы и живые заметки про ИИ, автоматизацию и нейросети для бизнеса — без воды и хайпа. Новое выходит первым в канале.</p>
+                    <a href="https://telegram.me/aipo_prostomy" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Подписаться на канал <span class="arrow">&#8599;</span></a>
+                </section>
                 <footer class="post-author">
-                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a></p>
+                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a> · <a href="https://telegram.me/aipo_prostomy" target="_blank" rel="noopener noreferrer">Telegram-канал</a></p>
                 </footer>
             </div>
         </article>

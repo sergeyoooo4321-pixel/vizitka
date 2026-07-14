@@ -46,7 +46,7 @@
           "author": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков", "url": "https://venchakov.com/"},
           "publisher": {"@type": "Person", "@id": "https://venchakov.com/#person", "name": "Сергей Венчаков"},
           "datePublished": "2026-02-09",
-          "dateModified": "2026-02-09",
+          "dateModified": "2026-07-14",
           "mainEntityOfPage": "https://venchakov.com/blog/chatgpt-dlya-biznesa.html",
           "image": "https://venchakov.com/hero-sergey.jpg",
           "keywords": "ChatGPT в бизнесе, ChatGPT для бизнеса, сценарии использования нейросети, автоматизация с ChatGPT, ИИ для компании, применение GPT"
@@ -58,6 +58,39 @@
             {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://venchakov.com/blog.html"},
             {"@type": "ListItem", "position": 3, "name": "ChatGPT в бизнесе: реальные сценарии, а не хайп"}
           ]
+        }
+      ]
+    }
+    </script>
+    <!--
+      FAQPage — машиночитаемые вопрос-ответ по теме статьи.
+      Помогает попасть в расширенные сниппеты Google и даёт ИИ-поисковикам
+      (ChatGPT/Claude/Perplexity) готовые цитируемые ответы со ссылкой на источник.
+    -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Что ChatGPT реально хорошо делает для бизнеса?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Он быстро работает с текстом: готовит черновики писем, постов и описаний, отвечает на частые вопросы по вашей базе знаний, пересказывает длинные документы, раскладывает входящие обращения по темам и помогает набросать варианты решений. Во всех этих сценариях человек остаётся на контроле — ChatGPT ускоряет, но не отвечает за результат в одиночку." }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли доверить ChatGPT важные задачи без проверки?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Нет. Нейросеть уверенно выдумывает — может назвать несуществующий факт или сочинить цифру ровным убедительным тоном. Всё, что касается точных данных, юридических и денежных вопросов, нельзя отдавать ей без проверки человеком. ChatGPT нельзя ставить туда, где ошибка стоит дорого, а проверить её некому." }
+        },
+        {
+          "@type": "Question",
+          "name": "Как встроить ChatGPT в бизнес, чтобы была польза?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Найдите повторяющуюся задачу, которая каждый день отнимает время, дайте нейросети контекст — подключите базу знаний с прайсами и регламентами (подход RAG), оставьте человека на контроле ключевых точек и измеряйте результат. Если время экономии не двигается — значит сценарий выбран неверно." }
+        },
+        {
+          "@type": "Question",
+          "name": "Почему ChatGPT «поставили, а он не сработал»?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Потому что его раздали сотрудникам «чтобы был», без конкретной задачи — люди пару раз поигрались и забросили. Польза появляется, когда нейросеть приставлена к одному чёткому делу и под него выстроена логика: что бот умеет, где его границы и куда он передаёт человека." }
         }
       ]
     }
@@ -153,8 +186,13 @@
                     <a href="https://t.me/cvvjesuss" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Написать в Telegram <span class="arrow">&#8599;</span></a>
                     <a href="/services.html" class="btn btn-ghost">Услуги и цены <span class="arrow">&#8599;</span></a>
                 </section>
+                <section class="post-cta">
+                    <h2>Подпишись на мой Telegram-канал</h2>
+                    <p>Разборы, кейсы и живые заметки про ИИ, автоматизацию и нейросети для бизнеса — без воды и хайпа. Новое выходит первым в канале.</p>
+                    <a href="https://telegram.me/aipo_prostomy" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Подписаться на канал <span class="arrow">&#8599;</span></a>
+                </section>
                 <footer class="post-author">
-                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a></p>
+                    <p><strong>Автор: Сергей Венчаков</strong> — разработчик ИИ-агентов и автоматизаций. <a href="/index.html">Обо мне</a> · <a href="https://t.me/cvvjesuss" target="_blank" rel="noopener noreferrer">Telegram</a> · <a href="https://telegram.me/aipo_prostomy" target="_blank" rel="noopener noreferrer">Telegram-канал</a></p>
                 </footer>
             </div>
         </article>
