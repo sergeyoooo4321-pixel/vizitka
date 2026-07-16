@@ -1073,6 +1073,41 @@ blockquote {
     color: var(--text-muted);
 }
 
+.footer-meta {
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.footer-desc {
+    font-size: 13px;
+    color: var(--text-secondary);
+    max-width: 480px;
+}
+
+.footer-contacts {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 16px;
+}
+
+.footer-contacts a {
+    font-size: 13px;
+    color: var(--text-secondary);
+    transition: var(--transition);
+}
+
+.footer-contacts a:hover {
+    color: var(--text);
+}
+
 /* ==============================
    SOCIAL PROOF (главная)
    ============================== */
