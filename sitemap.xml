@@ -72,7 +72,7 @@
     </url>
     <url>
         <loc>https://venchakov.com/blog.html</loc>
-        <lastmod>2026-07-07</lastmod>
+        <lastmod>2026-07-15</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
@@ -223,6 +223,56 @@
     <url>
         <loc>https://venchakov.com/blog/gotov-li-biznes-k-ii.html</loc>
         <lastmod>2026-06-29</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://venchakov.com/blog/chat-bot-dlya-stomatologii.html</loc>
+        <lastmod>2026-06-30</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://venchakov.com/blog/chat-bot-dlya-yuristov.html</loc>
+        <lastmod>2026-07-01</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://venchakov.com/blog/ii-bot-dlya-rekrutinga.html</loc>
+        <lastmod>2026-07-02</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://venchakov.com/blog/chat-bot-dlya-dostavki.html</loc>
+        <lastmod>2026-07-04</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://venchakov.com/blog/whatsapp-bot-dlya-biznesa.html</loc>
+        <lastmod>2026-07-05</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://venchakov.com/blog/integraciya-s-amocrm.html</loc>
+        <lastmod>2026-07-06</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://venchakov.com/blog/integraciya-s-bitrix24.html</loc>
+        <lastmod>2026-07-08</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://venchakov.com/blog/utechka-dannyh-cherez-chatgpt.html</loc>
+        <lastmod>2026-07-09</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://venchakov.com/blog/skolko-stoit-ii-agent.html</loc>
+        <lastmod>2026-07-11</lastmod>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://venchakov.com/blog/ii-agent-vs-chat-bot.html</loc>
+        <lastmod>2026-07-15</lastmod>
         <priority>0.6</priority>
     </url>
 </urlset>

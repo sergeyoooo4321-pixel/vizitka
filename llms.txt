@@ -24,10 +24,20 @@
 - [Кейс «Своя Среда»](https://venchakov.com/case-svoyasreda.html): ИИ-менеджер мебельного магазина с интеграцией Bitrix24
 - [Проект OpenClaw](https://venchakov.com/project-openclaw.html): личный AI-работник под ключ
 
-## Блог — 30 статей про ИИ для бизнеса
+## Блог — 40 статей про ИИ для бизнеса
 
-- [Блог о ИИ и автоматизации](https://venchakov.com/blog.html): 30 статей — разборы, гайды и мысли про ИИ для бизнеса
+- [Блог о ИИ и автоматизации](https://venchakov.com/blog.html): 40 статей — разборы, гайды и мысли про ИИ для бизнеса
 - [RSS-лента блога](https://venchakov.com/feed.xml)
+- [ИИ-агент и чат-бот: в чём разница и что выбрать для бизнеса](https://venchakov.com/blog/ii-agent-vs-chat-bot.html)
+- [Сколько стоит ИИ-агент под ключ: честный разбор цен](https://venchakov.com/blog/skolko-stoit-ii-agent.html)
+- [Утечка данных через ChatGPT: как сотрудники сливают конфиденциальную информацию](https://venchakov.com/blog/utechka-dannyh-cherez-chatgpt.html)
+- [Как подключить ИИ-бота к Bitrix24: пошаговая инструкция](https://venchakov.com/blog/integraciya-s-bitrix24.html)
+- [Как подключить ИИ-бота к amoCRM: пошаговая инструкция](https://venchakov.com/blog/integraciya-s-amocrm.html)
+- [WhatsApp-бот для бизнеса: как подключить и не попасть под блокировку](https://venchakov.com/blog/whatsapp-bot-dlya-biznesa.html)
+- [Чат-бот для службы доставки: автоматизация заявок и статусов](https://venchakov.com/blog/chat-bot-dlya-dostavki.html)
+- [ИИ для рекрутинга: как бот ускоряет подбор персонала](https://venchakov.com/blog/ii-bot-dlya-rekrutinga.html)
+- [Чат-бот для юридических услуг: автоматизация первичных консультаций](https://venchakov.com/blog/chat-bot-dlya-yuristov.html)
+- [Чат-бот для стоматологии: как снизить неявки и автоматизировать запись](https://venchakov.com/blog/chat-bot-dlya-stomatologii.html)
 - [Чек-лист: готов ли ваш бизнес к внедрению ИИ](https://venchakov.com/blog/gotov-li-biznes-k-ii.html)
 - [ИИ в недвижимости: боты для застройщиков и агентств](https://venchakov.com/blog/ii-dlya-nedvizhimosti.html)
 - [Куда идут ИИ-агенты: мой прогноз на ближайшие годы](https://venchakov.com/blog/kuda-idut-ii-agenty.html)

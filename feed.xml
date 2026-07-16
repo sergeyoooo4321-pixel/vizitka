@@ -6,7 +6,77 @@
         <atom:link href="https://venchakov.com/feed.xml" rel="self" type="application/rss+xml"/>
         <description>Мысли и разборы про ИИ для бизнеса: агенты, боты, автоматизация, контент и маркетплейсы.</description>
         <language>ru</language>
-        <lastBuildDate>Mon, 29 Jun 2026 10:00:00 +0300</lastBuildDate>
+        <lastBuildDate>Wed, 15 Jul 2026 10:00:00 +0300</lastBuildDate>
+        <item>
+            <title>ИИ-агент и чат-бот: в чём разница и что выбрать для бизнеса</title>
+            <link>https://venchakov.com/blog/ii-agent-vs-chat-bot.html</link>
+            <guid>https://venchakov.com/blog/ii-agent-vs-chat-bot.html</guid>
+            <pubDate>Wed, 15 Jul 2026 10:00:00 +0300</pubDate>
+            <description>Чем ИИ-агент отличается от чат-бота: бот отвечает по сценарию, агент сам решает шаги и вызывает инструменты.</description>
+        </item>
+        <item>
+            <title>Сколько стоит ИИ-агент под ключ: честный разбор цен</title>
+            <link>https://venchakov.com/blog/skolko-stoit-ii-agent.html</link>
+            <guid>https://venchakov.com/blog/skolko-stoit-ii-agent.html</guid>
+            <pubDate>Sat, 11 Jul 2026 10:00:00 +0300</pubDate>
+            <description>Из чего складывается стоимость ИИ-агента под ключ и почему единого прайс-листа тут быть не может.</description>
+        </item>
+        <item>
+            <title>Утечка данных через ChatGPT: как сотрудники сливают конфиденциальную информацию</title>
+            <link>https://venchakov.com/blog/utechka-dannyh-cherez-chatgpt.html</link>
+            <guid>https://venchakov.com/blog/utechka-dannyh-cherez-chatgpt.html</guid>
+            <pubDate>Thu, 09 Jul 2026 10:00:00 +0300</pubDate>
+            <description>Как сотрудники сливают рабочие данные в публичный ChatGPT и что делать вместо запрета.</description>
+        </item>
+        <item>
+            <title>Как подключить ИИ-бота к Bitrix24: пошаговая инструкция</title>
+            <link>https://venchakov.com/blog/integraciya-s-bitrix24.html</link>
+            <guid>https://venchakov.com/blog/integraciya-s-bitrix24.html</guid>
+            <pubDate>Wed, 08 Jul 2026 10:00:00 +0300</pubDate>
+            <description>Как подключить ИИ-бота к Bitrix24: открытые линии, сделки и воронка без ручного переноса переписки.</description>
+        </item>
+        <item>
+            <title>Как подключить ИИ-бота к amoCRM: пошаговая инструкция</title>
+            <link>https://venchakov.com/blog/integraciya-s-amocrm.html</link>
+            <guid>https://venchakov.com/blog/integraciya-s-amocrm.html</guid>
+            <pubDate>Mon, 06 Jul 2026 10:00:00 +0300</pubDate>
+            <description>Как подключить ИИ-бота к amoCRM, чтобы лиды и переписка не терялись при ручном переносе.</description>
+        </item>
+        <item>
+            <title>WhatsApp-бот для бизнеса: как подключить и не попасть под блокировку</title>
+            <link>https://venchakov.com/blog/whatsapp-bot-dlya-biznesa.html</link>
+            <guid>https://venchakov.com/blog/whatsapp-bot-dlya-biznesa.html</guid>
+            <pubDate>Sun, 05 Jul 2026 10:00:00 +0300</pubDate>
+            <description>Как подключить ИИ-бота к WhatsApp через официальный Business API и не попасть под блокировку.</description>
+        </item>
+        <item>
+            <title>Чат-бот для службы доставки: автоматизация заявок и статусов</title>
+            <link>https://venchakov.com/blog/chat-bot-dlya-dostavki.html</link>
+            <guid>https://venchakov.com/blog/chat-bot-dlya-dostavki.html</guid>
+            <pubDate>Sat, 04 Jul 2026 10:00:00 +0300</pubDate>
+            <description>Чат-бот для службы доставки принимает заявки и отвечает на «где мой заказ» вместо диспетчера.</description>
+        </item>
+        <item>
+            <title>ИИ для рекрутинга: как бот ускоряет подбор персонала</title>
+            <link>https://venchakov.com/blog/ii-bot-dlya-rekrutinga.html</link>
+            <guid>https://venchakov.com/blog/ii-bot-dlya-rekrutinga.html</guid>
+            <pubDate>Thu, 02 Jul 2026 10:00:00 +0300</pubDate>
+            <description>ИИ-бот для рекрутинга сортирует отклики и отвечает кандидатам 24/7, снимая рутину с HR.</description>
+        </item>
+        <item>
+            <title>Чат-бот для юридических услуг: автоматизация первичных консультаций</title>
+            <link>https://venchakov.com/blog/chat-bot-dlya-yuristov.html</link>
+            <guid>https://venchakov.com/blog/chat-bot-dlya-yuristov.html</guid>
+            <pubDate>Wed, 01 Jul 2026 10:00:00 +0300</pubDate>
+            <description>Чат-бот для юридических услуг отвечает на типовые вопросы и квалифицирует клиента до звонка юриста.</description>
+        </item>
+        <item>
+            <title>Чат-бот для стоматологии: как снизить неявки и автоматизировать запись</title>
+            <link>https://venchakov.com/blog/chat-bot-dlya-stomatologii.html</link>
+            <guid>https://venchakov.com/blog/chat-bot-dlya-stomatologii.html</guid>
+            <pubDate>Tue, 30 Jun 2026 10:00:00 +0300</pubDate>
+            <description>Чат-бот для стоматологии снижает неявки пациентов и автоматизирует подтверждение записи.</description>
+        </item>
         <item>
             <title>Чек-лист: готов ли ваш бизнес к внедрению ИИ</title>
             <link>https://venchakov.com/blog/gotov-li-biznes-k-ii.html</link>
