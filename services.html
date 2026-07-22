@@ -29,7 +29,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="stylesheet" href="style.css?v=uslugi2026">
+    <link rel="stylesheet" href="style.css?v=uslugi2026b">
     <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -64,14 +64,15 @@
 
     <main>
 
-    <section class="page-hero">
+    <section class="page-hero page-hero--search">
         <div class="container">
             <div class="badge">Услуги</div>
             <h1>Опишите задачу — <span class="text-accent">найду решение</span></h1>
             <p class="page-hero-desc">Не ищите по названиям технологий. Введите свою задачу простыми словами — покажу подходящие услуги. Или выберите категорию ниже.</p>
             <div class="svc-search-wrap">
-                <input type="search" id="svcSearch" class="svc-search-input" placeholder="Например: бот для записи клиентов, контроль звонков, парсинг цен…" autocomplete="off" aria-label="Поиск услуг по задаче">
-                <div id="svcResults" class="svc-search-results" hidden></div>
+                <input type="search" id="svcSearch" class="svc-search-input" placeholder="Например: бот для записи клиентов, контроль звонков, парсинг цен…" autocomplete="off" aria-label="Поиск услуг по задаче" role="combobox" aria-expanded="false" aria-controls="svcResults" aria-haspopup="listbox" aria-autocomplete="list">
+                <div id="svcResults" class="svc-search-results" role="listbox" aria-label="Услуги по вашему запросу" hidden></div>
+                <div id="svcStatus" class="sr-only" role="status" aria-live="polite"></div>
             </div>
         </div>
     </section>
