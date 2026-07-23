@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="stylesheet" href="style.css?v=seo2026">
+    <link rel="stylesheet" href="style.css?v=work2026b">
     <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -167,27 +167,74 @@
                 <span class="section-tag">Процесс</span>
                 <h2>Как я <span class="text-accent">работаю</span></h2>
             </div>
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="process-number">01</div>
-                    <h3>Обсуждение</h3>
-                    <p>Вы рассказываете задачу — я предлагаю решение. Бесплатно и без обязательств.</p>
-                </div>
-                <div class="process-step">
-                    <div class="process-number">02</div>
-                    <h3>ТЗ и сроки</h3>
-                    <p>Фиксируем объём работ, сроки и стоимость. Без сюрпризов по ходу проекта.</p>
-                </div>
-                <div class="process-step">
-                    <div class="process-number">03</div>
-                    <h3>Разработка</h3>
-                    <p>Делаю с промежуточными демо — вы видите прогресс и можете вносить правки.</p>
-                </div>
-                <div class="process-step">
-                    <div class="process-number">04</div>
-                    <h3>Запуск</h3>
-                    <p>Тестирование, запуск, настройка. После старта — поддержка и консультации.</p>
-                </div>
+            <!-- Интро из ТЗ: посетитель выбирает сценарий «про себя» -->
+            <p class="paths-intro">Я подстраиваюсь под то, насколько вы уже погружены в задачу. Выберите вариант, который про вас.</p>
+
+            <!-- 3 варианта (пути клиента) — карточки в ряд, равная высота, CTA у низа -->
+            <div class="paths">
+                <!-- Вариант 1 -->
+                <article class="path-card" data-reveal>
+                    <div class="path-head">
+                        <span class="path-num">01</span>
+                        <span class="path-tag">Вариант 1</span>
+                    </div>
+                    <h3 class="path-title">У вас есть чёткая задача и техническое задание</h3>
+                    <p class="path-lead">Это про вас, если вы понимаете, что и как нужно сделать, — просто не хватает рук или времени.</p>
+                    <ol class="path-steps">
+                        <li>Вы приходите с конкретной проблемой и готовым ТЗ.</li>
+                        <li>Я изучаю ТЗ, задаю уточняющие вопросы и, если вижу более удачное решение, предлагаю его.</li>
+                        <li>Фиксируем условия, договариваемся — и я берусь за работу.</li>
+                        <li>Отдаю результат. Если есть правки и замечания — вношу их и довожу работу до финала.</li>
+                    </ol>
+                    <div class="path-fit">
+                        <p class="path-fit-yes"><strong>Подходит</strong>, если вы разбираетесь в своей задаче, но не хватает ресурсов её закрыть.</p>
+                        <p class="path-fit-no"><strong>Не подходит</strong>, если пока есть только ощущение проблемы (или её ещё нужно нащупать) — тогда посмотрите Вариант 2 или 3.</p>
+                    </div>
+                    <a href="https://t.me/cvvjesuss" class="btn btn-accent path-cta" target="_blank" rel="noopener noreferrer">Обсудить задачу <span class="arrow">&#8594;</span></a>
+                </article>
+
+                <!-- Вариант 2 -->
+                <article class="path-card" data-reveal>
+                    <div class="path-head">
+                        <span class="path-num">02</span>
+                        <span class="path-tag">Вариант 2</span>
+                    </div>
+                    <h3 class="path-title">Вы знаете проблему, но не знаете, как её решить</h3>
+                    <p class="path-lead">Это про вас, если проблема ясна (например, «теряем клиентов из-за большой загрузки менеджеров»), но готового ТЗ и разложенных данных нет.</p>
+                    <ol class="path-steps">
+                        <li>Вы приходите с запросом. Я провожу короткий опрос: что за компания, куда пишут клиенты, как устроен процесс.</li>
+                        <li>Составляю список того, что нужно для аудита, говорю, что понадобится от вас, договариваемся — и я стартую.</li>
+                        <li>Провожу аудит вашего процесса и показываю рабочие варианты решения. Вместе выбираем — и я его реализую.</li>
+                        <li>Отдаю результат. Если есть правки и замечания — вношу их и довожу работу до финала.</li>
+                    </ol>
+                    <div class="path-fit">
+                        <p class="path-fit-yes"><strong>Подходит</strong>, если вы понимаете, ЧТО болит, но не понимаете, КАК это лечить.</p>
+                        <p class="path-fit-no"><strong>Не подходит</strong>, если у вас уже есть готовый запрос и ТЗ (тогда Вариант 1) или пока только желание «что-нибудь автоматизировать» без конкретики (тогда Вариант 3).</p>
+                    </div>
+                    <a href="https://t.me/cvvjesuss" class="btn btn-accent path-cta" target="_blank" rel="noopener noreferrer">Разобрать проблему <span class="arrow">&#8594;</span></a>
+                </article>
+
+                <!-- Вариант 3 -->
+                <article class="path-card" data-reveal>
+                    <div class="path-head">
+                        <span class="path-num">03</span>
+                        <span class="path-tag">Вариант 3</span>
+                    </div>
+                    <h3 class="path-title">Чувствуете, что бизнес можно улучшить, но не знаете с чего начать</h3>
+                    <p class="path-lead">Это про вас, если вы услышали, что ИИ помогает бизнесу, или видите, что много сил и денег уходит на рутину, — но не понимаете, за что взяться.</p>
+                    <ol class="path-steps">
+                        <li>Вы приходите с таким запросом. Я знакомлюсь с вашим бизнесом и провожу опрос.</li>
+                        <li>Составляю план аудита, говорю, что для него понадобится, — и приступаю.</li>
+                        <li>Провожу аудит и прихожу с отчётом и готовым решением найденных проблем. Если решать нечего или решение не окупится — честно так и скажу.</li>
+                        <li>Если вас устраивает цена за решение — договариваемся, и я берусь за работу.</li>
+                        <li>Отдаю результат и показываю, что он реально даёт вашему бизнесу.</li>
+                    </ol>
+                    <div class="path-fit">
+                        <p class="path-fit-yes"><strong>Подходит</strong>, если у вас средняя или крупная компания, где за всем не уследить, но вы чувствуете, что процессы можно улучшить; или вы просто хотите поднять эффективность и получить «всё и сразу».</p>
+                        <p class="path-fit-no"><strong>Не подходит</strong>, если у вас уже есть чёткий запрос или понимание, в какой области нужно решение (тогда Вариант 1 или 2).</p>
+                    </div>
+                    <a href="https://t.me/cvvjesuss" class="btn btn-accent path-cta" target="_blank" rel="noopener noreferrer">Начать с аудита <span class="arrow">&#8594;</span></a>
+                </article>
             </div>
         </div>
     </section>

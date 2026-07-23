@@ -2549,6 +2549,176 @@ blockquote {
 }
 
 /* ==============================
+   КАК Я РАБОТАЮ — 3 варианта (пути клиента)
+   Посетитель выбирает сценарий «про себя»: 3 карточки в ряд.
+   align-items:stretch + flex-column в карточке → равная высота,
+   а .path-fit с margin-top:auto прижимает «Подходит/Не подходит»
+   и кнопку к низу, чтобы CTA стояли на одной линии.
+   ============================== */
+.paths-intro {
+    max-width: 720px;
+    margin: -20px auto 40px;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.paths {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    align-items: stretch;
+}
+
+.path-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;                 /* без этого длинные слова дают горизонтальный скролл */
+    padding: 32px 28px;
+    /* фон/бордер/радиус/hover наследуются из общих правил карточек */
+}
+
+.path-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.path-num {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-family: var(--font-display);
+    font-size: 19px;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--accent);
+    background: var(--accent-dim);
+    border: 1px solid var(--accent-glow);
+}
+
+.path-tag {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.path-title {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--text);
+    margin-bottom: 10px;
+}
+
+.path-lead {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
+
+.path-steps {
+    list-style: none;
+    counter-reset: step;
+    margin: 0 0 22px;
+    padding: 0;
+    display: grid;
+    gap: 13px;
+}
+
+.path-steps li {
+    counter-increment: step;
+    position: relative;
+    padding-left: 38px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.path-steps li::before {
+    content: counter(step, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 8px;
+    font-family: var(--font-display);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    background: var(--accent-dim);
+}
+
+.path-fit {
+    margin-top: auto;             /* прижимает блок «подходит/не подходит» + CTA к низу карточки */
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+    display: grid;
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+.path-fit p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.path-fit-yes {
+    color: var(--text-secondary);
+}
+
+.path-fit-yes strong {
+    color: var(--accent);
+}
+
+.path-fit-no {
+    color: var(--text-muted);
+}
+
+.path-fit-no strong {
+    color: var(--text-secondary);
+}
+
+.path-cta {
+    align-self: flex-start;       /* кнопка по ширине содержимого, не на всю карточку */
+}
+
+/* Планшет и мобилка: 3 колонки в одну, ограничиваем ширину для читаемости */
+@media (max-width: 960px) {
+    .paths {
+        grid-template-columns: 1fr;
+        max-width: 560px;
+        margin-inline: auto;
+    }
+}
+
+@media (max-width: 520px) {
+    .path-card {
+        padding: 26px 22px;
+    }
+    .path-cta {
+        align-self: stretch;      /* на узком экране кнопка на всю ширину — удобнее тапать */
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+/* ==============================
    STICKY CTA
    ============================== */
 .sticky-cta {
@@ -3659,6 +3829,7 @@ body::before {
 
 .bento-card,
 .process-step,
+.path-card,
 .review-card,
 .contact-card-big,
 .stat-card,
@@ -3678,6 +3849,7 @@ body::before {
 
 .bento-card-hover,
 .process-step,
+.path-card,
 .review-card,
 .contact-card-big,
 .audience-card,
@@ -3687,6 +3859,7 @@ body::before {
 
 .bento-card-hover:hover,
 .process-step:hover,
+.path-card:hover,
 .review-card:hover,
 .contact-card-big:hover,
 .audience-card:hover,
@@ -4356,6 +4529,9 @@ body::before {
 .svc-res:last-child { border-bottom: none; }
 .svc-res:hover, .svc-res:focus { background: var(--bg-card-alt); }
 .svc-res-name { color: var(--text); font-weight: 600; font-size: 15px; line-height: 1.35; }
+/* Описание записи-фразы = тема родительской подуслуги. Приглушённый подзаголовок,
+   обрезаем в 1 строку многоточием, чтобы выдача не растягивалась по высоте. */
+.svc-res-desc { color: var(--text-secondary); font-size: 12.5px; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .svc-res-meta { display: flex; justify-content: space-between; gap: 12px; }
 .svc-res-cat { color: var(--text-muted); font-size: 13px; }
 .svc-res-price { color: var(--accent); font-size: 13px; font-weight: 600; white-space: nowrap; }
