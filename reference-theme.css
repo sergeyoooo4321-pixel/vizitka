@@ -141,7 +141,7 @@ h1,h2,h3,h4{font-family:Pixel,Consolas,monospace!important;font-weight:400!impor
 .reference-cases>a:not(.reference-all-cases){align-self:stretch}
 .channel-invite{border:1px solid #557f82!important;border-image:none!important;background:#09263beb!important;padding:24px!important}
 .channel-invite h2{font-family:var(--font)!important;font-size:20px!important;line-height:1.5!important}
-.channel-invite .btn-accent{background:#14515b!important;color:#fff0cb;outline:none;border:1px solid #a4e4dc!important;box-shadow:none!important;clip-path:none}
+.channel-invite .btn-accent{background:#14515b!important;color:#fff0cb!important;outline:none;border:1px solid #a4e4dc!important;box-shadow:none!important;clip-path:none}
 .project-hero-text{max-width:none}
 .project-hero-text h1{font-size:clamp(24px,2.6vw,36px)!important;line-height:1.65!important}
 .project-hero-text .hero-desc{font-size:17px;line-height:1.8;color:#d6eae5}
@@ -175,3 +175,7 @@ html{scrollbar-color:#79a7a5 #091d35}
  .reference-cases .reference-case-art{width:25%;flex-shrink:0}
 }
 @media(max-width:500px){.service-dialog{padding:16px}.service-dialog h2{font-size:15px!important}.service-dialog .btn{width:100%;font-size:15px;padding:10px}}
+
+/* Keep secondary copy and the floating contact link readable on blue surfaces. */
+:root{--text-muted:#b2d9d3}
+.sticky-cta{box-shadow:0 8px 24px #0005!important}
