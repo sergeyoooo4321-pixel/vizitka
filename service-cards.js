@@ -5,7 +5,7 @@
   const dialog = document.createElement('dialog');
   dialog.className = 'service-dialog';
   dialog.setAttribute('aria-labelledby', 'service-dialog-title');
-  dialog.innerHTML = '<button type="button" class="service-dialog-close" aria-label="Закрыть">×</button><p class="service-dialog-category"></p><h2 id="service-dialog-title"></h2><p class="service-dialog-price"></p><p class="service-dialog-context-label">О направлении</p><p class="service-dialog-description"></p><a class="btn btn-accent" target="_blank" rel="noopener noreferrer">Обсудить эту услугу ↗</a>';
+  dialog.innerHTML = '<button type="button" class="service-dialog-close" aria-label="Закрыть">×</button><p class="service-dialog-category"></p><h2 id="service-dialog-title"></h2><p class="service-dialog-price"></p><p class="service-dialog-context-label"></p><p class="service-dialog-description"></p><p class="service-dialog-scope"></p><p class="service-dialog-note">Точный состав работ, стоимость и срок согласуем после обсуждения задачи.</p><a class="btn btn-accent" target="_blank" rel="noopener noreferrer">Обсудить эту услугу ↗</a>';
   document.body.append(dialog);
   const close = dialog.querySelector('button');
   close.addEventListener('click', () => dialog.close());
@@ -34,7 +34,11 @@
       dialog.querySelector('h2').textContent = title;
       dialog.querySelector('.service-dialog-category').textContent = document.querySelector('.page-hero h1').textContent;
       dialog.querySelector('.service-dialog-price').textContent = card.querySelector('.svc-sub-price').textContent;
-      dialog.querySelector('.service-dialog-description').textContent = document.querySelector('.page-hero-desc').textContent;
+      const description = card.querySelector('.svc-card-description');
+      dialog.querySelector('.service-dialog-context-label').textContent = description ? 'Что решает эта услуга' : 'О направлении';
+      dialog.querySelector('.service-dialog-description').textContent = (description || document.querySelector('.page-hero-desc')).textContent;
+      const scope = card.querySelector('.svc-card-scope');
+      dialog.querySelector('.service-dialog-scope').textContent = scope ? scope.textContent : '';
       dialog.querySelector('a').href = 'https://t.me/cvvjesuss?text=' + encodeURIComponent('Здравствуйте! Интересует услуга: ' + title);
       savedOverflow = document.body.style.overflow;
       dialog.showModal();
