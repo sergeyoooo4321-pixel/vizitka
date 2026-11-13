@@ -82,3 +82,10 @@ h1,h2,h3,h4{font-family:Pixel,Consolas,monospace!important;font-weight:400!impor
 @media(max-width:820px){.nav{width:calc(100% - 20px)}}
 
 @media(max-width:820px){.nav-links{border-radius:0!important}.nav-links.open{transform:none!important}}
+
+/* Comparison panels use explicit theme colors, not the text color as a background. */
+.ba-after{background:#143e46;border-color:#79d9d0;color:#fff0cb}
+.ba-after .ba-side-label{color:#9de9df;opacity:1}
+.ba-after .ba-side-value{color:#fff0cb}
+.ba-after .ba-side-desc{color:#d7efeb}
+.ba-delta,.ba-delta-value,.ba-delta-label{color:#082b36}
