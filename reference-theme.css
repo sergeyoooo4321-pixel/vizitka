@@ -89,3 +89,22 @@ h1,h2,h3,h4{font-family:Pixel,Consolas,monospace!important;font-weight:400!impor
 .ba-after .ba-side-value{color:#fff0cb}
 .ba-after .ba-side-desc{color:#d7efeb}
 .ba-delta,.ba-delta-value,.ba-delta-label{color:#082b36}
+
+/* Native card buttons and an accessible service detail dialog. */
+.svc-sub{position:relative}
+.service-card-open{font:inherit;color:inherit;background:none;border:0;padding:0;text-align:left;cursor:pointer;line-height:inherit}
+.service-card-open::after{content:'';position:absolute;inset:0;z-index:1}
+.service-card-open:focus-visible{outline:none}
+.service-card-open:focus-visible::after{outline:3px solid #ffcb66;outline-offset:5px}
+.svc-sub>.btn{position:relative;z-index:2}
+.service-card-hint{color:#9de9df;font-size:14px;margin-bottom:12px;pointer-events:none}
+.svc-sub:has(.service-card-open:hover){background:#17434ff5!important}
+.service-dialog{box-sizing:border-box;width:min(680px,calc(100% - 28px));max-height:calc(100dvh - 40px);overflow:auto;margin:auto;padding:32px;color:#fff0cb;background:#0b2b3e;border:10px solid transparent;border-image:url('assets/pixel-frame.svg') 16 stretch}
+.service-dialog::backdrop{background:#031221d9}
+.service-dialog-close{display:block;margin:0 0 16px auto;width:44px;height:44px;background:#17434f;color:#fff0cb;border:1px solid #79d9d0;font-size:30px;cursor:pointer}
+.service-dialog h2{font-size:20px!important;line-height:1.8!important;margin-bottom:20px;overflow-wrap:anywhere}
+.service-dialog-category{font-size:14px;color:#9de9df;margin-bottom:12px}
+.service-dialog-price{font-size:18px;font-weight:700;margin-bottom:24px}
+.service-dialog-context-label{font-size:13px;color:#9de9df;margin-bottom:8px}
+.service-dialog-description{font-size:16px;line-height:1.8;margin-bottom:24px}
+@media(max-width:500px){.service-dialog{padding:16px}.service-dialog h2{font-size:15px!important}.service-dialog .btn{width:100%;font-size:15px;padding:10px}}
