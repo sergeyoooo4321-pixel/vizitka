@@ -179,3 +179,71 @@ html{scrollbar-color:#79a7a5 #091d35}
 /* Keep secondary copy and the floating contact link readable on blue surfaces. */
 :root{--text-muted:#b2d9d3}
 .sticky-cta{box-shadow:0 8px 24px #0005!important}
+
+.reference-home main > .content-home .reference-hero-copy {
+    padding: clamp(18px, 3vw, 32px);
+    background: #09263bf5;
+    border: 1px solid #79a7a5;
+}
+
+.reference-home main > .content-home h1 {
+    font-size: clamp(20px, 2.35vw, 34px) !important;
+    line-height: 1.55 !important;
+    overflow-wrap: anywhere;
+    text-shadow: none;
+}
+
+.content-home .reference-desc {
+    font-size: clamp(16px, 1.5vw, 20px);
+    text-shadow: none;
+}
+
+.content-stack {
+    display: grid;
+    gap: 24px;
+    max-width: 960px;
+    padding: 0 16px 40px;
+}
+
+.content-panel, .content-card {
+    padding: clamp(20px, 4vw, 32px);
+    background: #09263bf5;
+    border: 1px solid #527a80;
+    color: #e0eeeb;
+    line-height: 1.7;
+}
+
+.content-panel h2, .content-card h2, .content-card h3, .content-section-title {
+    font-size: clamp(16px, 2vw, 21px);
+    color: #fff0cb;
+    margin: 0 0 16px;
+    overflow-wrap: anywhere;
+}
+
+.content-card h2 a { color: inherit; }
+.content-panel ul, .content-panel ol { padding-inline-start: 1.5em; }
+.content-panel li + li { margin-top: .5em; }
+.content-card p + p, .page-hero-desc + p { margin-top: 14px; }
+.content-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.content-grid-home { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.content-actions, .content-links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 18px; }
+.content-actions .btn { min-width: 0; max-width: 100%; white-space: normal; text-align: center; }
+.page-hero .content-actions .btn { margin-top: 0 !important; }
+.content-links a, .content-link { color: #a4e4dc; text-decoration: underline; text-underline-offset: .2em; }
+.content-terms dt { font-weight: 700; color: #fff0cb; }
+.content-terms dd { margin: 0 0 14px; }
+#cases, #terms, #contact { scroll-margin-top: 24px; }
+
+@media (max-width: 900px) {
+    .content-grid-home { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 640px) {
+    .content-grid, .content-grid-home { grid-template-columns: minmax(0, 1fr); }
+    .reference-home main > .content-home {
+        min-height: auto;
+        padding: 24px 0;
+    }
+    .content-home .content-actions { flex-direction: column; }
+    .content-home .content-actions .btn { width: 100%; }
+}
